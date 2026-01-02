@@ -306,12 +306,113 @@
             font-size: 0.9em;
         }
         
+        .clients-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .clients-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .clients-list {
+            color: #555;
+            line-height: 1.9;
+        }
+        
+        .indicators-list {
+            list-style: none;
+        }
+        
+        .indicators-list li {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            color: #555;
+            transition: transform 0.2s ease;
+        }
+        
+        .indicators-list li:hover {
+            transform: translateX(5px);
+        }
+        
+        .indicators-list strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .highlights-list {
+            list-style: none;
+        }
+        
+        .highlights-list li {
+            padding: 12px 0 12px 35px;
+            position: relative;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .highlights-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: 700;
+            font-size: 1.3em;
+        }
+        
+        .references-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+        }
+        
+        .reference-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .reference-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .ref-name {
+            font-weight: 700;
+            color: #667eea;
+            font-size: 1.15em;
+            margin-bottom: 5px;
+        }
+        
+        .ref-info {
+            color: #666;
+            line-height: 1.6;
+        }
+        
         .footer {
             text-align: center;
             padding: 30px;
             background: #f8f9fa;
             color: #7f8c8d;
             font-size: 0.9em;
+        }
+        
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
         }
         
         @media print {
@@ -321,6 +422,15 @@
             }
             .container {
                 box-shadow: none;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+            .project-card:hover,
+            .skill-category:hover,
+            .cert-card:hover,
+            .indicators-list li:hover {
+                transform: none;
             }
         }
         
@@ -643,6 +753,71 @@
                 </div>
                 <div style="margin-top: 25px;">
                     <strong>Idiomas:</strong> Português (Nativo) • Espanhol (Avançado) • Inglês (Iniciante - A1)
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Clientes Enterprise Atendidos</h2>
+                <div class="clients-section">
+                    <div class="clients-title">Setores</div>
+                    <div class="clients-list">
+                        <strong>Financeiro:</strong> Bradesco (via MJV), Itaú • <strong>Varejo:</strong> Iguatemi • <strong>Indústria:</strong> BRF, Electrolux • <strong>Automotivo:</strong> Audi México • <strong>Mineração:</strong> Bauminas • <strong>Telecom/ISP:</strong> VivaTech, MetroNetwork, Operadora Vetorial, RR64, 30+ clientes via NOC
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Indicadores de Performance</h2>
+                <ul class="indicators-list">
+                    <li><strong>Consultor de Implantação:</strong> 7+ clientes enterprise | 100% de taxa de sucesso | 40% de redução em tempo de deploy | Promoção em 2 meses</li>
+                    <li><strong>Consultor Técnico MJV/Bradesco:</strong> Manipulação de dados sensíveis | Compliance mantido | Análises críticas entregues</li>
+                    <li><strong>Master Network Technician:</strong> 99%+ de disponibilidade mantida | 100% de SLA em incidentes críticos | Promoção de Senior para Master</li>
+                    <li><strong>Analista NOC:</strong> 1.000+ incidentes gerenciados | SLA acima de 99% | Resolução proativa reconhecida</li>
+                    <li><strong>Responsável Técnico VivaTech:</strong> 3 anos de atuação remota PJ | Estabilidade reconhecida via carta de recomendação</li>
+                    <li><strong>Técnico de Redes:</strong> 500+ ordens de serviço executadas | 85% de resolução no primeiro atendimento | 200+ clientes atendidos</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Diferenciais</h2>
+                <ul class="highlights-list">
+                    <li>Certificação Fortinet FCF (Network Security Expert) comprovando expertise em segurança de redes</li>
+                    <li>Experiência em ambientes críticos NOC 24x7 com empresas enterprise e multinacionais</li>
+                    <li>Perfil multidisciplinar: redes, monitoramento, automação, consultoria e suporte N2</li>
+                    <li>Trilíngue: português nativo, espanhol avançado, inglês em desenvolvimento</li>
+                    <li>Histórico de promoções consecutivas: Técnico → Analista → Senior → Master → Consultor</li>
+                    <li>Foco em resultados: automação, padronização, melhoria contínua e satisfação de clientes</li>
+                    <li>Carta de recomendação formal da VivaTech destacando excelência técnica e comprometimento</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Objetivo</h2>
+                <p style="margin-bottom: 15px; color: #555; line-height: 1.8;">
+                    <strong>Posições em:</strong> Consultor de Implantação Senior/Tech Lead • Network Engineer/Arquiteto • Especialista em Automação • SRE • Coordenador NOC/Infraestrutura
+                </p>
+                <p style="color: #555; line-height: 1.8;">
+                    <strong>Disponibilidade:</strong> Imediata | <strong>Modalidade:</strong> Presencial, Híbrido ou Remoto
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Referências Profissionais</h2>
+                <div class="references-section">
+                    <div class="reference-item">
+                        <div class="ref-name">Rôney Cordeiro</div>
+                        <div class="ref-info">
+                            CEO | VivaTech (CNPJ 33.692.990/0001-25)<br>
+                            <em>Recomendação formal disponível | Período: 2022-2025</em>
+                        </div>
+                    </div>
+                    <div class="reference-item">
+                        <div class="ref-name">Lucas Costa</div>
+                        <div class="ref-info">
+                            MetroNetwork<br>
+                            <em>Disponível mediante solicitação</em>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
