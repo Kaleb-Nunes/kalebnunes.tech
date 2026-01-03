@@ -1,149 +1,830 @@
-# Kaleb Nunes dos Santos
-**Consultor de Implantação | Redes, Monitoramento e Automação**
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV de Kaleb Nunes dos Santos - Consultor de Implantação, Redes, Monitoramento e Automação">
+    <meta name="author" content="Kaleb Nunes dos Santos">
+    <title>CV - Kaleb Nunes dos Santos | Consultor de Implantação</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ecf0f1;
+            padding: 20px 0;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 40px;
+            position: relative;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .photo-container {
+            flex-shrink: 0;
+        }
+        
+        /* CSS CORRIGIDO PARA A FOTO */
+        .photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 6px solid rgba(255,255,255,0.9);
+            object-fit: cover; /* Ajusta a imagem sem distorcer */
+            object-position: center top; /* Centraliza no rosto */
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            background: #fff;
+            display: block;
+        }
+        
+        .header-info {
+            flex: 1;
+        }
+        
+        .name {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+        
+        .title {
+            font-size: 1.4em;
+            margin-bottom: 25px;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            font-size: 0.95em;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+        
+        .contact-item::before {
+            content: "•";
+            font-size: 1.5em;
+            opacity: 0.7;
+        }
+        
+        .content {
+            padding: 50px 40px;
+        }
+        
+        .section {
+            margin-bottom: 45px;
+        }
+        
+        .section-title {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #667eea;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        .profile-text {
+            text-align: justify;
+            line-height: 1.9;
+            color: #34495e;
+            font-size: 1.05em;
+        }
+        
+        .skills-grid {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s ease;
+        }
+        
+        .skill-category:hover {
+            transform: translateX(5px);
+        }
+        
+        .skill-title {
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+        
+        .skill-list {
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .experience-item {
+            margin-bottom: 35px;
+            padding-bottom: 35px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+        
+        .exp-header {
+            margin-bottom: 15px;
+        }
+        
+        .exp-title-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 8px;
+        }
+        
+        .exp-role {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .exp-company {
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .exp-meta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            font-size: 0.95em;
+        }
+        
+        .exp-period {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        .exp-badge {
+            background: #e8eaf6;
+            color: #667eea;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        .exp-description ul {
+            margin: 15px 0 15px 25px;
+        }
+        
+        .exp-description li {
+            margin-bottom: 10px;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .exp-results {
+            background: #f0f4ff;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            margin-top: 15px;
+        }
+        
+        .exp-results strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .projects-grid {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .project-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #764ba2;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .project-title {
+            font-weight: 700;
+            color: #764ba2;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+        }
+        
+        .project-tech {
+            color: #95a5a6;
+            font-size: 0.9em;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        
+        .project-description {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        
+        .cert-card {
+            background: #f8f9fa;
+            padding: 18px;
+            border-radius: 8px;
+            border-left: 4px solid #764ba2;
+            transition: transform 0.2s ease;
+        }
+        
+        .cert-card:hover {
+            transform: translateX(5px);
+        }
+        
+        .cert-name {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .cert-org {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        .clients-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .clients-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .clients-list {
+            color: #555;
+            line-height: 1.9;
+        }
+        
+        .indicators-list {
+            list-style: none;
+        }
+        
+        .indicators-list li {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            color: #555;
+            transition: transform 0.2s ease;
+        }
+        
+        .indicators-list li:hover {
+            transform: translateX(5px);
+        }
+        
+        .indicators-list strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .highlights-list {
+            list-style: none;
+        }
+        
+        .highlights-list li {
+            padding: 12px 0 12px 35px;
+            position: relative;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .highlights-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: 700;
+            font-size: 1.3em;
+        }
+        
+        .references-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+        }
+        
+        .reference-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .reference-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .ref-name {
+            font-weight: 700;
+            color: #667eea;
+            font-size: 1.15em;
+            margin-bottom: 5px;
+        }
+        
+        .ref-info {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+            .project-card:hover,
+            .skill-category:hover,
+            .cert-card:hover,
+            .indicators-list li:hover {
+                transform: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .name {
+                font-size: 2em;
+            }
+            .photo {
+                width: 160px;
+                height: 160px;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .content {
+                padding: 30px 20px;
+            }
+            .header {
+                padding: 30px 20px;
+            }
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+<div class="photo-container">
+    <img src="foto.jpg" alt="Kaleb Nunes" class="photo">
+</div>
+                <div class="header-info">
+                    <h1 class="name">KALEB NUNES DOS SANTOS</h1>
+                    <h2 class="title">Consultor de Implantação | Redes, Monitoramento e Automação</h2>
+                    <div class="contact-grid">
+                        <div class="contact-item">Balneário Camboriú, SC</div>
+                        <div class="contact-item">
+                            <a href="https://wa.me/5547988901616" target="_blank" rel="noopener">+55 47 98890-1616</a>
+                        </div>
+                        <div class="contact-item">
+                            <a href="mailto:kalebdossantos59924@gmail.com">kalebdossantos59924@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <a href="https://linkedin.com/in/kalebnunes" target="_blank" rel="noopener">linkedin.com/in/kalebnunes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-📍 Balneário Camboriú – SC  
-📞 +55 47 98890-1616  
-✉️ kalebdossantos59924@gmail.com  
-🔗 https://linkedin.com/in/kalebnunes  
+        <div class="content">
+            <section class="section">
+                <h2 class="section-title">Perfil Profissional</h2>
+                <p class="profile-text">
+                    Profissional de infraestrutura e redes com <strong>6+ anos de experiência</strong> em ambientes críticos NOC, monitoramento proativo e consultoria de implantação. Atuação consolidada em empresas enterprise e multinacionais como <strong>Iguatemi, BRF, Bradesco, Itaú, Electrolux e Audi México</strong>. Especialista em <strong>Ellevo (Plataforma e Next)</strong>, ferramentas de monitoramento (Zabbix, Grafana, PRTG, LibreNMS) e troubleshooting avançado com foco em SLA. <strong>Certificado Fortinet FCF</strong> (Network Security Expert) com histórico de <strong>promoções consecutivas</strong> por desempenho. Expertise em automação com PowerShell, integrações via API e redução de <strong>40% no tempo de implantação</strong> através de padronização de processos.
+                </p>
+            </section>
 
----
+            <section class="section">
+                <h2 class="section-title">Competências-Chave</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-title">Monitoramento & Observabilidade</div>
+                        <div class="skill-list">Zabbix • Grafana • PRTG • LibreNMS • VMware • The Dude • Dashboards Customizados</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Redes & Infraestrutura</div>
+                        <div class="skill-list">Troubleshooting Avançado • SLA Management • ISP Operations • Linux Server • NOC 24x7 • Backups e Redundâncias</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Automação & Integração</div>
+                        <div class="skill-list">PowerShell • Shell Script • SQL • API REST • JSON/XML • Integrações de Sistemas</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Análise de Dados</div>
+                        <div class="skill-list">Manipulação de Dados Sensíveis • ETL • Compliance • Validação de Integridade • Relatórios Gerenciais</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Plataformas ITSM</div>
+                        <div class="skill-list">Ellevo (Plataforma e Next) • Configuração • Implantação • Consultoria • Suporte N2</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Segurança</div>
+                        <div class="skill-list">Fortinet FCF • Network Security • Cisco Security • Hardening • Firewall/VPN/IPS • Segurança da Informação</div>
+                    </div>
+                </div>
+            </section>
 
-## Perfil Profissional
+            <section class="section">
+                <h2 class="section-title">Experiência Profissional</h2>
+                
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div class="exp-title-line">
+                            <div>
+                                <div class="exp-role">CONSULTOR DE IMPLANTAÇÃO</div>
+                                <div class="exp-company">Ellevo Software</div>
+                            </div>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-period">Ago/2025 - Atual (Promoção em Out/2025)</span>
+                            <span class="exp-badge">Remoto | CLT</span>
+                        </div>
+                    </div>
+                    <div class="exp-description">
+                        <ul>
+                            <li>Atuação inicial como Analista de Suporte N2, promovido a Consultor de Implantação em outubro/2025</li>
+                            <li>Implantação end-to-end da plataforma Ellevo (Plataforma e Next) para clientes enterprise e multinacionais</li>
+                            <li>Configuração e validação de scripts PowerShell/SQL e desenvolvimento de integrações via APIs REST</li>
+                            <li>Suporte N2 com foco em estabilidade, padronização e melhoria contínua de processos</li>
+                            <li>Consultoria técnica e treinamento para clientes: Iguatemi, Bauminas, Audi México, BRF, Bradesco, Electrolux, Itaú</li>
+                        </ul>
+                        <div class="exp-results">
+                            <strong>Resultados:</strong> 100% de sucesso nas implantações | 40% de redução no tempo de deploy | Alta satisfação de clientes | Promoção em 2 meses
+                        </div>
+                    </div>
+                </div>
 
-Profissional de infraestrutura, redes e implantação com mais de 6 anos de experiência em ambientes críticos de NOC, monitoramento proativo e consultoria técnica. Atuação consolidada em empresas enterprise e multinacionais como Iguatemi, BRF, Bradesco, Itaú, Electrolux e Audi México. Especialista na plataforma Ellevo (Plataforma e Next), com forte foco em automação, integrações via API, observabilidade e cumprimento rigoroso de SLA. Certificação Fortinet FCF, com histórico comprovado de promoções por desempenho e entrega de resultados mensuráveis.
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div class="exp-title-line">
+                            <div>
+                                <div class="exp-role">MASTER NETWORK TECHNICIAN</div>
+                                <div class="exp-company">RR64</div>
+                            </div>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-period">2023 - Ago/2025 (Promoção de Senior para Master)</span>
+                            <span class="exp-badge">Remoto | CLT</span>
+                        </div>
+                    </div>
+                    <div class="exp-description">
+                        <ul>
+                            <li>Operação e suporte de rede em ambiente crítico NOC com cumprimento rigoroso de SLA</li>
+                            <li>Monitoramento proativo 24x7, troubleshooting avançado de incidentes críticos e coordenação de equipes de campo</li>
+                            <li>Gestão de tratativas com SLA, priorização de chamados e análise de causa raiz</li>
+                        </ul>
+                        <div class="exp-results">
+                            <strong>Resultados:</strong> Promoção de Senior para Master | 100% de SLA em incidentes críticos | Melhoria em processos operacionais
+                        </div>
+                    </div>
+                </div>
 
----
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div class="exp-title-line">
+                            <div>
+                                <div class="exp-role">CONSULTOR TÉCNICO</div>
+                                <div class="exp-company">MJV Technology & Innovation - Banco Bradesco</div>
+                            </div>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-period">2024</span>
+                            <span class="exp-badge">Remoto | PJ</span>
+                        </div>
+                    </div>
+                    <div class="exp-description">
+                        <ul>
+                            <li>Consultoria técnica especializada para projeto do Banco Bradesco via MJV</li>
+                            <li>Análise e manipulação de dados sensíveis com foco em segurança e conformidade</li>
+                            <li>Tratamento de grandes volumes de dados, validação de integridade e geração de relatórios gerenciais</li>
+                        </ul>
+                        <div class="exp-results">
+                            <strong>Resultados:</strong> Entrega de análises críticas para tomada de decisão | Compliance em segurança da informação mantido
+                        </div>
+                    </div>
+                </div>
 
-## Competências-Chave
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div class="exp-title-line">
+                            <div>
+                                <div class="exp-role">ANALISTA NOC N1/N2</div>
+                                <div class="exp-company">MetroNetwork</div>
+                            </div>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-period">Abr/2022 - Nov/2023</span>
+                            <span class="exp-badge">Presencial/Híbrido | CLT</span>
+                        </div>
+                    </div>
+                    <div class="exp-description">
+                        <ul>
+                            <li>Monitoramento 24x7 de infraestrutura de múltiplos clientes com foco em disponibilidade e qualidade</li>
+                            <li>Análise de incidentes, acionamento de equipes de campo e suporte técnico a ISPs e clientes corporativos</li>
+                            <li>Gestão de tickets, documentação de procedimentos e criação de base de conhecimento técnica</li>
+                        </ul>
+                        <div class="exp-results">
+                            <strong>Resultados:</strong> SLA acima de 99% | Resolução proativa de incidentes | Feedback positivo de clientes e gestão
+                        </div>
+                    </div>
+                </div>
 
-### Monitoramento & Observabilidade
-- Zabbix, Grafana, PRTG, LibreNMS, VMware, The Dude  
-- Dashboards customizados e alertas inteligentes  
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div class="exp-title-line">
+                            <div>
+                                <div class="exp-role">RESPONSÁVEL TÉCNICO</div>
+                                <div class="exp-company">VivaTech</div>
+                            </div>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-period">2022 - 2025</span>
+                            <span class="exp-badge">Remoto | PJ</span>
+                        </div>
+                    </div>
+                    <div class="exp-description">
+                        <ul>
+                            <li>Monitoramento de redes utilizando LibreNMS com foco em estabilidade e qualidade dos serviços</li>
+                            <li>Análise e verificação de links, troubleshooting em múltiplas camadas de rede</li>
+                            <li>Restauração de links e mitigação de oscilações em ambientes críticos</li>
+                            <li>Implementação de backups e redundâncias de rede para garantir alta disponibilidade</li>
+                            <li>Suporte técnico especializado a ambientes críticos com excelência no atendimento</li>
+                        </ul>
+                        <div class="exp-results">
+                            <strong>Resultados:</strong> Desempenho técnico e comprometimento reconhecidos formalmente via carta de recomendação | Contribuição direta para estabilidade dos serviços
+                        </div>
+                    </div>
+                </div>
 
-### Redes & Infraestrutura
-- Troubleshooting avançado  
-- Gestão de SLA e ambientes NOC 24x7  
-- Operações ISP, Linux Server, backups e redundâncias  
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div class="exp-title-line">
+                            <div>
+                                <div class="exp-role">TÉCNICO DE REDES</div>
+                                <div class="exp-company">Operadora Vetorial</div>
+                            </div>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-period">Mar/2019 - Dez/2020</span>
+                            <span class="exp-badge">Presencial | CLT</span>
+                        </div>
+                    </div>
+                    <div class="exp-description">
+                        <ul>
+                            <li>Instalação, manutenção e configuração de equipamentos de rede (MikroTik) em provedor de internet</li>
+                            <li>Execução de 500+ ordens de serviço, atendimento ao cliente e troubleshooting de conectividade</li>
+                        </ul>
+                        <div class="exp-results">
+                            <strong>Resultados:</strong> 85% de resolução no primeiro atendimento | Feedback positivo de clientes
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-### Automação & Integração
-- PowerShell, Shell Script, SQL  
-- API REST, JSON, XML  
-- Integração e padronização de sistemas  
+            <section class="section">
+                <h2 class="section-title">Projetos Destacados</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-title">Automação de Implantação Ellevo</div>
+                        <div class="project-tech">PowerShell + SQL + API REST</div>
+                        <div class="project-description">
+                            Scripts automatizados para provisionamento de ambientes, validações de integridade e integrações via API. <strong>Resultado:</strong> 40% de redução no tempo de implantação e eliminação de erros de configuração.
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-title">Análise de Dados Sensíveis - Bradesco</div>
+                        <div class="project-tech">SQL + ETL + Compliance</div>
+                        <div class="project-description">
+                            Consultoria técnica para MJV/Bradesco com tratamento de grandes volumes de dados sensíveis, validação de integridade e geração de relatórios gerenciais. <strong>Resultado:</strong> Compliance em segurança da informação mantido e análises críticas entregues com qualidade.
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-title">Dashboard Multi-Cliente</div>
+                        <div class="project-tech">Zabbix + Grafana + Shell Script</div>
+                        <div class="project-description">
+                            Sistema centralizado de monitoramento para 30+ clientes ISP com alertas inteligentes e visibilidade em tempo real. <strong>Resultado:</strong> 50% de redução em falsos alertas e identificação proativa de problemas.
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-title">Infraestrutura de Monitoramento VivaTech</div>
+                        <div class="project-tech">LibreNMS + Backups + Redundâncias</div>
+                        <div class="project-description">
+                            Implementação de solução completa de monitoramento com LibreNMS, políticas de backup e redundâncias de rede. <strong>Resultado:</strong> Alta disponibilidade mantida e mitigação eficaz de oscilações em ambientes críticos.
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-title">Troubleshooting Avançado ISP</div>
+                        <div class="project-tech">MikroTik + PRTG + Wireshark</div>
+                        <div class="project-description">
+                            Base de conhecimento com 50+ casos complexos documentados: BGP, DDoS, QoS, intermitência de enlaces. <strong>Resultado:</strong> 30% de redução no tempo médio de resolução.
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-### Análise de Dados
-- Manipulação de dados sensíveis  
-- ETL, validação de integridade  
-- Relatórios gerenciais e compliance  
+            <section class="section">
+                <h2 class="section-title">Formação & Certificações</h2>
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <div class="cert-name">Fortinet Network Security Expert (FCF)</div>
+                        <div class="cert-org">Fortinet - Jan/2025</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-name">Network Technician Career Path</div>
+                        <div class="cert-org">Cisco - Jun/2024 a Jun/2025</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-name">Bootcamp CCNA</div>
+                        <div class="cert-org">Hackone/Cisco - Ago/2023</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-name">Linux, Banco de Dados e Análise de Dados</div>
+                        <div class="cert-org">Workover Academy - Mai/2024</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-name">Shell Script: Do Básico ao Profissional</div>
+                        <div class="cert-org">Udemy - Dez/2025</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-name">Ensino Superior (Trancado)</div>
+                        <div class="cert-org">Cruzeiro do Sul (EAD) - Fev/2022 a Mar/2023</div>
+                    </div>
+                </div>
+                <div style="margin-top: 25px;">
+                    <strong>Idiomas:</strong> Português (Nativo) • Espanhol (Avançado) • Inglês (Iniciante - A1)
+                </div>
+            </section>
 
-### ITSM
-- Ellevo (Plataforma e Next)  
-- Implantação, configuração, consultoria e suporte N2  
+            <section class="section">
+                <h2 class="section-title">Clientes Enterprise Atendidos</h2>
+                <div class="clients-section">
+                    <div class="clients-title">Setores</div>
+                    <div class="clients-list">
+                        <strong>Financeiro:</strong> Bradesco (via MJV), Itaú • <strong>Varejo:</strong> Iguatemi • <strong>Indústria:</strong> BRF, Electrolux • <strong>Automotivo:</strong> Audi México • <strong>Mineração:</strong> Bauminas • <strong>Telecom/ISP:</strong> VivaTech, MetroNetwork, Operadora Vetorial, RR64, 30+ clientes via NOC
+                    </div>
+                </div>
+            </section>
 
-### Segurança
-- Fortinet FCF  
-- Network Security, Firewall, VPN, IPS  
-- Hardening e boas práticas de segurança da informação  
+            <section class="section">
+                <h2 class="section-title">Indicadores de Performance</h2>
+                <ul class="indicators-list">
+                    <li><strong>Consultor de Implantação:</strong> 7+ clientes enterprise | 100% de taxa de sucesso | 40% de redução em tempo de deploy | Promoção em 2 meses</li>
+                    <li><strong>Consultor Técnico MJV/Bradesco:</strong> Manipulação de dados sensíveis | Compliance mantido | Análises críticas entregues</li>
+                    <li><strong>Master Network Technician:</strong> 99%+ de disponibilidade mantida | 100% de SLA em incidentes críticos | Promoção de Senior para Master</li>
+                    <li><strong>Analista NOC:</strong> 1.000+ incidentes gerenciados | SLA acima de 99% | Resolução proativa reconhecida</li>
+                    <li><strong>Responsável Técnico VivaTech:</strong> 3 anos de atuação remota PJ | Estabilidade reconhecida via carta de recomendação</li>
+                    <li><strong>Técnico de Redes:</strong> 500+ ordens de serviço executadas | 85% de resolução no primeiro atendimento | 200+ clientes atendidos</li>
+                </ul>
+            </section>
 
----
+            <section class="section">
+                <h2 class="section-title">Diferenciais</h2>
+                <ul class="highlights-list">
+                    <li>Certificação Fortinet FCF (Network Security Expert) comprovando expertise em segurança de redes</li>
+                    <li>Experiência em ambientes críticos NOC 24x7 com empresas enterprise e multinacionais</li>
+                    <li>Perfil multidisciplinar: redes, monitoramento, automação, consultoria e suporte N2</li>
+                    <li>Trilíngue: português nativo, espanhol avançado, inglês em desenvolvimento</li>
+                    <li>Histórico de promoções consecutivas: Técnico → Analista → Senior → Master → Consultor</li>
+                    <li>Foco em resultados: automação, padronização, melhoria contínua e satisfação de clientes</li>
+                    <li>Carta de recomendação formal da VivaTech destacando excelência técnica e comprometimento</li>
+                </ul>
+            </section>
 
-## Experiência Profissional
+            <section class="section">
+                <h2 class="section-title">Objetivo</h2>
+                <p style="margin-bottom: 15px; color: #555; line-height: 1.8;">
+                    <strong>Posições em:</strong> Consultor de Implantação Senior/Tech Lead • Network Engineer/Arquiteto • Especialista em Automação • SRE • Coordenador NOC/Infraestrutura
+                </p>
+                <p style="color: #555; line-height: 1.8;">
+                    <strong>Disponibilidade:</strong> Imediata | <strong>Modalidade:</strong> Presencial, Híbrido ou Remoto
+                </p>
+            </section>
 
-### Consultor de Implantação  
-**Ellevo Software** | Ago/2025 – Atual | CLT – Presencial  
-- Promoção de Analista de Suporte N2 para Consultor de Implantação em 2 meses  
-- Implantação end-to-end da plataforma Ellevo (Plataforma e Next)  
-- Configuração de scripts PowerShell e SQL  
-- Desenvolvimento de integrações via API REST  
-- Consultoria técnica e treinamentos para clientes enterprise  
-
-**Resultados:**  
-- 100% de sucesso nas implantações  
-- 40% de redução no tempo de deploy  
-- Alta satisfação dos clientes  
-
----
-
-### Master Network Technician  
-**RR64 – Network Intelligence** | 2023 – Ago/2025 | CLT – Remoto  
-- Operação de redes em ambiente crítico NOC  
-- Monitoramento 24x7 e troubleshooting avançado  
-- Gestão de incidentes críticos e SLA  
-
-**Resultados:**  
-- Promoção de Senior para Master  
-- 100% de cumprimento de SLA em incidentes críticos  
-
----
-
-### Consultor Técnico  
-**MJV Technology & Innovation (Projeto Banco Bradesco)** | 2024 | PJ – Remoto  
-- Análise e manipulação de dados sensíveis  
-- Validação de integridade e geração de relatórios  
-- Atuação com foco em compliance e segurança da informação  
-
----
-
-### Analista NOC N1/N2  
-**MetroNetwork** | Abr/2022 – Nov/2023 | CLT – Presencial/Híbrido  
-- Monitoramento 24x7 de infraestrutura multi-cliente  
-- Suporte técnico a ISPs e clientes corporativos  
-- Documentação técnica e base de conhecimento  
-
-**Resultados:**  
-- SLA acima de 99%  
-- Resolução proativa de incidentes  
-
----
-
-### Responsável Técnico  
-**VivaTech** | 2022 – 2025 | PJ – Remoto  
-- Monitoramento com LibreNMS  
-- Troubleshooting de links e infraestrutura  
-- Implementação de backups e redundâncias  
-
-**Resultados:**  
-- Estabilidade de ambientes críticos  
-- Reconhecimento formal via carta de recomendação  
-
----
-
-### Técnico de Redes  
-**Operadora Vetorial** | Mar/2019 – Dez/2020 | CLT – Presencial  
-- Instalação e manutenção de redes (MikroTik)  
-- Execução de 500+ ordens de serviço  
-
-**Resultados:**  
-- 85% de resolução no primeiro atendimento  
-
----
-
-## Projetos Destacados
-
-### Automação de Implantação Ellevo
-**PowerShell | SQL | API REST**  
-Automação de provisionamento, validações e integrações.  
-**Resultado:** 40% de redução no tempo de implantação.
-
-### Análise de Dados Sensíveis – Bradesco
-**SQL | ETL | Compliance**  
-Tratamento e validação de grandes volumes de dados sensíveis.
-
-### Dashboard Multi-Cliente
-**Zabbix | Grafana | Shell Script**  
-Monitoramento centralizado para 30+ clientes ISP.  
-**Resultado:** 50% de redução em falsos alertas.
-
-### Infraestrutura de Monitoramento VivaTech
-**LibreNMS | Backups | Redundâncias**  
-Alta disponibilidade e mitigação de falhas.
-
-### Troubleshooting Avançado ISP
-**MikroTik | PRTG | Wireshark**  
-Documentação de 50+ casos complexos (BGP, DDoS, QoS).
-
----
-
-## Certificações
-
-- Fortinet Network Security Expert – FCF (Jan/2025)  
-- Network Technician Career Path – Cisco (Jun/2024 – Jun/2025)  
+            <section class="section">
+                <h2 class="section-title">Referências Profissionais</h2>
+                <div class="references-section">
+                    <div class="reference-item">
+                        <div class="ref-name">Rôney Cordeiro</div>
+                        <div class="ref-info">
+                            CEO | VivaTech (CNPJ 33.692.990/0001-25)<br>
+                            <em>Recomendação formal disponível | Período: 2022-2025</em>
+                        </div>
+                    </div>
+                    <div class="reference-item">
+                        <div class="ref-name">Lucas Costa</div>
+                        <div class="ref-info">
+                            MetroNetwork<br>
+                            <em>Disponível mediante solicitação</em>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div class="footer">
+            &copy; 2026 Kaleb Nunes dos Santos. Desenvolvido para portfólio profissional.
+        </div>
+    </div>
+</body>
+</html>
