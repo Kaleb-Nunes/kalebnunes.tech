@@ -1,158 +1,442 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kaleb Nunes dos Santos | Portfólio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV de Kaleb Nunes dos Santos - Consultor de Implantação, Redes, Monitoramento e Automação">
+    <meta name="author" content="Kaleb Nunes dos Santos">
+    <title>CV - Kaleb Nunes dos Santos | Consultor de Implantação</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<link rel="stylesheet" href="assets/print.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ecf0f1;
+            padding: 20px 0;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 50px 40px;
+            position: relative;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 6px solid rgba(255,255,255,0.9);
+            object-fit: cover;
+            object-position: center top;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            background: #fff;
+            display: block;
+        }
+        
+        .name {
+            font-size: 2.8em;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: -1px;
+        }
+        
+        .title {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            font-size: 0.9em;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        .content {
+            padding: 50px 40px;
+        }
+        
+        .section {
+            margin-bottom: 45px;
+        }
 
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,sans-serif;background:#eef2f7;color:#1f2937;padding-top:90px}
-body.dark{background:#020617;color:#e5e7eb}
+        .section-title {
+            color: #1e3a8a;
+            background: linear-gradient(to right, rgba(59,130,246,0.1), transparent);
+            padding: 8px 12px;
+            border-left: 5px solid #1e3a8a;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
 
-.navbar{
-position:fixed;top:0;width:100%;
-background:rgba(255,255,255,.95);
-backdrop-filter:blur(10px);
-display:flex;justify-content:center;gap:30px;
-padding:16px;box-shadow:0 2px 20px rgba(0,0,0,.08);z-index:999
-}
-body.dark .navbar{background:#020617}
+        /* CARDS DE PROJETOS */
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 10px;
+        }
 
-.navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
-body.dark .navbar a{color:#93c5fd}
+        .project-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid #3b82f6;
+            flex: 1 1 320px; 
+            display: flex;
+            flex-direction: column;
+        }
 
-.lang-switch{position:fixed;top:15px;right:30px;font-weight:600;z-index:1000}
-.lang-switch a{color:#1e3a8a;text-decoration:none;margin-left:8px}
-body.dark .lang-switch a{color:#93c5fd}
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+        }
 
-#darkToggle{
-position:fixed;top:15px;left:30px;
-background:#1e3a8a;color:#fff;border:none;
-padding:8px 14px;border-radius:20px;
-font-weight:600;cursor:pointer;z-index:1000
-}
+        .project-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #1e3a8a;
+        }
 
-.container{max-width:1100px;margin:auto;background:#fff;box-shadow:0 10px 40px rgba(0,0,0,.1)}
-body.dark .container{background:#020617}
+        .project-header i {
+            font-size: 1.4rem;
+            margin-right: 12px;
+        }
 
-.header{background:linear-gradient(135deg,#1e3a8a,#3b82f6);color:#fff;padding:50px}
-.header-content{display:flex;gap:40px;align-items:center}
-.photo{width:180px;height:180px;border-radius:50%;border:5px solid #fff;object-fit:cover}
+        .tags {
+            margin-top: auto; 
+            padding-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
 
-.btn-download{
-display:inline-flex;align-items:center;gap:10px;
-background:linear-gradient(135deg,#1e3a8a,#3b82f6);
-color:#fff;padding:12px 28px;border-radius:30px;
-font-weight:700;text-decoration:none;transition:.3s
-}
-.btn-download:hover{transform:translateY(-3px);box-shadow:0 12px 25px rgba(59,130,246,.45)}
+        .tags span {
+            background: #eff6ff;
+            color: #1e40af;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border: 1px solid #dbeafe;
+        }
 
-.section{padding:50px}
-.section-title{
-font-size:1.5em;font-weight:700;color:#1e3a8a;
-margin-bottom:25px;position:relative;padding-bottom:10px
-}
-.section-title:after{
-content:"";width:60px;height:4px;background:#3b82f6;
-position:absolute;bottom:0;left:0;border-radius:2px
-}
-body.dark .section-title{color:#93c5fd}
+        /* COMPETÊNCIAS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .skill-title {
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
 
-.highlight-box{
-background:linear-gradient(135deg,#eff6ff,#fff);
-border-radius:12px;padding:20px 25px;
-margin-top:25px;display:flex;gap:18px;
-box-shadow:inset 0 0 0 1px #dbeafe
-}
-.highlight-box span{font-size:2em;font-weight:800;color:#1e3a8a}
-body.dark .highlight-box{background:#020617;box-shadow:0 0 0 1px #1e293b}
+        /* ANALYTICS (GRÁFICOS) */
+        .charts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
 
-.footer{text-align:center;padding:40px;background:#f8fafc;color:#6b7280;font-size:.85em}
-body.dark .footer{background:#020617;color:#94a3b8}
-</style>
+        .chart-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .chart-card h3 {
+            color: #1e3a8a;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .experience-item {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .exp-role { font-weight: 700; font-size: 1.2em; color: #1e3a8a; }
+        .exp-company { color: #3b82f6; font-weight: 600; }
+        .exp-results { 
+            background: #f0f9ff; 
+            padding: 12px; 
+            border-radius: 6px; 
+            margin-top: 10px; 
+            font-size: 0.95em;
+            border-left: 3px solid #3b82f6;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            background: #f8fafc;
+            color: #64748b;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .header-content { flex-direction: column; text-align: center; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .name { font-size: 2em; }
+            .charts-container { grid-template-columns: 1fr; }
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; max-width: 100%; }
+            .header { background: #1e3a8a !important; color: white !important; -webkit-print-color-adjust: exact; }
+            .charts-container { break-inside: avoid; }
+        }
+    </style>
 </head>
-
 <body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <div class="photo-container">
+                    <img src="assets/Mídia%20(2).jpg" alt="Kaleb Nunes" class="photo">
+                </div>
+                <div class="header-info">
+                    <h1 class="name">KALEB NUNES DOS SANTOS</h1>
+                    <h2 class="title">Consultor de Implantação | Redes, Monitoramento e Automação</h2>
+                    <div class="contact-grid">
+                        <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Balneário Camboriú, SC</div>
+                        <div class="contact-item"><i class="fas fa-phone"></i> <a href="https://wa.me/5547988901616">+55 47 98890-1616</a></div>
+                        <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:kalebdossantos59924@gmail.com">kalebdossantos59924@gmail.com</a></div>
+                        <div class="contact-item"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/kalebnunes">linkedin.com/in/kalebnunes</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<button id="darkToggle">🌙 Dark</button>
+        <div class="content">
+            <section class="section">
+                <h2 class="section-title">Perfil Profissional</h2>
+                <p class="profile-text">
+                    Profissional de infraestrutura e redes com <strong>6+ anos de experiência</strong> em ambientes críticos NOC, monitoramento proativo e consultoria de implantação. Atuação consolidada em empresas como <strong>Iguatemi, BRF, Bradesco e Audi México</strong>. Especialista em <strong>Ellevo</strong> e automação com PowerShell, reduzindo em <strong>40% o tempo de implantação</strong>.
+                </p>
+            </section>
 
-<nav class="navbar">
-<a href="#perfil">Perfil</a>
-<a href="#projetos">Projetos</a>
-<a href="#competencias">Competências</a>
-<a href="#experiencia">Experiência</a>
-</nav>
+            <section class="section">
+                <h2 class="section-title">Projetos & Soluções</h2>
+                <div class="projects-container">
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-microchip"></i>
+                            <h3 style="margin: 0;">Automação de Implantação SaaS</h3>
+                        </div>
+                        <p style="font-size: 0.95em; color: #475569;">Otimização do setup Ellevo via PowerShell e APIs REST.</p>
+                        <ul style="font-size: 0.85em; margin-top: 10px; padding-left: 20px; color: #64748b;">
+                            <li>Redução de setup manual de 8h para 2h.</li>
+                            <li>Eliminação total de erros de configuração inicial.</li>
+                        </ul>
+                        <div class="tags">
+                            <span>PowerShell</span> <span>API REST</span> <span>SQL Server</span>
+                        </div>
+                    </div>
 
-<div class="lang-switch">
-<a href="index.html">PT</a> |
-<a href="index-en.html">EN</a> |
-<a href="index-es.html">ES</a>
-</div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-satellite-dish"></i>
+                            <h3 style="margin: 0;">Observabilidade & NOC</h3>
+                        </div>
+                        <p style="font-size: 0.95em; color: #475569;">Dashboards estratégicos de alta disponibilidade.</p>
+                        <ul style="font-size: 0.85em; margin-top: 10px; padding-left: 20px; color: #64748b;">
+                            <li>Monitoramento de 30+ clientes ISP simultâneos.</li>
+                            <li>Redução de 30% no tempo de resposta (MTTR).</li>
+                        </ul>
+                        <div class="tags">
+                            <span>Zabbix</span> <span>Grafana</span> <span>Fortinet</span>
+                        </div>
+                    </div>
 
-<div class="container">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-user-shield"></i>
+                            <h3 style="margin: 0;">Compliance & Data Analytics</h3>
+                        </div>
+                        <p style="font-size: 0.95em; color: #475569;">Consultoria especializada para o Banco Bradesco (via MJV).</p>
+                        <ul style="font-size: 0.85em; margin-top: 10px; padding-left: 20px; color: #64748b;">
+                            <li>Manipulação de dados sensíveis com foco em segurança.</li>
+                            <li>Geração de relatórios gerenciais críticos.</li>
+                        </ul>
+                        <div class="tags">
+                            <span>SQL Server</span> <span>ETL</span> <span>Compliance</span> <span>LGPD</span>
+                        </div>
+                    </div>
 
-<header class="header">
-<div class="header-content">
-<img src="assets/Mídia%20(2).jpg" class="photo" alt="Kaleb Nunes">
-<div>
-<h1>KALEB NUNES DOS SANTOS</h1>
-<h2>Consultor de Implantação | Redes e Automação</h2>
-<a href="assets/Kaleb-Nunes-CV.pdf" class="btn-download" target="_blank">
-<i class="fas fa-download"></i> Download CV
-</a>
-</div>
-</div>
-</header>
+                </div>
+            </section>
 
-<section id="perfil" class="section">
-<h2 class="section-title">Perfil Profissional</h2>
-<p>Especialista em implantação, automação e observabilidade em ambientes enterprise.</p>
-<div class="highlight-box"><span>40%</span> redução no tempo de implantação</div>
-</section>
+            <section class="section">
+                <h2 class="section-title">Competências-Chave</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-title">Monitoramento</div>
+                        <div class="skill-list">Zabbix • Grafana • PRTG • LibreNMS • Dashboards Customizados</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Automação & Dev</div>
+                        <div class="skill-list">PowerShell • SQL • API REST • JSON • Shell Script</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Segurança & Redes</div>
+                        <div class="skill-list">Fortinet FCF • Cisco CCNA Path • Troubleshooting Avançado • VPN</div>
+                    </div>
+                </div>
+            </section>
 
-<section id="projetos" class="section">
-<h2 class="section-title">Projetos</h2>
-<ul>
-<li>Automação SaaS com PowerShell e API REST</li>
-<li>Observabilidade NOC com Zabbix e Grafana</li>
-</ul>
-</section>
+            <section class="section">
+                <h2 class="section-title">Analytics de Carreira</h2>
+                <div class="charts-container">
+                    <div class="chart-card">
+                        <h3>Expertise Técnica (%)</h3>
+                        <canvas id="skillsChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Tempo de Atuação por Projeto</h3>
+                        <canvas id="experienceChart"></canvas>
+                    </div>
+                </div>
+            </section>
 
-<section id="competencias" class="section">
-<h2 class="section-title">Competências</h2>
-<p>PowerShell • Zabbix • Grafana • Fortinet • SQL • API REST</p>
-</section>
+            <section class="section">
+                <h2 class="section-title">Experiência Profissional</h2>
+                <div class="experience-item">
+                    <div class="exp-role">CONSULTOR DE IMPLANTAÇÃO</div>
+                    <div class="exp-company">Ellevo Software</div>
+                    <p style="font-size: 0.9em; color: #64748b; font-style: italic;">Ago/2025 - Atual</p>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Implantação da plataforma Ellevo Next para clientes multinacionais.</li>
+                        <li>Desenvolvimento de scripts de integração e treinamento técnico.</li>
+                    </ul>
+                    <div class="exp-results">
+                        <strong>Impacto:</strong> Promoção em 2 meses e redução de 40% no tempo de deploy.
+                    </div>
+                </div>
+            </section>
 
-<section id="experiencia" class="section">
-<h2 class="section-title">Experiência</h2>
-<div class="highlight-box"><span>Promoção</span> em 2 meses na Ellevo</div>
-</section>
+            <section class="section" style="text-align: center;">
+                <a href="./assets/carta-de-recomendacao-tecnica.png" target="_blank" style="text-decoration: none; background: #1e3a8a; color: white; padding: 12px 25px; border-radius: 8px; font-weight: 600; display: inline-block;">
+                    <i class="fas fa-file-signature"></i> Ver Carta de Recomendação Técnica - VivaTech
+                </a>
+            </section>
+        </div>
 
-<section class="section" style="text-align:center">
-<a href="assets/carta-de-recomendacao-tecnica.png" target="_blank" class="btn-download">
-<i class="fas fa-file-signature"></i> Carta de Recomendação VivaTech
-</a>
-</section>
+        <div class="footer">
+            &copy; 2026 Kaleb Nunes dos Santos • Gerado para Portfólio Profissional
+        </div>
+    </div>
 
-<footer class="footer">
-© 2026 Kaleb Nunes dos Santos • Todos os direitos reservados
-</footer>
+    <script>
+        // Gráfico de Competências (Radar ou Barra)
+        const ctxSkills = document.getElementById('skillsChart').getContext('2d');
+        new Chart(ctxSkills, {
+            type: 'bar',
+            data: {
+                labels: ['Monitoramento', 'PowerShell/SQL', 'Redes/NOC', 'Fortinet/Seg', 'Implantação SaaS'],
+                datasets: [{
+                    label: 'Nível de Domínio (%)',
+                    data: [95, 90, 95, 85, 90],
+                    backgroundColor: [
+                        'rgba(30, 58, 138, 0.8)',
+                        'rgba(59, 130, 246, 0.8)',
+                        'rgba(29, 78, 216, 0.8)',
+                        'rgba(37, 99, 235, 0.8)',
+                        'rgba(96, 165, 250, 0.8)'
+                    ],
+                    borderColor: '#1e3a8a',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true, max: 100 }
+                },
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
 
-</div>
-
-<script>
-const toggle=document.getElementById("darkToggle");
-toggle.onclick=()=>{
-document.body.classList.toggle("dark");
-toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
-};
-</script>
-
+        // Gráfico de Experiência (Linha do Tempo)
+        const ctxExp = document.getElementById('experienceChart').getContext('2d');
+        new Chart(ctxExp, {
+            type: 'doughnut',
+            data: {
+                labels: ['VivaTech (3 anos)', 'RR64 (2.5 anos)', 'Ellevo (Atual)', 'Outros (3 anos)'],
+                datasets: [{
+                    data: [35, 25, 10, 30],
+                    backgroundColor: [
+                        '#1e3a8a', 
+                        '#3b82f6', 
+                        '#60a5fa', 
+                        '#dbeafe'
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
