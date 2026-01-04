@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kaleb Nunes dos Santos | CV & Portfolio</title>
+<title>Kaleb Nunes dos Santos | CV & Portfólio Profissional</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -11,52 +11,146 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,sans-serif;background:#eef2f7;color:#1f2937;padding-top:90px}
+html{scroll-behavior:smooth}
+
+body{
+font-family:Inter,sans-serif;
+background:#eef2f7;
+color:#1f2937;
+padding-top:90px
+}
 
 .navbar{
-position:fixed;top:0;width:100%;
-background:#fff;display:flex;justify-content:center;gap:30px;
-padding:16px;box-shadow:0 2px 20px rgba(0,0,0,.08);z-index:999
+position:fixed;
+top:0;
+width:100%;
+background:#fff;
+display:flex;
+justify-content:center;
+gap:32px;
+padding:16px;
+box-shadow:0 2px 20px rgba(0,0,0,.08);
+z-index:999
 }
-.navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
+.navbar a{
+text-decoration:none;
+font-weight:600;
+color:#1e3a8a
+}
+.navbar a:hover{
+text-decoration:underline
+}
 
-.container{max-width:1100px;margin:auto;background:#fff;box-shadow:0 10px 40px rgba(0,0,0,.1)}
+.container{
+max-width:1100px;
+margin:auto;
+background:#fff;
+box-shadow:0 10px 40px rgba(0,0,0,.1)
+}
 
 .header{
 background:linear-gradient(135deg,#1e3a8a,#3b82f6);
-color:#fff;padding:55px
+color:#fff;
+padding:55px
 }
-.header-content{display:flex;gap:40px;align-items:center}
-.photo{width:180px;height:180px;border-radius:50%;border:5px solid #fff}
+.header-content{
+display:flex;
+gap:40px;
+align-items:center
+}
+
+.photo{
+width:180px;
+height:180px;
+border-radius:50%;
+border:6px solid rgba(255,255,255,.95);
+object-fit:cover;
+object-position:center;
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+flex-shrink:0;
+background:#fff
+}
 
 .btn-download{
-display:inline-flex;align-items:center;gap:10px;
-background:#fff;color:#1e3a8a;
-padding:14px 30px;border-radius:30px;
-font-weight:700;text-decoration:none;margin-top:20px
+display:inline-flex;
+align-items:center;
+gap:10px;
+background:#fff;
+color:#1e3a8a;
+padding:14px 30px;
+border-radius:30px;
+font-weight:700;
+text-decoration:none;
+margin-top:20px;
+transition:.3s
+}
+.btn-download:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 25px rgba(255,255,255,.35)
 }
 
-.section{padding:50px}
+.section{
+padding:60px 50px
+}
+
 .section-title{
-font-size:1.5em;font-weight:700;color:#1e3a8a;margin-bottom:25px
+font-size:1.6em;
+font-weight:700;
+color:#1e3a8a;
+margin-bottom:30px
 }
 
+/* INDICADORES */
 .metrics{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;margin-top:30px
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px
 }
 .metric-box{
-background:#f8fafc;padding:25px;border-radius:14px;
-text-align:center;box-shadow:0 0 0 1px #e5e7eb
+background:#f8fafc;
+padding:28px;
+border-radius:14px;
+text-align:center;
+box-shadow:0 0 0 1px #e5e7eb
 }
-.metric-box span{font-size:2.2em;font-weight:800;color:#1e3a8a}
+.metric-box span{
+font-size:2.3em;
+font-weight:800;
+color:#1e3a8a
+}
 
-.footer{text-align:center;padding:40px;background:#f8fafc;color:#6b7280}
+/* LISTAS */
+ul{
+padding-left:20px;
+line-height:1.8
+}
+
+.footer{
+text-align:center;
+padding:40px;
+background:#f8fafc;
+color:#6b7280
+}
+
+@media(max-width:768px){
+.header-content{
+flex-direction:column;
+text-align:center
+}
+.photo{
+width:160px;
+height:160px
+}
+.section{
+padding:50px 25px
+}
+}
 </style>
 </head>
 
 <body>
 
+<!-- MENU -->
 <nav class="navbar">
 <a href="#perfil">Perfil</a>
 <a href="#projetos">Projetos</a>
@@ -66,30 +160,45 @@ text-align:center;box-shadow:0 0 0 1px #e5e7eb
 
 <div class="container">
 
+<!-- HEADER -->
 <header class="header">
 <div class="header-content">
-<img src="assets/Mídia%20(2).jpg" class="photo">
+
+<img src="assets/Mídia%20(2).jpg" class="photo" alt="Kaleb Nunes dos Santos">
+
 <div>
 <h1>KALEB NUNES DOS SANTOS</h1>
 <h2>Consultor de Implantação | Redes, Automação e Observabilidade</h2>
 
-<!-- BOTÃO CV COM TRACKING -->
 <a id="cvDownload" class="btn-download" target="_blank">
 <i class="fas fa-download"></i> Download CV
 </a>
-
 </div>
+
 </div>
 </header>
 
+<!-- PERFIL -->
 <section id="perfil" class="section">
 <h2 class="section-title">Perfil Profissional</h2>
 <p>
-Profissional com atuação em ambientes enterprise, especializado em implantação de plataformas ITSM,
-automação de processos, observabilidade e governança operacional.
+Profissional com sólida atuação em ambientes enterprise, especializado em implantação de plataformas ITSM,
+automação de processos, observabilidade, monitoramento NOC e governança operacional.
 </p>
 </section>
 
+<!-- PROJETOS -->
+<section id="projetos" class="section">
+<h2 class="section-title">Projetos de Implantação (Resumo Executivo)</h2>
+<ul>
+<li>Implantação completa de plataforma ITSM (Ellevo Next), incluindo catálogo de serviços, SLAs e workflows</li>
+<li>Automação de setup e integrações via PowerShell e APIs REST</li>
+<li>Monitoramento e observabilidade com Zabbix, Grafana e dashboards executivos</li>
+<li>Projetos conduzidos seguindo boas práticas de segurança da informação e LGPD</li>
+</ul>
+</section>
+
+<!-- INDICADORES -->
 <section id="indicadores" class="section">
 <h2 class="section-title">Indicadores Profissionais</h2>
 
@@ -101,24 +210,18 @@ automação de processos, observabilidade e governança operacional.
 </div>
 </section>
 
-<section id="projetos" class="section">
-<h2 class="section-title">Projetos de Implantação (Resumo Executivo)</h2>
-<ul>
-<li>Implantação de ITSM (Ellevo Next) com catálogo, SLAs, fluxos e automações</li>
-<li>Automação de setups via PowerShell e APIs REST</li>
-<li>Monitoramento NOC com Zabbix, Grafana e observabilidade avançada</li>
-</ul>
-</section>
-
+<!-- EXPERIÊNCIA -->
 <section id="experiencia" class="section">
 <h2 class="section-title">Experiência Profissional</h2>
 <ul>
 <li><strong>Consultor de Implantação</strong> – Ellevo Software</li>
-<li><strong>Master Network Technician</strong> – RR64</li>
-<li><strong>Analista NOC N1/N2</strong> – MetroNetwork</li>
+<li><strong>Master Network Technician</strong> – RR64 Network Intelligence</li>
+<li><strong>Analista NOC N1 / N2</strong> – MetroNetwork</li>
+<li><strong>Técnico de Redes</strong> – Operadora Vetorial</li>
 </ul>
 </section>
 
+<!-- CARTA -->
 <section class="section" style="text-align:center">
 <a href="assets/carta-de-recomendacao-tecnica.png" target="_blank" class="btn-download">
 <i class="fas fa-file-signature"></i> Carta de Recomendação Técnica
@@ -126,20 +229,12 @@ automação de processos, observabilidade e governança operacional.
 </section>
 
 <footer class="footer">
-© 2026 Kaleb Nunes dos Santos • Portfólio Profissional
+© 2026 Kaleb Nunes dos Santos • CV & Portfólio Profissional
 </footer>
 
 </div>
 
 <script>
-/* TRACKING DE RECRUTADOR (LGPD SAFE) */
-const params = new URLSearchParams(window.location.search);
-const source = params.get("source") || "direct";
-const recruiter = params.get("recruiter") || "unknown";
-
-localStorage.setItem("recruiter_source", source);
-localStorage.setItem("recruiter_name", recruiter);
-
 /* CV POR IDIOMA */
 let cvFile = "Kaleb%20Nunes%20dos%20Santos%20_%20CV%20Profissional.pdf";
 if (location.pathname.includes("index-en")) {
@@ -148,7 +243,6 @@ cvFile = "Kaleb%20Nunes%20dos%20Santos%20_%20CV%20Professional_EN.pdf";
 if (location.pathname.includes("index-es")) {
 cvFile = "Kaleb%20Nunes%20dos%20Santos%20_%20CV%20Profesional_ES.pdf";
 }
-
 document.getElementById("cvDownload").href = "/" + cvFile;
 </script>
 
