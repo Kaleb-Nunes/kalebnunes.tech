@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kaleb Nunes dos Santos | Portfólio</title>
+<title>Kaleb Nunes dos Santos | CV & Portfolio</title>
 
-<link rel="stylesheet" href="assets/print.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
@@ -13,102 +12,69 @@
 
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Inter,sans-serif;background:#eef2f7;color:#1f2937;padding-top:90px}
-body.dark{background:#020617;color:#e5e7eb}
 
 .navbar{
 position:fixed;top:0;width:100%;
-background:rgba(255,255,255,.95);
-backdrop-filter:blur(10px);
-display:flex;justify-content:center;gap:30px;
+background:#fff;display:flex;justify-content:center;gap:30px;
 padding:16px;box-shadow:0 2px 20px rgba(0,0,0,.08);z-index:999
 }
-body.dark .navbar{background:#020617}
-
 .navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
-body.dark .navbar a{color:#93c5fd}
-
-.lang-switch{position:fixed;top:15px;right:30px;font-weight:600;z-index:1000}
-.lang-switch a{color:#1e3a8a;text-decoration:none;margin-left:8px}
-body.dark .lang-switch a{color:#93c5fd}
-
-#darkToggle{
-position:fixed;top:15px;left:30px;
-background:#1e3a8a;color:#fff;border:none;
-padding:8px 14px;border-radius:20px;
-font-weight:600;cursor:pointer;z-index:1000
-}
 
 .container{max-width:1100px;margin:auto;background:#fff;box-shadow:0 10px 40px rgba(0,0,0,.1)}
-body.dark .container{background:#020617}
 
-.header{background:linear-gradient(135deg,#1e3a8a,#3b82f6);color:#fff;padding:50px}
+.header{
+background:linear-gradient(135deg,#1e3a8a,#3b82f6);
+color:#fff;padding:55px
+}
 .header-content{display:flex;gap:40px;align-items:center}
-.photo{width:180px;height:180px;border-radius:50%;border:5px solid #fff;object-fit:cover}
+.photo{width:180px;height:180px;border-radius:50%;border:5px solid #fff}
 
 .btn-download{
 display:inline-flex;align-items:center;gap:10px;
-background:linear-gradient(135deg,#1e3a8a,#3b82f6);
-color:#fff;padding:12px 28px;border-radius:30px;
-font-weight:700;text-decoration:none;transition:.3s
+background:#fff;color:#1e3a8a;
+padding:14px 30px;border-radius:30px;
+font-weight:700;text-decoration:none;margin-top:20px
 }
-.btn-download:hover{transform:translateY(-3px);box-shadow:0 12px 25px rgba(59,130,246,.45)}
 
 .section{padding:50px}
 .section-title{
-font-size:1.5em;font-weight:700;color:#1e3a8a;
-margin-bottom:25px;position:relative;padding-bottom:10px
+font-size:1.5em;font-weight:700;color:#1e3a8a;margin-bottom:25px
 }
-.section-title:after{
-content:"";width:60px;height:4px;background:#3b82f6;
-position:absolute;bottom:0;left:0;border-radius:2px
-}
-body.dark .section-title{color:#93c5fd}
 
-.highlight-box{
-background:linear-gradient(135deg,#eff6ff,#fff);
-border-radius:12px;padding:20px 25px;
-margin-top:25px;display:flex;gap:18px;
-box-shadow:inset 0 0 0 1px #dbeafe
+.metrics{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;margin-top:30px
 }
-.highlight-box span{font-size:2em;font-weight:800;color:#1e3a8a}
-body.dark .highlight-box{background:#020617;box-shadow:0 0 0 1px #1e293b}
+.metric-box{
+background:#f8fafc;padding:25px;border-radius:14px;
+text-align:center;box-shadow:0 0 0 1px #e5e7eb
+}
+.metric-box span{font-size:2.2em;font-weight:800;color:#1e3a8a}
 
-.footer{text-align:center;padding:40px;background:#f8fafc;color:#6b7280;font-size:.85em}
-body.dark .footer{background:#020617;color:#94a3b8}
+.footer{text-align:center;padding:40px;background:#f8fafc;color:#6b7280}
 </style>
 </head>
 
 <body>
 
-<button id="darkToggle">🌙 Dark</button>
-
 <nav class="navbar">
 <a href="#perfil">Perfil</a>
 <a href="#projetos">Projetos</a>
-<a href="#competencias">Competências</a>
+<a href="#indicadores">Indicadores</a>
 <a href="#experiencia">Experiência</a>
 </nav>
-
-<div class="lang-switch">
-<a href="index.html">PT</a> |
-<a href="index-en.html">EN</a> |
-<a href="index-es.html">ES</a>
-</div>
 
 <div class="container">
 
 <header class="header">
 <div class="header-content">
-<img src="assets/Mídia%20(2).jpg" class="photo" alt="Kaleb Nunes">
+<img src="assets/Mídia%20(2).jpg" class="photo">
 <div>
 <h1>KALEB NUNES DOS SANTOS</h1>
-<h2>Consultor de Implantação | Redes e Automação</h2>
+<h2>Consultor de Implantação | Redes, Automação e Observabilidade</h2>
 
-<!-- BOTÃO DOWNLOAD CV (CORRIGIDO) -->
-<a href="/Kaleb%20Nunes%20dos%20Santos%20_%20CV%20Profissional.pdf"
-   class="btn-download"
-   target="_blank"
-   rel="noopener">
+<!-- BOTÃO CV COM TRACKING -->
+<a id="cvDownload" class="btn-download" target="_blank">
 <i class="fas fa-download"></i> Download CV
 </a>
 
@@ -118,46 +84,72 @@ body.dark .footer{background:#020617;color:#94a3b8}
 
 <section id="perfil" class="section">
 <h2 class="section-title">Perfil Profissional</h2>
-<p>Especialista em implantação, automação e observabilidade em ambientes enterprise.</p>
-<div class="highlight-box"><span>40%</span> redução no tempo de implantação</div>
+<p>
+Profissional com atuação em ambientes enterprise, especializado em implantação de plataformas ITSM,
+automação de processos, observabilidade e governança operacional.
+</p>
+</section>
+
+<section id="indicadores" class="section">
+<h2 class="section-title">Indicadores Profissionais</h2>
+
+<div class="metrics">
+<div class="metric-box"><span>40%</span><br>Redução no tempo de implantação</div>
+<div class="metric-box"><span>6+</span><br>Anos de experiência</div>
+<div class="metric-box"><span>Enterprise</span><br>Clientes de grande porte</div>
+<div class="metric-box"><span>2 meses</span><br>Promoção técnica</div>
+</div>
 </section>
 
 <section id="projetos" class="section">
-<h2 class="section-title">Projetos</h2>
+<h2 class="section-title">Projetos de Implantação (Resumo Executivo)</h2>
 <ul>
-<li>Automação SaaS com PowerShell e API REST</li>
-<li>Observabilidade NOC com Zabbix e Grafana</li>
+<li>Implantação de ITSM (Ellevo Next) com catálogo, SLAs, fluxos e automações</li>
+<li>Automação de setups via PowerShell e APIs REST</li>
+<li>Monitoramento NOC com Zabbix, Grafana e observabilidade avançada</li>
 </ul>
 </section>
 
-<section id="competencias" class="section">
-<h2 class="section-title">Competências</h2>
-<p>PowerShell • Zabbix • Grafana • Fortinet • SQL • API REST</p>
-</section>
-
 <section id="experiencia" class="section">
-<h2 class="section-title">Experiência</h2>
-<div class="highlight-box"><span>Promoção</span> em 2 meses na Ellevo</div>
+<h2 class="section-title">Experiência Profissional</h2>
+<ul>
+<li><strong>Consultor de Implantação</strong> – Ellevo Software</li>
+<li><strong>Master Network Technician</strong> – RR64</li>
+<li><strong>Analista NOC N1/N2</strong> – MetroNetwork</li>
+</ul>
 </section>
 
 <section class="section" style="text-align:center">
 <a href="assets/carta-de-recomendacao-tecnica.png" target="_blank" class="btn-download">
-<i class="fas fa-file-signature"></i> Carta de Recomendação VivaTech
+<i class="fas fa-file-signature"></i> Carta de Recomendação Técnica
 </a>
 </section>
 
 <footer class="footer">
-© 2026 Kaleb Nunes dos Santos • Todos os direitos reservados
+© 2026 Kaleb Nunes dos Santos • Portfólio Profissional
 </footer>
 
 </div>
 
 <script>
-const toggle=document.getElementById("darkToggle");
-toggle.onclick=()=>{
-document.body.classList.toggle("dark");
-toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
-};
+/* TRACKING DE RECRUTADOR (LGPD SAFE) */
+const params = new URLSearchParams(window.location.search);
+const source = params.get("source") || "direct";
+const recruiter = params.get("recruiter") || "unknown";
+
+localStorage.setItem("recruiter_source", source);
+localStorage.setItem("recruiter_name", recruiter);
+
+/* CV POR IDIOMA */
+let cvFile = "Kaleb%20Nunes%20dos%20Santos%20_%20CV%20Profissional.pdf";
+if (location.pathname.includes("index-en")) {
+cvFile = "Kaleb%20Nunes%20dos%20Santos%20_%20CV%20Professional_EN.pdf";
+}
+if (location.pathname.includes("index-es")) {
+cvFile = "Kaleb%20Nunes%20dos%20Santos%20_%20CV%20Profesional_ES.pdf";
+}
+
+document.getElementById("cvDownload").href = "/" + cvFile;
 </script>
 
 </body>
