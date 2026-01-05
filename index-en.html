@@ -22,6 +22,7 @@ transition:.3s
 }
 body.dark{background:#020617;color:#e5e7eb}
 
+/* NAVBAR */
 .navbar{
 position:fixed;top:0;width:100%;
 background:rgba(255,255,255,.95);
@@ -33,12 +34,44 @@ body.dark .navbar{background:#020617}
 .navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
 body.dark .navbar a{color:#93c5fd}
 
+/* LANGUAGE SWITCH – FLAGS (NO EMOJI) */
 .lang-switch{
-position:fixed;top:18px;right:30px;font-weight:600;z-index:1000
+position:fixed;
+top:16px;
+right:30px;
+background:#fff;
+border:2px solid #2563eb;
+border-radius:12px;
+padding:8px 14px;
+display:flex;
+align-items:center;
+gap:14px;
+z-index:1000
 }
-.lang-switch a{color:#1e3a8a;text-decoration:none;margin-left:8px}
+body.dark .lang-switch{
+background:#020617;
+border-color:#60a5fa
+}
+.lang-switch a{
+color:#1e3a8a;
+text-decoration:none;
+font-weight:600;
+display:flex;
+align-items:center;
+gap:6px;
+border-bottom:2px solid transparent
+}
 body.dark .lang-switch a{color:#93c5fd}
+.lang-switch a.active{
+border-bottom:2px solid #2563eb
+}
+.lang-switch img{
+width:22px;
+height:16px;
+border-radius:3px
+}
 
+/* DARK MODE BUTTON */
 #darkToggle{
 position:fixed;top:15px;left:30px;
 background:#1e3a8a;color:#fff;border:none;
@@ -46,12 +79,14 @@ padding:8px 14px;border-radius:20px;
 font-weight:600;cursor:pointer;z-index:1000
 }
 
+/* CONTAINER */
 .container{
 max-width:1100px;margin:auto;background:#fff;
 box-shadow:0 10px 40px rgba(0,0,0,.1)
 }
 body.dark .container{background:#020617}
 
+/* HEADER */
 .header{
 background:linear-gradient(135deg,#1e3a8a,#3b82f6);
 color:#fff;padding:55px
@@ -63,6 +98,7 @@ border:6px solid rgba(255,255,255,.95);
 object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.35)
 }
 
+/* BUTTON */
 .btn-download{
 display:inline-flex;align-items:center;gap:10px;
 background:#fff;color:#1e3a8a;
@@ -71,6 +107,7 @@ font-weight:700;text-decoration:none;margin-top:20px;transition:.3s
 }
 .btn-download:hover{transform:translateY(-3px)}
 
+/* METRICS */
 .dashboard-metrics{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -82,6 +119,7 @@ padding:22px;border-radius:14px;text-align:center
 }
 .metric span{font-size:2em;font-weight:800;display:block}
 
+/* SECTIONS */
 .section{padding:70px 55px}
 .section-title{
 font-size:1.6em;font-weight:700;color:#1e3a8a;
@@ -90,15 +128,11 @@ margin-bottom:30px
 body.dark .section-title{color:#93c5fd}
 ul{padding-left:20px;line-height:1.8}
 
+/* FOOTER */
 .footer{
 text-align:center;padding:40px;background:#f8fafc;color:#6b7280
 }
 body.dark .footer{background:#020617;color:#94a3b8}
-
-@media(max-width:768px){
-.header-content{flex-direction:column;text-align:center}
-.section{padding:55px 25px}
-}
 </style>
 </head>
 
@@ -113,10 +147,17 @@ body.dark .footer{background:#020617;color:#94a3b8}
 <a href="#experience">Experience</a>
 </nav>
 
+<!-- LANGUAGE SWITCH -->
 <div class="lang-switch">
-<a href="index.html">PT</a> |
-<a href="index-en.html">EN</a> |
-<a href="index-es.html">ES</a>
+<a href="/index.html">
+<img src="https://flagcdn.com/w20/br.png" alt="Brazil"> PT
+</a>
+<a href="/index-en.html" class="active">
+<img src="https://flagcdn.com/w20/us.png" alt="United States"> EN
+</a>
+<a href="/index-es.html">
+<img src="https://flagcdn.com/w20/es.png" alt="Spain"> ES
+</a>
 </div>
 
 <div class="container">
@@ -180,41 +221,11 @@ observability, and IT governance.
 
 <section id="experience" class="section">
 <h2 class="section-title">Professional Experience</h2>
-
 <ul>
-<li>
-<strong>Implementation Consultant – Ellevo Software</strong> — On-site • Cooperative<br>
-Implementation and consulting of ITSM platforms for enterprise clients
-(Iguatemi, BRF, Bradesco, Audi Mexico), process automation, and API integrations.
-</li>
-
-<li>
-<strong>Infrastructure / Project Analyst – MJV Technology (Bradesco Project)</strong> — Remote • Contractor<br>
-Work in a critical banking environment, supporting corporate operations,
-incident management, and high-complexity projects, following security
-and governance standards.
-</li>
-
-<li>
-<strong>Network / NOC Analyst – Vivatech Telecom</strong> — Remote • Contractor<br>
-Proactive infrastructure monitoring, link troubleshooting, routing,
-service stability, backups, and operational continuity.
-</li>
-
-<li>
-<strong>Master Network Technician – RR64 Network Intelligence</strong> — Remote • Full-time<br>
-Backbone operations and critical corporate network environments with strict SLAs.
-</li>
-
-<li>
-<strong>NOC Analyst N1/N2 – MetroNetwork</strong> — Hybrid • Full-time<br>
-Monitoring, incident response, and ISP support operations.
-</li>
-
-<li>
-<strong>Network Technician – Vetorial Operator</strong> — On-site • Full-time<br>
-Deployment and maintenance of corporate network infrastructure.
-</li>
+<li><strong>Implementation Consultant – Ellevo Software</strong></li>
+<li><strong>Infrastructure / Project Analyst – MJV (Bradesco Project)</strong></li>
+<li><strong>Network / NOC Analyst – Vivatech Telecom</strong></li>
+<li><strong>Master Network Technician – RR64 Network Intelligence</strong></li>
 </ul>
 </section>
 
