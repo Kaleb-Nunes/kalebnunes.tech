@@ -112,6 +112,23 @@ border:6px solid rgba(255,255,255,.95);
 object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.35)
 }
 
+/* CONTACT INFO */
+.contact-info{
+margin-top:18px;
+display:flex;
+flex-wrap:wrap;
+gap:18px;
+font-size:.95em
+}
+.contact-info a,
+.contact-info span{
+color:#e0e7ff;
+text-decoration:none;
+display:flex;
+align-items:center;
+gap:8px
+}
+
 /* BUTTON */
 .btn-download{
 display:inline-flex;align-items:center;gap:10px;
@@ -168,26 +185,36 @@ body{background:#fff}
 </nav>
 
 <div class="lang-switch">
-<a href="/index.html" class="active">
-<img src="https://flagcdn.com/w20/br.png"> PT
-</a>
-<a href="/index-en.html">
-<img src="https://flagcdn.com/w20/us.png"> EN
-</a>
-<a href="/index-es.html">
-<img src="https://flagcdn.com/w20/es.png"> ES
-</a>
+<a href="/index.html" class="active"><img src="https://flagcdn.com/w20/br.png"> PT</a>
+<a href="/index-en.html"><img src="https://flagcdn.com/w20/us.png"> EN</a>
+<a href="/index-es.html"><img src="https://flagcdn.com/w20/es.png"> ES</a>
 </div>
 
 <div class="container">
 
 <header class="header">
 <div class="header-content">
+
 <img src="assets/Mídia%20(2).jpg" class="photo">
 
 <div>
 <h1>KALEB NUNES DOS SANTOS</h1>
 <h2>Consultor de Implantação | Automação, Redes e Observabilidade</h2>
+
+<div class="contact-info">
+<a href="https://www.linkedin.com/in/SEU-LINKEDIN" target="_blank">
+<i class="fab fa-linkedin"></i> LinkedIn
+</a>
+<a href="mailto:seuemail@email.com">
+<i class="fas fa-envelope"></i> seuemail@email.com
+</a>
+<a href="tel:+55XXXXXXXXX">
+<i class="fas fa-phone"></i> +55 XX XXXXX-XXXX
+</a>
+<span>
+<i class="fas fa-location-dot"></i> Cidade / Brasil
+</span>
+</div>
 
 <p style="margin-top:15px;max-width:520px">
 Especialista em implantação de plataformas enterprise, automação de processos,
@@ -198,6 +225,7 @@ monitoramento NOC e integração de sistemas críticos.
 <i class="fas fa-download"></i> Download CV
 </a>
 </div>
+
 </div>
 
 <div class="dashboard-metrics">
