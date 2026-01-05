@@ -34,7 +34,7 @@ body.dark .navbar{background:#020617}
 .navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
 body.dark .navbar a{color:#93c5fd}
 
-/* LANGUAGE SWITCH – FLAGS (NO EMOJI) */
+/* LANGUAGE SWITCH */
 .lang-switch{
 position:fixed;
 top:16px;
@@ -48,10 +48,7 @@ align-items:center;
 gap:14px;
 z-index:1000
 }
-body.dark .lang-switch{
-background:#020617;
-border-color:#60a5fa
-}
+body.dark .lang-switch{background:#020617;border-color:#60a5fa}
 .lang-switch a{
 color:#1e3a8a;
 text-decoration:none;
@@ -62,16 +59,10 @@ gap:6px;
 border-bottom:2px solid transparent
 }
 body.dark .lang-switch a{color:#93c5fd}
-.lang-switch a.active{
-border-bottom:2px solid #2563eb
-}
-.lang-switch img{
-width:22px;
-height:16px;
-border-radius:3px
-}
+.lang-switch a.active{border-bottom:2px solid #2563eb}
+.lang-switch img{width:22px;height:16px;border-radius:3px}
 
-/* DARK MODE BUTTON */
+/* DARK MODE */
 #darkToggle{
 position:fixed;top:15px;left:30px;
 background:#1e3a8a;color:#fff;border:none;
@@ -97,6 +88,25 @@ width:180px;height:180px;border-radius:50%;
 border:6px solid rgba(255,255,255,.95);
 object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.35)
 }
+
+/* CONTACT INFO (FIX EN) */
+.contact-info{
+margin-top:14px;
+display:flex;
+flex-direction:column;
+gap:10px
+}
+.contact-info a,
+.contact-info span{
+color:#ffffff;
+text-decoration:none;
+font-size:15px;
+display:flex;
+align-items:center;
+gap:8px
+}
+.contact-info a:hover{text-decoration:underline}
+.contact-info i{font-size:16px}
 
 /* BUTTON */
 .btn-download{
@@ -147,17 +157,10 @@ body.dark .footer{background:#020617;color:#94a3b8}
 <a href="#experience">Experience</a>
 </nav>
 
-<!-- LANGUAGE SWITCH -->
 <div class="lang-switch">
-<a href="/index.html">
-<img src="https://flagcdn.com/w20/br.png" alt="Brazil"> PT
-</a>
-<a href="/index-en.html" class="active">
-<img src="https://flagcdn.com/w20/us.png" alt="United States"> EN
-</a>
-<a href="/index-es.html">
-<img src="https://flagcdn.com/w20/es.png" alt="Spain"> ES
-</a>
+<a href="index.html"><img src="https://flagcdn.com/w20/br.png"> PT</a>
+<a href="index-en.html" class="active"><img src="https://flagcdn.com/w20/us.png"> EN</a>
+<a href="index-es.html"><img src="https://flagcdn.com/w20/es.png"> ES</a>
 </div>
 
 <div class="container">
@@ -172,28 +175,20 @@ body.dark .footer{background:#020617;color:#94a3b8}
 <h2>Implementation Consultant | Automation, Networks & Observability</h2>
 
 <div class="contact-info">
-  <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">
-    <i class="fab fa-linkedin"></i> LinkedIn
-  </a>
-
-  <a href="https://wa.me/5547988901616" target="_blank">
-    <i class="fab fa-whatsapp"></i> WhatsApp
-  </a>
-
-  <a href="mailto:kalebdossantos59924@gmail.com">
-    <i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com
-  </a>
-
-  <span>
+<a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">
+<i class="fab fa-linkedin"></i> LinkedIn
+</a>
+<a href="https://wa.me/5547988901616" target="_blank">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+<a href="mailto:kalebdossantos59924@gmail.com">
+<i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com
+</a>
+<span>
 <i class="fas fa-location-dot"></i>
 Balneário Camboriú • SC • Brazil
-  </span>
+</span>
 </div>
-  
-<p style="margin-top:15px;max-width:520px">
-Specialist in enterprise platform implementations, process automation,
-NOC monitoring, and integration of mission-critical systems.
-</p>
 
 <a id="cvDownload" class="btn-download" target="_blank">
 <i class="fas fa-download"></i> Download CV
@@ -222,29 +217,28 @@ observability, and IT governance.
 <section id="projects" class="section">
 <h2 class="section-title">Implementation Projects</h2>
 <ul>
-<li>Implementation of ITSM platforms (Ellevo Next)</li>
-<li>Workflow automation using PowerShell and REST APIs</li>
-<li>Executive and NOC dashboards with Grafana</li>
-<li>Projects conducted following best practices and LGPD compliance</li>
+<li>Implementation of ITSM platforms</li>
+<li>Process automation with PowerShell and APIs</li>
+<li>Executive dashboards with Grafana</li>
+<li>Observability and monitoring projects</li>
 </ul>
 </section>
 
 <section id="indicators" class="section">
 <h2 class="section-title">Professional Indicators</h2>
 <ul>
-<li>Average 40% reduction in deployment time</li>
-<li>Process standardization and governance improvement</li>
-<li>Experience in regulated and mission-critical environments</li>
+<li>40% average deployment time reduction</li>
+<li>Improved stability of critical environments</li>
+<li>Process standardization</li>
 </ul>
 </section>
 
 <section id="experience" class="section">
 <h2 class="section-title">Professional Experience</h2>
 <ul>
-<li><strong>Implementation Consultant – Ellevo Software</strong></li>
-<li><strong>Infrastructure / Project Analyst – MJV (Bradesco Project)</strong></li>
-<li><strong>Network / NOC Analyst – Vivatech Telecom</strong></li>
-<li><strong>Master Network Technician – RR64 Network Intelligence</strong></li>
+<li><strong>Implementation Consultant – Ellevo</strong></li>
+<li><strong>Infrastructure Analyst – MJV</strong></li>
+<li><strong>Network Analyst – VivaTech</strong></li>
 </ul>
 </section>
 
@@ -266,7 +260,6 @@ toggle.onclick=()=>{
 document.body.classList.toggle("dark");
 toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
 };
-
 document.getElementById("cvDownload").href="assets/Kaleb-Nunes-CV-EN.pdf";
 </script>
 
