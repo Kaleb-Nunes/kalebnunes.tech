@@ -6,14 +6,14 @@
 
 <title>Kaleb Nunes dos Santos | Consultor de Implantação</title>
 
-<meta name="description" content="Consultor de Implantação especializado em automação, redes e observabilidade. Experiência em ambientes enterprise e projetos críticos.">
+<meta name="description" content="Consultor de Implantação com experiência em automação, redes, observabilidade e ambientes enterprise.">
 <meta name="author" content="Kaleb Nunes dos Santos">
-<meta name="robots" content="index, follow">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 
@@ -21,8 +21,7 @@ body{
 font-family:Inter,sans-serif;
 background:#eef2f7;
 color:#1f2937;
-padding-top:90px;
-transition:.3s
+padding-top:90px
 }
 body.dark{background:#020617;color:#e5e7eb}
 
@@ -38,20 +37,7 @@ body.dark .navbar{background:#020617}
 .navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
 body.dark .navbar a{color:#93c5fd}
 
-/* LANGUAGE */
-.lang-switch{
-position:fixed;top:16px;right:30px;
-background:#fff;border:2px solid #2563eb;
-border-radius:12px;padding:8px 14px;
-display:flex;gap:14px;z-index:1000
-}
-body.dark .lang-switch{background:#020617;border-color:#60a5fa}
-.lang-switch a{display:flex;gap:6px;font-weight:600;text-decoration:none;color:#1e3a8a}
-body.dark .lang-switch a{color:#93c5fd}
-.lang-switch img{width:22px;height:16px;border-radius:3px}
-.lang-switch a.active{border-bottom:2px solid #2563eb}
-
-/* DARK BUTTON */
+/* DARK MODE */
 #darkToggle{
 position:fixed;top:15px;left:30px;
 background:#1e3a8a;color:#fff;
@@ -117,7 +103,7 @@ padding:22px;border-radius:14px;text-align:center
 .section{padding:70px 55px}
 .section-title{
 font-size:1.6em;font-weight:700;color:#1e3a8a;
-margin-bottom:30px
+margin-bottom:20px
 }
 body.dark .section-title{color:#93c5fd}
 ul{padding-left:20px;line-height:1.8}
@@ -129,37 +115,10 @@ background:#f8fafc;color:#6b7280
 }
 body.dark .footer{background:#020617;color:#94a3b8}
 
-/* MOBILE FIX */
-@media (max-width: 768px){
-
-  body{padding-top:130px}
-
-  #darkToggle{
-    top:10px;left:10px;
-    padding:6px 12px;font-size:0.85rem
-  }
-
-  .lang-switch{
-    top:10px;right:10px;
-    padding:6px 10px;gap:10px
-  }
-
-  .navbar{
-    top:60px;
-    padding:12px;
-    gap:20px;
-    font-size:0.9rem
-  }
-
-  .header-content{
-    flex-direction:column;
-    text-align:center
-  }
-
-  .contact-info{
-    align-items:center;
-    text-align:center
-  }
+/* MOBILE */
+@media (max-width:768px){
+.header-content{flex-direction:column;text-align:center}
+.contact-info{align-items:center}
 }
 </style>
 </head>
@@ -173,13 +132,8 @@ body.dark .footer{background:#020617;color:#94a3b8}
 <a href="#projetos">Projetos</a>
 <a href="#indicadores">Indicadores</a>
 <a href="#experiencia">Experiência</a>
+<a href="#referencias">Referências</a>
 </nav>
-
-<div class="lang-switch">
-<a href="/index.html" class="active"><img src="https://flagcdn.com/w20/br.png">PT</a>
-<a href="/index-en.html"><img src="https://flagcdn.com/w20/us.png">EN</a>
-<a href="/index-es.html"><img src="https://flagcdn.com/w20/es.png">ES</a>
-</div>
 
 <div class="container">
 
@@ -194,13 +148,11 @@ body.dark .footer{background:#020617;color:#94a3b8}
 <div class="contact-info">
 <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
 <a href="https://wa.me/5547988901616" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-<a href="mailto:kalebdossantos59924@gmail.com"><i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com</a>
-<a href="https://www.instagram.com/kaleb_nunesdossantos" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-<a href="https://www.facebook.com/share/1DAz4CjVcL/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+<a href="mailto:kalebdossantos59924@gmail.com"><i class="fas fa-envelope"></i> Email</a>
 <span><i class="fas fa-location-dot"></i> Balneário Camboriú • SC • Brasil</span>
 </div>
 
-<a id="cvDownload" class="btn-download" target="_blank">
+<a class="btn-download" href="assets/Kaleb-Nunes-CV.pdf" target="_blank">
 <i class="fas fa-download"></i> Download CV
 </a>
 </div>
@@ -208,41 +160,66 @@ body.dark .footer{background:#020617;color:#94a3b8}
 
 <div class="dashboard-metrics">
 <div class="metric"><span>6+</span>Anos de experiência</div>
-<div class="metric"><span>40%</span>Redução no tempo</div>
+<div class="metric"><span>40%</span>Redução de tempo</div>
 <div class="metric"><span>Enterprise</span>Ambientes críticos</div>
-<div class="metric"><span>Alta</span>Confiabilidade</div>
+<div class="metric"><span>Alta</span>Disponibilidade</div>
 </div>
 </header>
 
 <section id="perfil" class="section">
 <h2 class="section-title">Perfil Profissional</h2>
-<p>Profissional com sólida atuação em ambientes enterprise, projetos críticos e operações de alta disponibilidade.</p>
+<p>
+Consultor de Implantação com sólida experiência em ambientes enterprise, atuando na implementação de soluções
+tecnológicas, automação de processos, observabilidade e infraestrutura de redes.
+Possui forte foco em eficiência operacional, padronização, estabilidade e melhoria contínua.
+</p>
 </section>
 
 <section id="projetos" class="section">
 <h2 class="section-title">Projetos & Soluções</h2>
 <ul>
-<li>Implantação de plataformas ITSM</li>
-<li>Automação via PowerShell e APIs</li>
-<li>Dashboards executivos com Grafana</li>
+<li>Implantação de plataformas ITSM e ferramentas de gestão de serviços</li>
+<li>Automação de processos com PowerShell, scripts e integrações via API</li>
+<li>Criação de dashboards executivos utilizando Grafana e ferramentas de monitoramento</li>
+<li>Projetos de observabilidade, monitoramento e análise de incidentes</li>
 </ul>
 </section>
 
 <section id="indicadores" class="section">
 <h2 class="section-title">Indicadores Profissionais</h2>
 <ul>
-<li>Redução de 40% no tempo de implantação</li>
-<li>Padronização de processos</li>
+<li>Redução média de 40% no tempo de implantação de soluções</li>
+<li>Melhoria na estabilidade e confiabilidade de ambientes críticos</li>
+<li>Padronização de processos técnicos e operacionais</li>
+<li>Suporte estratégico a times técnicos e gestores</li>
 </ul>
 </section>
 
 <section id="experiencia" class="section">
 <h2 class="section-title">Experiência Profissional</h2>
 <ul>
-<li>Consultor de Implantação – Ellevo</li>
-<li>Analista de Infraestrutura – MJV</li>
-<li>Analista de Redes – Vivatech</li>
+<li><strong>Consultor de Implantação – Ellevo</strong><br>Atuação em projetos de implantação, automação e integração de sistemas.</li>
+<li><strong>Analista de Infraestrutura – MJV</strong><br>Suporte a ambientes corporativos e infraestrutura de TI.</li>
+<li><strong>Analista de Redes – VivaTech</strong><br>Gerenciamento de redes, suporte técnico e ambientes empresariais.</li>
 </ul>
+</section>
+
+<section id="referencias" class="section">
+<h2 class="section-title">Referências Profissionais</h2>
+
+<div style="padding:14px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.08);margin-bottom:20px">
+<strong>Rôney Cordeiro</strong><br>
+CEO | VivaTech (CNPJ 33.692.990/0001-25)<br>
+Telefone: +1 (857) 204-7057<br>
+<em>Recomendação formal disponível | Período: 2022–2025</em>
+</div>
+
+<div style="padding:14px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.08)">
+<strong>Lucas Costa</strong><br>
+MetroNetwork<br>
+Telefone: +55 47 9759-6283
+</div>
+
 </section>
 
 <section class="section" style="text-align:center">
@@ -252,7 +229,7 @@ body.dark .footer{background:#020617;color:#94a3b8}
 </section>
 
 <footer class="footer">
-© 2026 Kaleb Nunes dos Santos • CV Profissional
+© 2026 Kaleb Nunes dos Santos • Portfólio Profissional
 </footer>
 
 </div>
@@ -263,7 +240,6 @@ toggle.onclick=()=>{
 document.body.classList.toggle("dark");
 toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
 };
-document.getElementById("cvDownload").href="assets/Kaleb-Nunes-CV.pdf";
 </script>
 
 </body>
