@@ -22,7 +22,6 @@ transition:.3s
 }
 body.dark{background:#020617;color:#e5e7eb}
 
-/* NAVBAR */
 .navbar{
 position:fixed;top:0;width:100%;
 background:rgba(255,255,255,.95);
@@ -34,7 +33,6 @@ body.dark .navbar{background:#020617}
 .navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
 body.dark .navbar a{color:#93c5fd}
 
-/* TOOLS */
 .lang-switch{
 position:fixed;top:18px;right:30px;font-weight:600;z-index:1000
 }
@@ -48,14 +46,12 @@ padding:8px 14px;border-radius:20px;
 font-weight:600;cursor:pointer;z-index:1000
 }
 
-/* CONTAINER */
 .container{
 max-width:1100px;margin:auto;background:#fff;
 box-shadow:0 10px 40px rgba(0,0,0,.1)
 }
 body.dark .container{background:#020617}
 
-/* HEADER */
 .header{
 background:linear-gradient(135deg,#1e3a8a,#3b82f6);
 color:#fff;padding:55px
@@ -75,7 +71,6 @@ font-weight:700;text-decoration:none;margin-top:20px;transition:.3s
 }
 .btn-download:hover{transform:translateY(-3px)}
 
-/* DASHBOARD */
 .dashboard-metrics{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -87,7 +82,6 @@ padding:22px;border-radius:14px;text-align:center
 }
 .metric span{font-size:2em;font-weight:800;display:block}
 
-/* SECTIONS */
 .section{padding:70px 55px}
 .section-title{
 font-size:1.6em;font-weight:700;color:#1e3a8a;
@@ -96,7 +90,6 @@ margin-bottom:30px
 body.dark .section-title{color:#93c5fd}
 ul{padding-left:20px;line-height:1.8}
 
-/* FOOTER */
 .footer{
 text-align:center;padding:40px;background:#f8fafc;color:#6b7280
 }
@@ -135,7 +128,7 @@ body.dark .footer{background:#020617;color:#94a3b8}
 
 <div>
 <h1>KALEB NUNES DOS SANTOS</h1>
-<h2>Redes | Automação e Infraestrutura</h2>
+<h2>Consultor de Implantação | Automação, Redes e Observabilidade</h2>
 
 <p style="margin-top:15px;max-width:520px">
 Especialista em implantação de plataformas enterprise, automação de processos,
@@ -190,36 +183,36 @@ observabilidade e governança de TI.
 
 <ul>
 <li>
-<strong>Consultor de Implantação – Ellevo Software</strong><br>
+<strong>Consultor de Implantação – Ellevo Software</strong> — Presencial • Cooperado<br>
 Implantação e consultoria em plataforma ITSM para clientes enterprise
 (Iguatemi, BRF, Bradesco, Audi México), automação de processos e integração via APIs.
 </li>
 
 <li>
-<strong>Analista de Infraestrutura / Projetos – MJV Technology (Projeto Bradesco)</strong><br>
+<strong>Analista de Infraestrutura / Projetos – MJV Technology (Projeto Bradesco)</strong> — Remoto • PJ<br>
 Atuação em ambiente bancário crítico, suporte a operações corporativas,
 monitoramento, tratativas de incidentes e apoio a projetos de alta complexidade,
 seguindo padrões de segurança e governança.
 </li>
 
 <li>
-<strong>Analista de Redes / NOC – Vivatech Telecom</strong><br>
+<strong>Analista de Redes / NOC – Vivatech Telecom</strong> — Remoto • PJ<br>
 Monitoramento proativo de infraestrutura, troubleshooting de links,
-roteamento, estabilidade de serviços, backups e apoio à continuidade operacional.
+roteamento, estabilidade de serviços, backups e continuidade operacional.
 </li>
 
 <li>
-<strong>Master Network Technician – RR64 Network Intelligence</strong><br>
+<strong>Master Network Technician – RR64 Network Intelligence</strong> — Remoto • CLT<br>
 Atuação em backbone, ambientes críticos e redes corporativas com SLA rigoroso.
 </li>
 
 <li>
-<strong>Analista NOC N1/N2 – MetroNetwork</strong><br>
+<strong>Analista NOC N1/N2 – MetroNetwork</strong> — Híbrido • CLT<br>
 Monitoramento, resposta a incidentes e suporte a ISPs.
 </li>
 
 <li>
-<strong>Técnico de Redes – Operadora Vetorial</strong><br>
+<strong>Técnico de Redes – Operadora Vetorial</strong> — Presencial • CLT<br>
 Implantação e manutenção de infraestrutura de redes corporativas.
 </li>
 </ul>
@@ -238,14 +231,12 @@ Implantação e manutenção de infraestrutura de redes corporativas.
 </div>
 
 <script>
-/* Dark Mode */
 const toggle=document.getElementById("darkToggle");
 toggle.onclick=()=>{
 document.body.classList.toggle("dark");
 toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
 };
 
-/* CV por idioma */
 let cv="assets/Kaleb-Nunes-CV.pdf";
 if(location.pathname.includes("index-en")) cv="assets/Kaleb-Nunes-CV-EN.pdf";
 if(location.pathname.includes("index-es")) cv="assets/Kaleb-Nunes-CV-ES.pdf";
