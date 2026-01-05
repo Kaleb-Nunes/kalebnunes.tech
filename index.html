@@ -180,11 +180,70 @@ color:#6b7280
 }
 body.dark .footer{background:#020617;color:#94a3b8}
 
-/* MOBILE */
-@media (max-width:768px){
-.header-content{text-align:center;justify-content:center}
-.contact-info a,.contact-info span{justify-content:center}
+  /* ===== MOBILE FIX (ANDROID & IOS) ===== */
+@media (max-width: 900px){
+
+  body{
+    padding-top: 120px;
+  }
+
+  /* HEADER */
+  .header{
+    padding: 40px 25px;
+  }
+
+  .header-content{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .photo{
+    width: 150px;
+    height: 150px;
+  }
+
+  /* CONTACT INFO */
+  .contact-info{
+    align-items: center;
+  }
+
+  /* METRICS */
+  .dashboard-metrics{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .metric{
+    padding: 18px;
+  }
+
+  /* NAVBAR */
+  .navbar{
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 14px 10px;
+  }
+
+  /* LANGUAGE SWITCH */
+  .lang-switch{
+    top: 65px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  /* DARK BUTTON */
+  #darkToggle{
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* SECTIONS */
+  .section{
+    padding: 50px 25px;
+  }
 }
+
 </style>
 </head>
 
