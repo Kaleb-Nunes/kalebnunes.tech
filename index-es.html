@@ -58,10 +58,8 @@ text-decoration:none;
 font-weight:600;
 display:flex;
 align-items:center;
-gap:6px;
-border-bottom:2px solid transparent
+gap:6px
 }
-body.dark .lang-switch a{color:#93c5fd}
 .lang-switch a.active{
 border-bottom:2px solid #2563eb
 }
@@ -98,7 +96,7 @@ border:6px solid rgba(255,255,255,.95);
 object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.35)
 }
 
-/* CONTACT INFO — CORRIGIDO (IGUAL AO EN) */
+/* CONTACT INFO */
 .contact-info{
 margin-top:18px;
 display:flex;
@@ -114,14 +112,20 @@ display:flex;
 align-items:center;
 gap:8px
 }
-.contact-info a:hover{text-decoration:underline}
 
-/* BUTTON */
+/* BUTTONS */
 .btn-download{
-display:inline-flex;align-items:center;gap:10px;
-background:#fff;color:#1e3a8a;
-padding:14px 30px;border-radius:30px;
-font-weight:700;text-decoration:none;margin-top:20px;transition:.3s
+display:inline-flex;
+align-items:center;
+gap:10px;
+background:#fff;
+color:#1e3a8a;
+padding:14px 30px;
+border-radius:30px;
+font-weight:700;
+text-decoration:none;
+margin-top:14px;
+transition:.3s
 }
 .btn-download:hover{transform:translateY(-3px)}
 
@@ -152,70 +156,18 @@ text-align:center;padding:40px;background:#f8fafc;color:#6b7280
 }
 body.dark .footer{background:#020617;color:#94a3b8}
 
-  /* ===== MOBILE FIX (ANDROID & IOS) ===== */
-@media (max-width: 900px){
-
-  body{
-    padding-top: 120px;
-  }
-
-  /* HEADER */
-  .header{
-    padding: 40px 25px;
-  }
-
-  .header-content{
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .photo{
-    width: 150px;
-    height: 150px;
-  }
-
-  /* CONTACT INFO */
-  .contact-info{
-    align-items: center;
-  }
-
-  /* METRICS */
-  .dashboard-metrics{
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .metric{
-    padding: 18px;
-  }
-
-  /* NAVBAR */
-  .navbar{
-    flex-wrap: wrap;
-    gap: 14px;
-    padding: 14px 10px;
-  }
-
-  /* LANGUAGE SWITCH */
-  .lang-switch{
-    top: 65px;
-    right: 50%;
-    transform: translateX(50%);
-  }
-
-  /* DARK BUTTON */
-  #darkToggle{
-    top: 65px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  /* SECTIONS */
-  .section{
-    padding: 50px 25px;
-  }
+/* MOBILE FIX */
+@media (max-width:900px){
+body{padding-top:120px}
+.header-content{flex-direction:column;text-align:center}
+.photo{width:150px;height:150px}
+.contact-info{align-items:center}
+.dashboard-metrics{grid-template-columns:1fr}
+.navbar{flex-wrap:wrap}
+.lang-switch{top:65px;right:50%;transform:translateX(50%)}
+#darkToggle{top:65px;left:50%;transform:translateX(-50%)}
+.section{padding:50px 25px}
 }
-
 </style>
 </head>
 
@@ -257,8 +209,12 @@ body.dark .footer{background:#020617;color:#94a3b8}
 <a id="cvDownload" class="btn-download" target="_blank">
 <i class="fas fa-download"></i> Descargar CV
 </a>
-</div>
 
+<a id="recDownload" class="btn-download" target="_blank">
+<i class="fas fa-file-signature"></i> Carta de Recomendación Técnica
+</a>
+
+</div>
 </div>
 
 <div class="dashboard-metrics">
@@ -271,18 +227,15 @@ body.dark .footer{background:#020617;color:#94a3b8}
 
 <section id="perfil" class="section">
 <h2 class="section-title">Perfil Profesional</h2>
-<p>
-Profesional con sólida experiencia en entornos empresariales, proyectos críticos
-y operaciones de alta disponibilidad.
-</p>
+<p>Profesional con sólida experiencia en proyectos empresariales y entornos críticos.</p>
 </section>
 
 <section id="proyectos" class="section">
 <h2 class="section-title">Proyectos de Implementación</h2>
 <ul>
-<li>Implementación de plataforma ITSM (Ellevo Next)</li>
-<li>Automatización con PowerShell y APIs REST</li>
-<li>Dashboards ejecutivos y NOC con Grafana</li>
+<li>Implementación ITSM (Ellevo Next)</li>
+<li>Automatización con PowerShell y APIs</li>
+<li>Dashboards con Grafana</li>
 </ul>
 </section>
 
@@ -291,7 +244,7 @@ y operaciones de alta disponibilidad.
 <ul>
 <li>Reducción promedio del 40%</li>
 <li>Estandarización de procesos</li>
-<li>Entornos regulados y críticos</li>
+<li>Alta disponibilidad</li>
 </ul>
 </section>
 
@@ -316,7 +269,9 @@ toggle.onclick=()=>{
 document.body.classList.toggle("dark");
 toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
 };
+
 document.getElementById("cvDownload").href="assets/Kaleb-Nunes-CV-ES.pdf";
+document.getElementById("recDownload").href="assets/Carta-Recomendacion-Tecnica-ES.pdf";
 </script>
 
 </body>
