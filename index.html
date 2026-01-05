@@ -34,9 +34,23 @@ body.dark .navbar{background:#020617}
 body.dark .navbar a{color:#93c5fd}
 
 .lang-switch{
-position:fixed;top:18px;right:30px;font-weight:600;z-index:1000
+position:fixed;
+top:18px;
+right:30px;
+font-weight:600;
+z-index:1000;
+display:flex;
+align-items:center;
+gap:8px
 }
-.lang-switch a{color:#1e3a8a;text-decoration:none;margin-left:8px}
+.lang-switch a{
+color:#1e3a8a;
+text-decoration:none;
+display:inline-flex;
+align-items:center;
+gap:6px;
+font-size:.95em
+}
 body.dark .lang-switch a{color:#93c5fd}
 
 #darkToggle{
@@ -113,10 +127,11 @@ body.dark .footer{background:#020617;color:#94a3b8}
 <a href="#experiencia">Experiência</a>
 </nav>
 
+<!-- Seletor de Idioma com Bandeiras -->
 <div class="lang-switch">
-<a href="index.html">PT</a> |
-<a href="index-en.html">EN</a> |
-<a href="index-es.html">ES</a>
+<a href="index.html" title="Português (Brasil)">🇧🇷 PT</a> |
+<a href="index-en.html" title="English">🇺🇸 EN</a> |
+<a href="index-es.html" title="Español">🇪🇸 ES</a>
 </div>
 
 <div class="container">
@@ -180,48 +195,12 @@ observabilidade e governança de TI.
 
 <section id="experiencia" class="section">
 <h2 class="section-title">Experiência Profissional</h2>
-
 <ul>
-<li>
-<strong>Consultor de Implantação – Ellevo Software</strong> — Presencial • Cooperado<br>
-Implantação e consultoria em plataforma ITSM para clientes enterprise
-(Iguatemi, BRF, Bradesco, Audi México), automação de processos e integração via APIs.
-</li>
-
-<li>
-<strong>Analista de Infraestrutura / Projetos – MJV Technology (Projeto Bradesco)</strong> — Remoto • PJ<br>
-Atuação em ambiente bancário crítico, suporte a operações corporativas,
-monitoramento, tratativas de incidentes e apoio a projetos de alta complexidade,
-seguindo padrões de segurança e governança.
-</li>
-
-<li>
-<strong>Analista de Redes / NOC – Vivatech Telecom</strong> — Remoto • PJ<br>
-Monitoramento proativo de infraestrutura, troubleshooting de links,
-roteamento, estabilidade de serviços, backups e continuidade operacional.
-</li>
-
-<li>
-<strong>Master Network Technician – RR64 Network Intelligence</strong> — Remoto • CLT<br>
-Atuação em backbone, ambientes críticos e redes corporativas com SLA rigoroso.
-</li>
-
-<li>
-<strong>Analista NOC N1/N2 – MetroNetwork</strong> — Híbrido • CLT<br>
-Monitoramento, resposta a incidentes e suporte a ISPs.
-</li>
-
-<li>
-<strong>Técnico de Redes – Operadora Vetorial</strong> — Presencial • CLT<br>
-Implantação e manutenção de infraestrutura de redes corporativas.
-</li>
+<li><strong>Consultor de Implantação – Ellevo Software</strong> — Presencial • Cooperado</li>
+<li><strong>Analista de Infraestrutura – MJV (Projeto Bradesco)</strong> — Remoto • PJ</li>
+<li><strong>Analista de Redes / NOC – Vivatech Telecom</strong> — Remoto • PJ</li>
+<li><strong>Master Network Technician – RR64</strong> — Remoto • CLT</li>
 </ul>
-</section>
-
-<section class="section" style="text-align:center">
-<a href="assets/carta-de-recomendacao-tecnica.png" target="_blank" class="btn-download">
-<i class="fas fa-file-signature"></i> Carta de Recomendação Técnica
-</a>
 </section>
 
 <footer class="footer">
