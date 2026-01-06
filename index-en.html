@@ -9,138 +9,36 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-
-body{
-font-family:Inter,sans-serif;
-background:#eef2f7;
-color:#1f2937;
-padding-top:90px;
-transition:.3s
-}
+body{font-family:Inter,sans-serif;background:#eef2f7;color:#1f2937;padding-top:90px}
 body.dark{background:#020617;color:#e5e7eb}
-
-/* NAVBAR */
-.navbar{
-position:fixed;top:0;width:100%;
-background:rgba(255,255,255,.95);
-backdrop-filter:blur(10px);
-display:flex;justify-content:center;gap:32px;
-padding:16px;box-shadow:0 2px 20px rgba(0,0,0,.08);z-index:999
-}
+.navbar{position:fixed;top:0;width:100%;background:rgba(255,255,255,.95);display:flex;justify-content:center;gap:32px;padding:16px;z-index:999}
 body.dark .navbar{background:#020617}
 .navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
 body.dark .navbar a{color:#93c5fd}
-
-/* LANGUAGE SWITCH */
-.lang-switch{
-position:fixed;
-top:16px;
-right:30px;
-background:#fff;
-border:2px solid #2563eb;
-border-radius:12px;
-padding:8px 14px;
-display:flex;
-align-items:center;
-gap:14px;
-z-index:1000
-}
+.lang-switch{position:fixed;top:16px;right:30px;background:#fff;border:2px solid #2563eb;border-radius:12px;padding:8px 14px;display:flex;gap:14px;z-index:1000}
 body.dark .lang-switch{background:#020617;border-color:#60a5fa}
-.lang-switch a{
-color:#1e3a8a;
-text-decoration:none;
-font-weight:600;
-display:flex;
-align-items:center;
-gap:6px;
-border-bottom:2px solid transparent
-}
-body.dark .lang-switch a{color:#93c5fd}
+.lang-switch a{color:#1e3a8a;text-decoration:none;font-weight:600;display:flex;align-items:center;gap:6px}
 .lang-switch a.active{border-bottom:2px solid #2563eb}
-.lang-switch img{width:22px;height:16px;border-radius:3px}
-
-/* DARK MODE */
-#darkToggle{
-position:fixed;top:15px;left:30px;
-background:#1e3a8a;color:#fff;border:none;
-padding:8px 14px;border-radius:20px;
-font-weight:600;cursor:pointer;z-index:1000
-}
-
-/* CONTAINER */
-.container{
-max-width:1100px;margin:auto;background:#fff;
-box-shadow:0 10px 40px rgba(0,0,0,.1)
-}
+#darkToggle{position:fixed;top:15px;left:30px;background:#1e3a8a;color:#fff;border:none;padding:8px 14px;border-radius:20px;cursor:pointer;z-index:1000}
+.container{max-width:1100px;margin:auto;background:#fff}
 body.dark .container{background:#020617}
-
-/* HEADER */
-.header{
-background:linear-gradient(135deg,#1e3a8a,#3b82f6);
-color:#fff;padding:55px
-}
+.header{background:linear-gradient(135deg,#1e3a8a,#3b82f6);color:#fff;padding:55px}
 .header-content{display:flex;gap:40px;align-items:center}
-.photo{
-width:180px;height:180px;border-radius:50%;
-border:6px solid rgba(255,255,255,.95);
-object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.35)
-}
-
-/* CONTACT INFO */
-.contact-info{
-margin-top:14px;
-display:flex;
-flex-direction:column;
-gap:10px
-}
-.contact-info a,
-.contact-info span{
-color:#ffffff;
-text-decoration:none;
-font-size:15px;
-display:flex;
-align-items:center;
-gap:8px
-}
-
-/* BUTTON */
-.btn-download{
-display:inline-flex;align-items:center;gap:10px;
-background:#fff;color:#1e3a8a;
-padding:14px 30px;border-radius:30px;
-font-weight:700;text-decoration:none;margin-top:20px;transition:.3s
-}
-.btn-download:hover{transform:translateY(-3px)}
-
-/* SECTIONS */
+.photo{width:180px;height:180px;border-radius:50%;border:6px solid #fff}
+.contact-info{margin-top:14px;display:flex;flex-direction:column;gap:10px}
+.contact-info a,.contact-info span{color:#fff;text-decoration:none}
+.btn-download{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#1e3a8a;padding:14px 30px;border-radius:30px;font-weight:700;text-decoration:none;margin-top:20px}
 .section{padding:70px 55px}
-.section-title{
-font-size:1.6em;font-weight:700;color:#1e3a8a;
-margin-bottom:30px
-}
+.section-title{font-size:1.6em;font-weight:700;color:#1e3a8a;margin-bottom:30px}
 body.dark .section-title{color:#93c5fd}
-ul{padding-left:20px;line-height:1.8}
-
-/* FOOTER */
-.footer{
-text-align:center;padding:40px;background:#f8fafc;color:#6b7280
-}
+.footer{text-align:center;padding:40px;background:#f8fafc;color:#6b7280}
 body.dark .footer{background:#020617;color:#94a3b8}
-
-/* MOBILE */
-@media (max-width:900px){
-body{padding-top:120px}
-.header-content{flex-direction:column;text-align:center}
-.photo{width:150px;height:150px}
-.contact-info{align-items:center}
-.navbar{flex-wrap:wrap}
-.lang-switch{top:65px;right:50%;transform:translateX(50%)}
-#darkToggle{top:65px;left:50%;transform:translateX(-50%)}
-.section{padding:50px 25px}
-}
+.experience-item{margin-bottom:28px}
+.experience-item h3{font-size:1.1em;margin-bottom:6px}
+.experience-item span{font-size:.9em;color:#6b7280}
+body.dark .experience-item span{color:#9ca3af}
 </style>
 </head>
 
@@ -156,60 +54,78 @@ body{padding-top:120px}
 </nav>
 
 <div class="lang-switch">
-<a href="index.html">
-<img src="https://flagcdn.com/w20/br.png"> PT
-</a>
-<a href="index-en.html" class="active">
-<img src="https://flagcdn.com/w20/us.png"> EN
-</a>
-<a href="index-es.html">
-<img src="https://flagcdn.com/w20/es.png"> ES
-</a>
+<a href="index.html"><img src="https://flagcdn.com/w20/br.png"> PT</a>
+<a href="index-en.html" class="active"><img src="https://flagcdn.com/w20/us.png"> EN</a>
+<a href="index-es.html"><img src="https://flagcdn.com/w20/es.png"> ES</a>
 </div>
 
 <div class="container">
 
-<header class="header">
+<header class="header" id="profile">
 <div class="header-content">
-
-<img src="assets/Mídia%20(2).jpg" class="photo" alt="Kaleb Nunes dos Santos">
-
+<img src="assets/Mídia%20(2).jpg" class="photo">
 <div>
 <h1>KALEB NUNES DOS SANTOS</h1>
 <h2>Implementation Consultant | Automation, Networks & Observability</h2>
 
 <div class="contact-info">
-<a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">
-<i class="fab fa-linkedin"></i> LinkedIn
-</a>
-<a href="https://wa.me/5547988901616" target="_blank">
-<i class="fab fa-whatsapp"></i> WhatsApp
-</a>
-<a href="mailto:kalebdossantos59924@gmail.com">
-<i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com
-</a>
-<span>
-<i class="fas fa-location-dot"></i>
-Balneário Camboriú • SC • Brazil
-</span>
+<a href="https://www.linkedin.com/in/kalebnunes/">LinkedIn</a>
+<a href="https://wa.me/5547988901616">WhatsApp</a>
+<a href="mailto:kalebdossantos59924@gmail.com">Email</a>
+<span>Balneário Camboriú • SC • Brazil</span>
 </div>
 
 <a id="cvDownload" class="btn-download" target="_blank">
 <i class="fas fa-download"></i> Download CV
 </a>
 </div>
-
 </div>
 </header>
 
 <section id="experience" class="section">
 <h2 class="section-title">Professional Experience</h2>
-<ul>
-<li><strong>Bradesco Seguros – Technical Consulting</strong></li>
-<li><strong>Implementation Consultant – Ellevo Software</strong></li>
-<li><strong>Network Analyst – VivaTech</strong></li>
-<li><strong>Master / Senior Network Technician – RR64 Network Intelligence</strong></li>
-</ul>
+
+<div class="experience-item">
+<h3>Bradesco Seguros – Technical Consulting</h3>
+<span>Remote | PJ</span>
+<p>
+Work in a highly critical corporate environment, focused on integration and handling of sensitive data in compliance with LGPD.
+Responsible for API consumption and testing using Postman, data processing and validation, as well as receiving and managing tickets via email.
+Support for large-scale national insurance operations, ensuring compliance, traceability, and operational continuity.
+</p>
+</div>
+
+<div class="experience-item">
+<h3>Implementation Consultant – Ellevo Software</h3>
+<span>On-site | Cooperative | Current</span>
+<p>
+Direct involvement in ITSM platform implementation projects, performing configuration, parameterization, functional testing,
+and go-live support. Technical interface with enterprise clients, requirements gathering, support for API/REST integrations,
+and consultative guidance for process adaptation and service management best practices.
+</p>
+</div>
+
+<div class="experience-item">
+<h3>Network Analyst – VivaTech</h3>
+<span>Remote | PJ</span>
+<p>
+Responsible for monitoring and supporting network infrastructure, ensuring availability, stability, and service performance.
+Activities include link troubleshooting, incident analysis, SLA monitoring, specialized monitoring tools usage,
+and support for operational continuity of critical environments.
+</p>
+</div>
+
+<div class="experience-item">
+<h3>Master / Senior Network Technician – RR64 Network Intelligence</h3>
+<span>Indaiatuba – SP | Remote | CLT</span>
+<p>
+Senior-level performance in network and infrastructure environments, focused on advanced incident analysis,
+continuous improvement, technical standardization, and mission-critical environment support.
+Participation in projects, high-level troubleshooting, technical documentation,
+and strategic support for operational teams.
+</p>
+</div>
+
 </section>
 
 <section class="section" style="text-align:center">
@@ -230,7 +146,6 @@ toggle.onclick=()=>{
 document.body.classList.toggle("dark");
 toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
 };
-
 document.getElementById("cvDownload").href="assets/Kaleb_Nunes_CV_EN_2026.pdf";
 document.getElementById("recDownload").href="assets/Technical-Recommendation-Letter-EN.pdf";
 </script>
