@@ -9,31 +9,95 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Inter,sans-serif;background:#eef2f7;color:#1f2937;padding-top:90px}
+
+body{
+font-family:Inter,sans-serif;
+background:#eef2f7;
+color:#1f2937;
+padding-top:90px;
+transition:.3s
+}
 body.dark{background:#020617;color:#e5e7eb}
-.navbar{position:fixed;top:0;width:100%;background:rgba(255,255,255,.95);display:flex;justify-content:center;gap:32px;padding:16px;z-index:999}
+
+/* NAVBAR */
+.navbar{
+position:fixed;top:0;width:100%;
+background:rgba(255,255,255,.95);
+display:flex;justify-content:center;gap:32px;
+padding:16px;z-index:999
+}
 body.dark .navbar{background:#020617}
 .navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
 body.dark .navbar a{color:#93c5fd}
-.lang-switch{position:fixed;top:16px;right:30px;background:#fff;border:2px solid #2563eb;border-radius:12px;padding:8px 14px;display:flex;gap:14px;z-index:1000}
+
+/* LANGUAGE SWITCH */
+.lang-switch{
+position:fixed;top:16px;right:30px;
+background:#fff;border:2px solid #2563eb;
+border-radius:12px;padding:8px 14px;
+display:flex;gap:14px;z-index:1000
+}
 body.dark .lang-switch{background:#020617;border-color:#60a5fa}
-.lang-switch a{color:#1e3a8a;text-decoration:none;font-weight:600}
+.lang-switch a{text-decoration:none;font-weight:600;color:#1e3a8a}
 .lang-switch a.active{border-bottom:2px solid #2563eb}
-#darkToggle{position:fixed;top:15px;left:30px;background:#1e3a8a;color:#fff;border:none;padding:8px 14px;border-radius:20px;cursor:pointer;z-index:1000}
+
+/* DARK MODE */
+#darkToggle{
+position:fixed;top:15px;left:30px;
+background:#1e3a8a;color:#fff;border:none;
+padding:8px 14px;border-radius:20px;
+cursor:pointer;z-index:1000
+}
+
+/* CONTAINER */
 .container{max-width:1100px;margin:auto;background:#fff}
 body.dark .container{background:#020617}
-.header{background:linear-gradient(135deg,#1e3a8a,#3b82f6);color:#fff;padding:55px}
+
+/* HEADER */
+.header{
+background:linear-gradient(135deg,#1e3a8a,#3b82f6);
+color:#fff;padding:55px
+}
 .header-content{display:flex;gap:40px;align-items:center}
-.photo{width:180px;height:180px;border-radius:50%;border:6px solid #fff}
-.contact-info{margin-top:14px;display:flex;flex-direction:column;gap:10px}
-.contact-info a,.contact-info span{color:#fff;text-decoration:none}
-.btn-download{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#1e3a8a;padding:14px 30px;border-radius:30px;font-weight:700;text-decoration:none;margin-top:20px}
+.photo{
+width:180px;height:180px;border-radius:50%;
+border:6px solid #fff;object-fit:cover
+}
+
+/* CONTACT */
+.contact-info{
+margin-top:14px;display:flex;
+flex-direction:column;gap:10px
+}
+.contact-info a,.contact-info span{
+color:#fff;text-decoration:none
+}
+
+/* BUTTON */
+.btn-download{
+display:inline-flex;align-items:center;gap:10px;
+background:#fff;color:#1e3a8a;
+padding:14px 30px;border-radius:30px;
+font-weight:700;text-decoration:none;margin-top:20px
+}
+
+/* SECTIONS */
 .section{padding:70px 55px}
-.section-title{font-size:1.6em;font-weight:700;color:#1e3a8a;margin-bottom:30px}
+.section-title{
+font-size:1.6em;font-weight:700;
+color:#1e3a8a;margin-bottom:30px
+}
 body.dark .section-title{color:#93c5fd}
-.footer{text-align:center;padding:40px;background:#f8fafc;color:#6b7280}
+ul{padding-left:20px;line-height:1.8}
+
+/* FOOTER */
+.footer{
+text-align:center;padding:40px;
+background:#f8fafc;color:#6b7280
+}
 body.dark .footer{background:#020617;color:#94a3b8}
 </style>
 </head>
@@ -44,9 +108,8 @@ body.dark .footer{background:#020617;color:#94a3b8}
 
 <nav class="navbar">
 <a href="#profile">Profile</a>
-<a href="#projects">Projects</a>
-<a href="#indicators">Indicators</a>
 <a href="#experience">Experience</a>
+<a href="#references">References</a>
 </nav>
 
 <div class="lang-switch">
@@ -59,16 +122,26 @@ body.dark .footer{background:#020617;color:#94a3b8}
 
 <header class="header">
 <div class="header-content">
-<img src="assets/Mídia%20(2).jpg" class="photo">
+<img src="assets/Mídia%20(2).jpg" class="photo" alt="Kaleb Nunes dos Santos">
+
 <div>
 <h1>KALEB NUNES DOS SANTOS</h1>
 <h2>Implementation Consultant | Automation, Networks & Observability</h2>
 
 <div class="contact-info">
-<a href="https://www.linkedin.com/in/kalebnunes/">LinkedIn</a>
-<a href="https://wa.me/5547988901616">WhatsApp</a>
-<a href="mailto:kalebdossantos59924@gmail.com">Email</a>
-<span>Balneário Camboriú • Brazil</span>
+<a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">
+<i class="fab fa-linkedin"></i> LinkedIn
+</a>
+<a href="https://wa.me/5547988901616" target="_blank">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+<a href="mailto:kalebdossantos59924@gmail.com">
+<i class="fas fa-envelope"></i> Email
+</a>
+<span>
+<i class="fas fa-location-dot"></i>
+Balneário Camboriú • Brazil
+</span>
 </div>
 
 <a id="cvDownload" class="btn-download" target="_blank">
@@ -78,19 +151,52 @@ body.dark .footer{background:#020617;color:#94a3b8}
 </div>
 </header>
 
+<section id="profile" class="section">
+<h2 class="section-title">Professional Profile</h2>
+<p>
+Professional with solid experience in enterprise environments and critical operations,
+focused on system implementation, automation, observability, and IT service management.
+</p>
+</section>
+
 <section id="experience" class="section">
 <h2 class="section-title">Professional Experience</h2>
 <ul>
-<li><strong>Bradesco Seguros – Technical Consulting</strong></li>
-<li><strong>Implementation Consultant – Ellevo Software</strong></li>
-<li><strong>Network Analyst – VivaTech</strong></li>
-<li><strong>Master / Senior Network Technician – RR64 Network Intelligence</strong></li>
+<li>
+<strong>Bradesco Seguros – Technical Consulting</strong><br>
+Remote | Contractor (PJ)<br>
+Work in a highly critical corporate environment focused on sensitive data integration
+and handling in compliance with LGPD. Responsible for API consumption and testing using
+Postman, data processing and validation, and request management via email.
+</li>
+
+<li>
+<strong>Implementation Consultant – Ellevo Software</strong><br>
+On-site | Cooperative | Current<br>
+Direct involvement in ITSM platform implementation projects, including configuration,
+parameterization, functional testing, and go-live support.
+</li>
+
+<li>
+<strong>Network Analyst – VivaTech</strong><br>
+Remote | Contractor (PJ)<br>
+Responsible for network infrastructure monitoring and support, ensuring availability,
+stability, SLA compliance, and operational continuity.
+</li>
+
+<li>
+<strong>Master / Senior Network Technician – RR64 Network Intelligence</strong><br>
+Remote | Full-time (CLT)<br>
+Senior role focused on network and infrastructure environments, advanced incident analysis,
+technical standardization, and mission-critical support.
+</li>
 </ul>
 </section>
 
-<section class="section" style="text-align:center">
+<section id="references" class="section" style="text-align:center">
 <a id="recDownload" class="btn-download" target="_blank">
-<i class="fas fa-file-signature"></i> Technical Recommendation Letter
+<i class="fas fa-file-signature"></i>
+Technical Recommendation Letter
 </a>
 </section>
 
@@ -106,6 +212,7 @@ toggle.onclick=()=>{
 document.body.classList.toggle("dark");
 toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
 };
+
 document.getElementById("cvDownload").href="assets/Kaleb_Nunes_CV_EN_2026.pdf";
 document.getElementById("recDownload").href="assets/Technical-Recommendation-Letter-EN.pdf";
 </script>
