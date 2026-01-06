@@ -26,8 +26,9 @@ body.dark{background:#020617;color:#e5e7eb}
 .navbar{
 position:fixed;top:0;width:100%;
 background:rgba(255,255,255,.95);
+backdrop-filter:blur(10px);
 display:flex;justify-content:center;gap:32px;
-padding:16px;z-index:999
+padding:16px;box-shadow:0 2px 20px rgba(0,0,0,.08);z-index:999
 }
 body.dark .navbar{background:#020617}
 .navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
@@ -35,25 +36,45 @@ body.dark .navbar a{color:#93c5fd}
 
 /* LANGUAGE SWITCH */
 .lang-switch{
-position:fixed;top:16px;right:30px;
-background:#fff;border:2px solid #2563eb;
-border-radius:12px;padding:8px 14px;
-display:flex;gap:14px;z-index:1000
+position:fixed;
+top:16px;
+right:30px;
+background:#fff;
+border:2px solid #2563eb;
+border-radius:12px;
+padding:8px 14px;
+display:flex;
+align-items:center;
+gap:14px;
+z-index:1000
 }
 body.dark .lang-switch{background:#020617;border-color:#60a5fa}
-.lang-switch a{text-decoration:none;font-weight:600;color:#1e3a8a}
+.lang-switch a{
+color:#1e3a8a;
+text-decoration:none;
+font-weight:600;
+display:flex;
+align-items:center;
+gap:6px;
+border-bottom:2px solid transparent
+}
+body.dark .lang-switch a{color:#93c5fd}
 .lang-switch a.active{border-bottom:2px solid #2563eb}
+.lang-switch img{width:22px;height:16px;border-radius:3px}
 
 /* DARK MODE */
 #darkToggle{
 position:fixed;top:15px;left:30px;
 background:#1e3a8a;color:#fff;border:none;
 padding:8px 14px;border-radius:20px;
-cursor:pointer;z-index:1000
+font-weight:600;cursor:pointer;z-index:1000
 }
 
 /* CONTAINER */
-.container{max-width:1100px;margin:auto;background:#fff}
+.container{
+max-width:1100px;margin:auto;background:#fff;
+box-shadow:0 10px 40px rgba(0,0,0,.1)
+}
 body.dark .container{background:#020617}
 
 /* HEADER */
@@ -64,16 +85,25 @@ color:#fff;padding:55px
 .header-content{display:flex;gap:40px;align-items:center}
 .photo{
 width:180px;height:180px;border-radius:50%;
-border:6px solid #fff;object-fit:cover
+border:6px solid rgba(255,255,255,.95);
+object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.35)
 }
 
-/* CONTACT */
+/* CONTACT INFO */
 .contact-info{
-margin-top:14px;display:flex;
-flex-direction:column;gap:10px
+margin-top:14px;
+display:flex;
+flex-direction:column;
+gap:10px
 }
-.contact-info a,.contact-info span{
-color:#fff;text-decoration:none
+.contact-info a,
+.contact-info span{
+color:#ffffff;
+text-decoration:none;
+font-size:15px;
+display:flex;
+align-items:center;
+gap:8px
 }
 
 /* BUTTON */
@@ -81,24 +111,36 @@ color:#fff;text-decoration:none
 display:inline-flex;align-items:center;gap:10px;
 background:#fff;color:#1e3a8a;
 padding:14px 30px;border-radius:30px;
-font-weight:700;text-decoration:none;margin-top:20px
+font-weight:700;text-decoration:none;margin-top:20px;transition:.3s
 }
+.btn-download:hover{transform:translateY(-3px)}
 
 /* SECTIONS */
 .section{padding:70px 55px}
 .section-title{
-font-size:1.6em;font-weight:700;
-color:#1e3a8a;margin-bottom:30px
+font-size:1.6em;font-weight:700;color:#1e3a8a;
+margin-bottom:30px
 }
 body.dark .section-title{color:#93c5fd}
 ul{padding-left:20px;line-height:1.8}
 
 /* FOOTER */
 .footer{
-text-align:center;padding:40px;
-background:#f8fafc;color:#6b7280
+text-align:center;padding:40px;background:#f8fafc;color:#6b7280
 }
 body.dark .footer{background:#020617;color:#94a3b8}
+
+/* MOBILE */
+@media (max-width:900px){
+body{padding-top:120px}
+.header-content{flex-direction:column;text-align:center}
+.photo{width:150px;height:150px}
+.contact-info{align-items:center}
+.navbar{flex-wrap:wrap}
+.lang-switch{top:65px;right:50%;transform:translateX(50%)}
+#darkToggle{top:65px;left:50%;transform:translateX(-50%)}
+.section{padding:50px 25px}
+}
 </style>
 </head>
 
@@ -108,20 +150,28 @@ body.dark .footer{background:#020617;color:#94a3b8}
 
 <nav class="navbar">
 <a href="#profile">Profile</a>
+<a href="#projects">Projects</a>
+<a href="#indicators">Indicators</a>
 <a href="#experience">Experience</a>
-<a href="#references">References</a>
 </nav>
 
 <div class="lang-switch">
-<a href="index.html">PT</a>
-<a href="index-en.html" class="active">EN</a>
-<a href="index-es.html">ES</a>
+<a href="index.html">
+<img src="https://flagcdn.com/w20/br.png"> PT
+</a>
+<a href="index-en.html" class="active">
+<img src="https://flagcdn.com/w20/us.png"> EN
+</a>
+<a href="index-es.html">
+<img src="https://flagcdn.com/w20/es.png"> ES
+</a>
 </div>
 
 <div class="container">
 
 <header class="header">
 <div class="header-content">
+
 <img src="assets/Mídia%20(2).jpg" class="photo" alt="Kaleb Nunes dos Santos">
 
 <div>
@@ -136,11 +186,11 @@ body.dark .footer{background:#020617;color:#94a3b8}
 <i class="fab fa-whatsapp"></i> WhatsApp
 </a>
 <a href="mailto:kalebdossantos59924@gmail.com">
-<i class="fas fa-envelope"></i> Email
+<i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com
 </a>
 <span>
 <i class="fas fa-location-dot"></i>
-Balneário Camboriú • Brazil
+Balneário Camboriú • SC • Brazil
 </span>
 </div>
 
@@ -148,55 +198,23 @@ Balneário Camboriú • Brazil
 <i class="fas fa-download"></i> Download CV
 </a>
 </div>
+
 </div>
 </header>
-
-<section id="profile" class="section">
-<h2 class="section-title">Professional Profile</h2>
-<p>
-Professional with solid experience in enterprise environments and critical operations,
-focused on system implementation, automation, observability, and IT service management.
-</p>
-</section>
 
 <section id="experience" class="section">
 <h2 class="section-title">Professional Experience</h2>
 <ul>
-<li>
-<strong>Bradesco Seguros – Technical Consulting</strong><br>
-Remote | Contractor (PJ)<br>
-Work in a highly critical corporate environment focused on sensitive data integration
-and handling in compliance with LGPD. Responsible for API consumption and testing using
-Postman, data processing and validation, and request management via email.
-</li>
-
-<li>
-<strong>Implementation Consultant – Ellevo Software</strong><br>
-On-site | Cooperative | Current<br>
-Direct involvement in ITSM platform implementation projects, including configuration,
-parameterization, functional testing, and go-live support.
-</li>
-
-<li>
-<strong>Network Analyst – VivaTech</strong><br>
-Remote | Contractor (PJ)<br>
-Responsible for network infrastructure monitoring and support, ensuring availability,
-stability, SLA compliance, and operational continuity.
-</li>
-
-<li>
-<strong>Master / Senior Network Technician – RR64 Network Intelligence</strong><br>
-Remote | Full-time (CLT)<br>
-Senior role focused on network and infrastructure environments, advanced incident analysis,
-technical standardization, and mission-critical support.
-</li>
+<li><strong>Bradesco Seguros – Technical Consulting</strong></li>
+<li><strong>Implementation Consultant – Ellevo Software</strong></li>
+<li><strong>Network Analyst – VivaTech</strong></li>
+<li><strong>Master / Senior Network Technician – RR64 Network Intelligence</strong></li>
 </ul>
 </section>
 
-<section id="references" class="section" style="text-align:center">
+<section class="section" style="text-align:center">
 <a id="recDownload" class="btn-download" target="_blank">
-<i class="fas fa-file-signature"></i>
-Technical Recommendation Letter
+<i class="fas fa-file-signature"></i> Technical Recommendation Letter
 </a>
 </section>
 
