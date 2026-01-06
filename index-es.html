@@ -9,6 +9,7 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 
@@ -47,19 +48,26 @@ align-items:center;
 gap:14px;
 z-index:1000
 }
-body.dark .lang-switch{background:#020617;border-color:#60a5fa}
+body.dark .lang-switch{
+background:#020617;
+border-color:#60a5fa
+}
 .lang-switch a{
 color:#1e3a8a;
 text-decoration:none;
 font-weight:600;
 display:flex;
 align-items:center;
-gap:6px;
-border-bottom:2px solid transparent
+gap:6px
 }
-body.dark .lang-switch a{color:#93c5fd}
-.lang-switch a.active{border-bottom:2px solid #2563eb}
-.lang-switch img{width:22px;height:16px;border-radius:3px}
+.lang-switch a.active{
+border-bottom:2px solid #2563eb
+}
+.lang-switch img{
+width:22px;
+height:16px;
+border-radius:3px
+}
 
 /* DARK MODE */
 #darkToggle{
@@ -90,27 +98,34 @@ object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.35)
 
 /* CONTACT INFO */
 .contact-info{
-margin-top:14px;
+margin-top:18px;
 display:flex;
 flex-direction:column;
-gap:10px
+gap:10px;
+font-size:.95em
 }
 .contact-info a,
 .contact-info span{
-color:#ffffff;
+color:#e0e7ff;
 text-decoration:none;
-font-size:15px;
 display:flex;
 align-items:center;
 gap:8px
 }
 
-/* BUTTON */
+/* BUTTONS */
 .btn-download{
-display:inline-flex;align-items:center;gap:10px;
-background:#fff;color:#1e3a8a;
-padding:14px 30px;border-radius:30px;
-font-weight:700;text-decoration:none;margin-top:20px;transition:.3s
+display:inline-flex;
+align-items:center;
+gap:10px;
+background:#fff;
+color:#1e3a8a;
+padding:14px 30px;
+border-radius:30px;
+font-weight:700;
+text-decoration:none;
+margin-top:18px;
+transition:.3s
 }
 .btn-download:hover{transform:translateY(-3px)}
 
@@ -135,19 +150,11 @@ margin-bottom:30px
 body.dark .section-title{color:#93c5fd}
 ul{padding-left:20px;line-height:1.8}
 
-/* REFERENCES */
-.references{
-display:grid;
-gap:20px
-}
-.reference-item{
-padding:18px;
-border-radius:10px;
-background:#f1f5f9;
-box-shadow:0 2px 6px rgba(0,0,0,.08)
-}
-body.dark .reference-item{background:#020617}
-.ref-name{font-weight:700}
+/* EXPERIENCE */
+.experience-item{margin-bottom:30px}
+.experience-item h3{font-size:1.1em;margin-bottom:6px}
+.experience-meta{font-size:.9em;color:#64748b}
+body.dark .experience-meta{color:#94a3b8}
 
 /* FOOTER */
 .footer{
@@ -176,23 +183,20 @@ body{padding-top:120px}
 
 <nav class="navbar">
 <a href="#perfil">Perfil</a>
-<a href="#proyectos">Proyectos</a>
-<a href="#indicadores">Indicadores</a>
 <a href="#experiencia">Experiencia</a>
 <a href="#referencias">Referencias</a>
 </nav>
 
 <div class="lang-switch">
-<a href="index.html"><img src="https://flagcdn.com/w20/br.png"> PT</a>
-<a href="index-en.html"><img src="https://flagcdn.com/w20/us.png"> EN</a>
-<a href="index-es.html" class="active"><img src="https://flagcdn.com/w20/es.png"> ES</a>
+<a href="/index.html"><img src="https://flagcdn.com/w20/br.png"> PT</a>
+<a href="/index-en.html"><img src="https://flagcdn.com/w20/us.png"> EN</a>
+<a href="/index-es.html" class="active"><img src="https://flagcdn.com/w20/es.png"> ES</a>
 </div>
 
 <div class="container">
 
 <header class="header">
 <div class="header-content">
-
 <img src="assets/Mídia%20(2).jpg" class="photo" alt="Kaleb Nunes dos Santos">
 
 <div>
@@ -203,7 +207,7 @@ body{padding-top:120px}
 <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
 <a href="https://wa.me/5547988901616" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
 <a href="mailto:kalebdossantos59924@gmail.com"><i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com</a>
-<span><i class="fas fa-location-dot"></i> Balneário Camboriú • Brasil</span>
+<span><i class="fas fa-location-dot"></i> Balneário Camboriú • SC • Brasil</span>
 </div>
 
 <a id="cvDownload" class="btn-download" target="_blank">
@@ -215,72 +219,53 @@ body{padding-top:120px}
 
 <div class="dashboard-metrics">
 <div class="metric"><span>6+</span>Años de experiencia</div>
-<div class="metric"><span>40%</span>Reducción en implantaciones</div>
+<div class="metric"><span>40%</span>Reducción operativa</div>
 <div class="metric"><span>Enterprise</span>Entornos críticos</div>
-<div class="metric"><span>Alta</span>Confiabilidad operativa</div>
+<div class="metric"><span>Alta</span>Confiabilidad</div>
 </div>
 </header>
 
 <section id="perfil" class="section">
 <h2 class="section-title">Perfil Profesional</h2>
-<p>
-Consultor con sólida experiencia en entornos empresariales y proyectos críticos,
-especializado en implantación de soluciones, automatización, observabilidad e
-infraestructura de redes.
-</p>
-</section>
-
-<section id="proyectos" class="section">
-<h2 class="section-title">Proyectos de Implementación</h2>
-<ul>
-<li>Implementación de plataformas ITSM</li>
-<li>Automatización de procesos con PowerShell y APIs</li>
-<li>Dashboards ejecutivos con Grafana</li>
-<li>Observabilidad y monitoreo</li>
-</ul>
-</section>
-
-<section id="indicadores" class="section">
-<h2 class="section-title">Indicadores Profesionales</h2>
-<ul>
-<li>Reducción promedio del 40% en tiempos de implementación</li>
-<li>Mejora en la estabilidad de entornos críticos</li>
-<li>Estandarización de procesos técnicos</li>
-</ul>
+<p>Profesional con sólida experiencia en entornos corporativos, proyectos enterprise y operaciones críticas.</p>
 </section>
 
 <section id="experiencia" class="section">
 <h2 class="section-title">Experiencia Profesional</h2>
-<ul>
-<li><strong>Consultor de Implementación – Ellevo Software</strong></li>
-<li><strong>Consultoría Técnica – Bradesco Seguros</strong></li>
-<li><strong>Analista de Redes – VivaTech</strong></li>
-<li><strong>Técnico Senior de Redes – RR64 Network Intelligence</strong></li>
-</ul>
+
+<div class="experience-item">
+<h3>Bradesco Seguros – Consultoría Técnica</h3>
+<span class="experience-meta">Remoto | PJ</span>
+<p>Integración y manipulación de datos sensibles conforme a la LGPD. Consumo y pruebas de APIs con Postman, validación de datos y gestión de incidencias por correo electrónico en operaciones de gran escala nacional.</p>
+</div>
+
+<div class="experience-item">
+<h3>Consultor de Implantación – Ellevo Software</h3>
+<span class="experience-meta">Presencial | Cooperado | Actual</span>
+<p>Implantación de plataformas ITSM, parametrización, pruebas funcionales, soporte en go-live, integraciones API/REST y consultoría técnica para clientes enterprise.</p>
+</div>
+
+<div class="experience-item">
+<h3>Analista de Redes – VivaTech</h3>
+<span class="experience-meta">Remoto | PJ</span>
+<p>Monitoreo de infraestructura, troubleshooting de enlaces, análisis de incidentes, seguimiento de SLA y soporte a entornos críticos.</p>
+</div>
+
+<div class="experience-item">
+<h3>Master / Senior Network Technician – RR64 Network Intelligence</h3>
+<span class="experience-meta">Remoto | CLT | Indaiatuba – SP</span>
+<p>Actuación senior en redes e infraestructura, troubleshooting avanzado, estandarización técnica, documentación y apoyo estratégico a equipos operativos.</p>
+</div>
 </section>
 
-<section id="referencias" class="section">
-<h2 class="section-title">Referencias Profesionales</h2>
+<section id="referencias" class="section" style="text-align:center">
+<h2 class="section-title">Referencias</h2>
 
-<div class="references">
-<div class="reference-item">
-<div class="ref-name">Rôney Cordeiro</div>
-CEO | VivaTech<br>
-Teléfono: +1 (857) 204-7057<br>
-<em>Recomendación técnica formal disponible (2022–2025)</em>
-</div>
-
-<div class="reference-item">
-<div class="ref-name">Lucas Costa</div>
-MetroNetwork<br>
-Teléfono: +55 47 9759-6283
-</div>
-</div>
-</section>
-
-<section class="section" style="text-align:center">
-<a id="recDownload" class="btn-download" target="_blank">
-<i class="fas fa-file-signature"></i> Carta de Recomendación Técnica
+<a href="assets/Carta-Recomendacion-Tecnica-ES.pdf"
+   target="_blank"
+   class="btn-download">
+<i class="fas fa-file-signature"></i>
+Carta de Recomendación Técnica
 </a>
 </section>
 
@@ -297,8 +282,7 @@ document.body.classList.toggle("dark");
 toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
 };
 
-document.getElementById("cvDownload").href="assets/Kaleb_Nunes_CV_ES_2026.pdf";
-document.getElementById("recDownload").href="assets/Carta-Recomendacion-Tecnica-ES.pdf";
+document.getElementById("cvDownload").href="assets/Kaleb Nunes dos Santos _ CV Profissional_2026.pdf";
 </script>
 
 </body>
