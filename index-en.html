@@ -81,7 +81,7 @@ box-shadow:0 10px 40px rgba(0,0,0,.1)
 }
 body.dark .container{background:#020617}
 
-/* HEADER — IDÊNTICO AO PT */
+/* HEADER */
 .header{
 background:linear-gradient(135deg,#1e3a8a,#3b82f6);
 color:#fff;
@@ -158,7 +158,10 @@ body.dark .section-title{color:#93c5fd}
 ul{padding-left:20px;line-height:1.8}
 
 /* REFERENCES */
-.references{display:grid;gap:20px}
+.references{
+display:grid;
+gap:20px
+}
 .reference-item{
 padding:18px;
 border-radius:10px;
@@ -178,7 +181,7 @@ color:#6b7280
 body.dark .footer{background:#020617;color:#94a3b8}
 
 /* MOBILE */
-@media (max-width:900px){
+@media (max-width: 900px){
 body{padding-top:120px}
 .header{padding:40px 25px}
 .header-content{flex-direction:column;text-align:center}
@@ -194,6 +197,148 @@ body{padding-top:120px}
 </head>
 
 <body>
-<!-- restante do HTML permanece idêntico ao que você já validou -->
+
+<button id="darkToggle">🌙 Dark</button>
+
+<nav class="navbar">
+<a href="#profile">Profile</a>
+<a href="#projects">Projects</a>
+<a href="#indicators">Indicators</a>
+<a href="#experience">Experience</a>
+<a href="#references">References</a>
+</nav>
+
+<div class="lang-switch">
+<a href="index.html"><img src="https://flagcdn.com/w20/br.png">PT</a>
+<a href="index-en.html" class="active"><img src="https://flagcdn.com/w20/us.png">EN</a>
+<a href="index-es.html"><img src="https://flagcdn.com/w20/es.png">ES</a>
+</div>
+
+<div class="container">
+
+<header class="header">
+<div class="header-content">
+<img src="assets/Mídia%20(2).jpg" class="photo">
+
+<div>
+<h1>KALEB NUNES DOS SANTOS</h1>
+<h2>Implementation Consultant | Automation, Networks and Observability</h2>
+
+<div class="contact-info">
+<a href="https://www.linkedin.com/in/kalebnunes/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+<a href="https://wa.me/5547988901616" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+<a href="mailto:kalebdossantos59924@gmail.com"><i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com</a>
+<span><i class="fas fa-location-dot"></i> Balneário Camboriú • SC • Brazil</span>
+</div>
+
+<a id="cvDownload" class="btn-download" target="_blank">
+<i class="fas fa-download"></i> Download CV
+</a>
+</div>
+</div>
+
+<div class="dashboard-metrics">
+<div class="metric"><span>6+</span>Years of experience</div>
+<div class="metric"><span>40%</span>Time reduction</div>
+<div class="metric"><span>Enterprise</span>Critical environments</div>
+<div class="metric"><span>High</span>Availability</div>
+</div>
+</header>
+
+<section id="profile" class="section">
+<h2 class="section-title">Professional Profile</h2>
+<p>
+Implementation Consultant with solid experience in enterprise environments, working on technology solution implementations, process automation, observability and network infrastructure. Strong focus on operational efficiency, standardization, stability and continuous improvement.
+</p>
+</section>
+
+<section id="projects" class="section">
+<h2 class="section-title">Projects & Solutions</h2>
+<ul>
+<li>Implementation of ITSM platforms and service management tools</li>
+<li>Process automation using PowerShell, scripts and APIs</li>
+<li>Executive dashboard creation with Grafana</li>
+<li>Observability and monitoring projects</li>
+</ul>
+</section>
+
+<section id="indicators" class="section">
+<h2 class="section-title">Professional Indicators</h2>
+<ul>
+<li>Average 40% reduction in implementation time</li>
+<li>Improved stability of critical environments</li>
+<li>Technical process standardization</li>
+<li>Strategic support for technical teams and managers</li>
+</ul>
+</section>
+
+<section id="experience" class="section">
+<h2 class="section-title">Professional Experience</h2>
+<ul>
+<li>
+<strong>Bradesco Seguros – Technical Consulting (Curitiba-based Company)</strong><br>
+<em>Model: Remote | Contractor (PJ)</em><br>
+Worked in a highly critical corporate environment, focusing on integration and handling of sensitive data in compliance with LGPD. Responsible for API consumption and testing via Postman, data processing and validation, as well as receiving and managing requests via email. Supported large-scale national insurance operations, ensuring compliance, traceability and operational continuity.
+</li>
+
+<li>
+<strong>Implementation Consultant – Ellevo Software</strong><br>
+<em>Model: On-site | Cooperative | Current</em><br>
+Direct involvement in ITSM platform implementation projects, performing configuration, parameterization, functional testing and go-live follow-up. Technical interface with enterprise clients, requirements gathering, support for API/REST integrations and consultative guidance for process alignment and service management best practices.
+</li>
+
+<li>
+<strong>Network Analyst – VivaTech</strong><br>
+<em>Model: Remote | Contractor (PJ)</em><br>
+Responsible for monitoring and supporting network infrastructure, ensuring service availability, stability and performance. Worked on link troubleshooting, incident analysis, SLA tracking, monitoring with specialized tools and operational continuity support for critical environments.
+</li>
+
+<li>
+<strong>Master / Senior Network Technician – RR64 Network Intelligence</strong><br>
+<em>Location: Indaiatuba – SP | Model: Remote | Full-time (CLT)</em><br>
+Senior-level role in network and infrastructure environments, focused on advanced incident analysis, continuous improvement, technical standardization and mission-critical support. Participation in projects, high-level troubleshooting, technical documentation and strategic support for operational teams.
+</li>
+</ul>
+</section>
+
+<section id="references" class="section">
+<h2 class="section-title">Professional References</h2>
+<div class="references">
+<div class="reference-item">
+<div class="ref-name">Rôney Cordeiro</div>
+CEO | VivaTech (CNPJ 33.692.990/0001-25)<br>
+Phone: +1 (857) 204-7057<br>
+<em>Formal recommendation available | 2022–2025</em>
+</div>
+
+<div class="reference-item">
+<div class="ref-name">Lucas Costa</div>
+MetroNetwork<br>
+Phone: +55 47 9759-6283
+</div>
+</div>
+</section>
+
+<section class="section" style="text-align:center">
+<a href="assets/carta-de-recomendacao-tecnica.png" target="_blank" class="btn-download">
+<i class="fas fa-file-signature"></i> Technical Recommendation Letter
+</a>
+</section>
+
+<footer class="footer">
+© 2026 Kaleb Nunes dos Santos • Professional CV
+</footer>
+
+</div>
+
+<script>
+const toggle=document.getElementById("darkToggle");
+toggle.onclick=()=>{
+document.body.classList.toggle("dark");
+toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
+};
+document.getElementById("cvDownload").href="assets/Kaleb Nunes dos Santos _ CV Profissional_2026.pdf";
+</script>
+
 </body>
 </html>
