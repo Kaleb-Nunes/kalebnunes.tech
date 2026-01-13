@@ -26,7 +26,6 @@ transition:.3s
 }
 body.dark{background:#020617;color:#e5e7eb}
 
-/* NAVBAR */
 .navbar{
 position:fixed;top:0;width:100%;
 background:rgba(255,255,255,.95);
@@ -38,7 +37,6 @@ body.dark .navbar{background:#020617}
 .navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
 body.dark .navbar a{color:#93c5fd}
 
-/* LANGUAGE */
 .lang-switch{
 position:fixed;
 top:16px;
@@ -57,7 +55,6 @@ body.dark .lang-switch a{color:#93c5fd}
 .lang-switch img{width:22px;height:16px;border-radius:3px}
 .lang-switch a.active{border-bottom:2px solid #2563eb}
 
-/* DARK BUTTON */
 #darkToggle{
 position:fixed;
 top:16px;
@@ -72,7 +69,6 @@ cursor:pointer;
 z-index:1000
 }
 
-/* CONTAINER */
 .container{
 max-width:1100px;
 margin:auto;
@@ -81,7 +77,6 @@ box-shadow:0 10px 40px rgba(0,0,0,.1)
 }
 body.dark .container{background:#020617}
 
-/* HEADER */
 .header{
 background:linear-gradient(135deg,#1e3a8a,#3b82f6);
 color:#fff;
@@ -101,7 +96,6 @@ border:6px solid #fff;
 object-fit:cover
 }
 
-/* CONTACT */
 .contact-info{
 margin-top:16px;
 display:flex;
@@ -117,7 +111,6 @@ align-items:center;
 gap:8px
 }
 
-/* BUTTON */
 .btn-download{
 display:inline-flex;
 align-items:center;
@@ -131,7 +124,6 @@ text-decoration:none;
 margin-top:20px
 }
 
-/* METRICS */
 .dashboard-metrics{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -146,7 +138,6 @@ text-align:center
 }
 .metric span{font-size:2em;font-weight:800;display:block}
 
-/* SECTIONS */
 .section{padding:70px 55px}
 .section-title{
 font-size:1.6em;
@@ -157,7 +148,6 @@ margin-bottom:30px
 body.dark .section-title{color:#93c5fd}
 ul{padding-left:20px;line-height:1.8}
 
-/* REFERENCES */
 .references{
 display:grid;
 gap:20px
@@ -171,7 +161,6 @@ box-shadow:0 2px 6px rgba(0,0,0,.08)
 body.dark .reference-item{background:#020617}
 .ref-name{font-weight:700}
 
-/* FOOTER */
 .footer{
 text-align:center;
 padding:40px;
@@ -180,7 +169,6 @@ color:#6b7280
 }
 body.dark .footer{background:#020617;color:#94a3b8}
 
-/* MOBILE */
 @media (max-width: 900px){
 body{padding-top:120px}
 .header{padding:40px 25px}
@@ -225,13 +213,13 @@ body{padding-top:120px}
 <h2>Consultor de Implantação | Automação, Redes e Observabilidade</h2>
 
 <div class="contact-info">
-<a href="https://www.linkedin.com/in/kalebnunes/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
-<a href="https://wa.me/5547988901616" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+<a href="https://www.linkedin.com/in/kalebnunes/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+<a href="https://wa.me/5547988901616" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
 <a href="mailto:kalebdossantos59924@gmail.com"><i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com</a>
 <span><i class="fas fa-location-dot"></i> Balneário Camboriú • SC • Brasil</span>
 </div>
 
-<a id="cvDownload" class="btn-download" target="_blank" rel="noopener">
+<a id="cvDownload" class="btn-download" target="_blank">
 <i class="fas fa-download"></i> Download Portfólio
 </a>
 </div>
@@ -248,115 +236,57 @@ body{padding-top:120px}
 <section id="perfil" class="section">
 <h2 class="section-title">Perfil Profissional</h2>
 <p>
-Consultor de Implantação com sólida experiência em ambientes enterprise, atuando na implementação de soluções tecnológicas, automação de processos, observabilidade e infraestrutura de redes. Possui forte foco em eficiência operacional, padronização, estabilidade e melhoria contínua.
+Consultor de Implantação com sólida experiência em ambientes enterprise, atuando na implementação de soluções tecnológicas, automação de processos, observabilidade e infraestrutura de redes.
 </p>
 </section>
 
 <section id="projetos" class="section">
 <h2 class="section-title">Projetos & Soluções</h2>
 <ul>
-<li>Implantação de plataformas ITSM e ferramentas de gestão de serviços</li>
-<li>Automação de processos com PowerShell, scripts e APIs</li>
-<li>Criação de dashboards executivos com Grafana</li>
-<li>Projetos de observabilidade e monitoramento</li>
+<li>Implantação de plataformas ITSM</li>
+<li>Automação com PowerShell e APIs</li>
+<li>Dashboards com Grafana</li>
+<li>Projetos de observabilidade</li>
 </ul>
-
-<br>
-
-<h3 style="font-size:1.2em;color:#1e3a8a;margin-top:30px;margin-bottom:16px;">
-Estudo de Caso – Migração de Sistema Legado para Ellevo Next
-</h3>
-
-<p><strong>Cliente:</strong><br>Grupo Elfa</p>
-
-<p><strong>Projeto:</strong><br>Migração da plataforma Ellevo Legado para Ellevo Next</p>
-<br>
-
-<p><strong>Atuação:</strong><br>Implantação técnica em conjunto com o líder de Projetos e Consultoria</p>
-<br>
-
-<p><strong>Desafio:</strong><br>
-O cliente utilizava a plataforma Ellevo Legado e precisava migrar...
-</p>
-<br>
-
-<p><strong>Solução:</strong><br>
-Realizada a implantação completa do Ellevo Next...
-</p>
-<br>
-
-<p><strong>Resultado:</strong><br>
-Sistema entregue funcional para homologação...
-</p>
-<br>
-
-<p><strong>Próximo projeto validado:</strong><br>
-Higex Vendas – https://higexvendas.com.br/
-</p>
-
 </section>
 
 <section id="indicadores" class="section">
 <h2 class="section-title">Indicadores Profissionais</h2>
 <ul>
-<li>Redução média de 40% no tempo de implantação</li>
-<li>Melhoria na estabilidade de ambientes críticos</li>
-<li>Padronização de processos técnicos</li>
-<li>Suporte estratégico a times técnicos e gestores</li>
+<li>40% de redução no tempo de implantação</li>
+<li>Maior estabilidade em ambientes críticos</li>
+<li>Padronização de processos</li>
 </ul>
 </section>
 
 <section id="experiencia" class="section">
 <h2 class="section-title">Experiência Profissional</h2>
 <ul>
-<li>
-<strong>Bradesco Seguros – Consultoria Técnica (Empresa de Curitiba)</strong><br><br>
-<em>Modelo: Remoto | PJ</em><br>
-Atuação em ambiente corporativo de alta criticidade, com foco em integração e manipulação de dados sensíveis conforme LGPD. Responsável pelo consumo e testes de APIs via Postman, tratamento e validação de dados, além do recebimento e gestão de chamados via e-mail.
-</li>
-
-<li>
-<strong>Consultor de Implantação – Ellevo Software</strong><br><br>
-<em>Modelo: Presencial | Cooperado | Atual</em><br>
-Atuação direta em projetos de implantação de plataforma ITSM, realizando configuração, parametrização, testes funcionais e acompanhamento de go-live. Interface técnica com clientes enterprise, levantamento de requisitos, apoio em integrações via API/REST e suporte consultivo.
-</li>
-
-<li>
-<strong>Analista de Redes – VivaTech</strong><br><br>
-<em>Modelo: Remoto | PJ</em><br>
-Responsável pelo monitoramento e suporte de infraestrutura de redes, garantindo disponibilidade, estabilidade e desempenho dos serviços.
-</li>
-
-<li>
-<strong>Master / Senior Network Technician – RR64 Network Intelligence</strong><br><br>
-<em>Local: Indaiatuba – SP | Modelo: Remoto | CLT</em><br>
-Atuação sênior em ambientes de redes e infraestrutura, com foco em análise avançada de incidentes, melhoria contínua e suporte a ambientes de missão crítica.
-</li>
+<li><strong>Consultor de Implantação – Ellevo Software</strong><br>Implantação de ITSM e integrações API.</li>
+<li><strong>Analista de Redes – VivaTech</strong><br>Monitoramento de infraestrutura.</li>
 </ul>
 </section>
 
 <section id="referencias" class="section">
-  <h2 class="section-title">Referências Profissionais</h2>
-
-  <div class="references">
-    <div class="reference-item">
-      <div class="ref-name">Rôney Cordeiro</div>
-      CEO | VivaTech<br>
-      Telefone: +1 (857) 204-7057
-    </div>
-
-    <div class="reference-item">
-      <div class="ref-name">Lucas Costa</div>
-      MetroNetwork<br>
-      Telefone: +55 47 9759-6283
-    </div>
+<h2 class="section-title">Referências Profissionais</h2>
+<div class="references">
+  <div class="reference-item">
+    <div class="ref-name">Rôney Cordeiro</div>
+    CEO | VivaTech<br>
+    Telefone: +1 (857) 204-7057
   </div>
+  <div class="reference-item">
+    <div class="ref-name">Lucas Costa</div>
+    MetroNetwork<br>
+    Telefone: +55 47 9759-6283
+  </div>
+</div>
 </section>
 
 <section class="section" style="text-align:center">
-  <a href="assets/carta-recomendacao-2026.pdf" target="_blank" rel="noopener" class="btn-download">
-    <i class="fas fa-file-signature"></i> Carta de Recomendação Técnica (PDF)
-  </a>
+<a href="assets/carta-recomendacao-2026.pdf" target="_blank" class="btn-download">
+<i class="fas fa-file-signature"></i> Carta de Recomendação Técnica (PDF)
+</a>
 </section>
 
 <footer class="footer">
@@ -371,7 +301,6 @@ toggle.onclick=()=>{
 document.body.classList.toggle("dark");
 toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
 };
-
 document.getElementById("cvDownload").href="assets/portfolio_2026.pdf";
 </script>
 
