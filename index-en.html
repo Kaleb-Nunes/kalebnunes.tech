@@ -26,7 +26,6 @@ transition:.3s
 }
 body.dark{background:#020617;color:#e5e7eb}
 
-/* NAVBAR */
 .navbar{
 position:fixed;top:0;width:100%;
 background:rgba(255,255,255,.95);
@@ -38,7 +37,6 @@ body.dark .navbar{background:#020617}
 .navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
 body.dark .navbar a{color:#93c5fd}
 
-/* LANGUAGE */
 .lang-switch{
 position:fixed;
 top:16px;
@@ -57,7 +55,6 @@ body.dark .lang-switch a{color:#93c5fd}
 .lang-switch img{width:22px;height:16px;border-radius:3px}
 .lang-switch a.active{border-bottom:2px solid #2563eb}
 
-/* DARK BUTTON */
 #darkToggle{
 position:fixed;
 top:16px;
@@ -72,7 +69,6 @@ cursor:pointer;
 z-index:1000
 }
 
-/* CONTAINER */
 .container{
 max-width:1100px;
 margin:auto;
@@ -81,7 +77,6 @@ box-shadow:0 10px 40px rgba(0,0,0,.1)
 }
 body.dark .container{background:#020617}
 
-/* HEADER */
 .header{
 background:linear-gradient(135deg,#1e3a8a,#3b82f6);
 color:#fff;
@@ -101,7 +96,6 @@ border:6px solid #fff;
 object-fit:cover
 }
 
-/* CONTACT */
 .contact-info{
 margin-top:16px;
 display:flex;
@@ -117,7 +111,6 @@ align-items:center;
 gap:8px
 }
 
-/* BUTTON */
 .btn-download{
 display:inline-flex;
 align-items:center;
@@ -131,7 +124,6 @@ text-decoration:none;
 margin-top:20px
 }
 
-/* METRICS */
 .dashboard-metrics{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -146,7 +138,6 @@ text-align:center
 }
 .metric span{font-size:2em;font-weight:800;display:block}
 
-/* SECTIONS */
 .section{padding:70px 55px}
 .section-title{
 font-size:1.6em;
@@ -157,7 +148,6 @@ margin-bottom:30px
 body.dark .section-title{color:#93c5fd}
 ul{padding-left:20px;line-height:1.8}
 
-/* REFERENCES */
 .references{
 display:grid;
 gap:20px
@@ -171,7 +161,6 @@ box-shadow:0 2px 6px rgba(0,0,0,.08)
 body.dark .reference-item{background:#020617}
 .ref-name{font-weight:700}
 
-/* FOOTER */
 .footer{
 text-align:center;
 padding:40px;
@@ -180,7 +169,6 @@ color:#6b7280
 }
 body.dark .footer{background:#020617;color:#94a3b8}
 
-/* MOBILE */
 @media (max-width: 900px){
 body{padding-top:120px}
 .header{min-height:auto;padding:40px 25px}
@@ -238,10 +226,10 @@ body{padding-top:120px}
 </div>
 
 <div class="dashboard-metrics">
-<div class="metric"><span>6+</span>Anos de experiência</div>
-<div class="metric"><span>40%</span>Redução no tempo</div>
-<div class="metric"><span>Enterprise</span>Ambientes críticos</div>
-<div class="metric"><span>Alta</span>Disponibilidade</div>
+  <div class="metric"><span>6+</span>Years of experience</div>
+  <div class="metric"><span>40%</span>Operational efficiency</div>
+  <div class="metric"><span>Enterprise</span>Critical environments</div>
+  <div class="metric"><span>High</span>Availability</div>
 </div>
 </header>
 
@@ -250,107 +238,6 @@ body{padding-top:120px}
 <p>
 Implementation Consultant with solid experience in enterprise environments, working on the implementation of technological solutions, process automation, observability and network infrastructure. Strong focus on operational efficiency, standardization, stability and continuous improvement.
 </p>
-</section>
-
-<section id="projetos" class="section">
-<h2 class="section-title">Projects & Solutions</h2>
-<ul>
-<li>Implementation of ITSM platforms and service management tools</li>
-<li>Process automation using PowerShell, scripts and APIs</li>
-<li>Development of executive dashboards with Grafana</li>
-<li>Observability and monitoring projects</li>
-</ul>
-
-<br>
-
-<h3 style="font-size:1.2em;color:#1e3a8a;margin-top:30px;margin-bottom:16px;">
-Case Study – Legacy System Migration to Ellevo Next
-</h3>
-
-<p><strong>Client:</strong><br>Grupo Elfa</p>
-<br>
-
-<p><strong>Project:</strong><br>Migration from Ellevo Legacy platform to Ellevo Next</p>
-<br>
-
-<p><strong>Role:</strong><br>Technical implementation alongside the Projects and Consulting team leader</p>
-<br>
-
-<p><strong>Challenge:</strong><br>
-The client used the Ellevo Legacy platform and needed to migrate to Ellevo Next, ensuring operational continuity, system stability and validation of service workflows.
-</p>
-<br>
-
-<p><strong>Solution:</strong><br>
-Full implementation of Ellevo Next, including environment configuration, profile adjustments, feature validation and migration of PowerShell scripts used in company operations.
-</p>
-<br>
-
-<p><strong>Result:</strong><br>
-System delivered functional for homologation. After client validation, the environment will be promoted to production.
-</p>
-<br>
-
-<p><strong>Next validated project:</strong><br>
-Higex Vendas – https://higexvendas.com.br/
-</p>
-</section>
-
-<section id="indicadores" class="section">
-<h2 class="section-title">Professional Metrics</h2>
-<ul>
-<li>Average 40% reduction in deployment time</li>
-<li>Improved stability of mission-critical environments</li>
-<li>Standardization of technical processes</li>
-<li>Strategic support for technical teams and managers</li>
-</ul>
-</section>
-
-<section id="experiencia" class="section">
-<h2 class="section-title">Professional Experience</h2>
-<ul>
-<li>
-<strong>Bradesco Seguros – Technical Consulting (Curitiba-based company)</strong><br><br>
-<em>Model: Remote | Contractor</em><br>
-Worked in a highly critical corporate environment, focusing on integration and handling of sensitive data in compliance with LGPD. Responsible for API consumption and testing using Postman, data validation and processing, as well as ticket intake and management via email. Supported large-scale national insurance operations, ensuring compliance, traceability and operational continuity.
-</li>
-
-<li>
-<strong>Implementation Consultant – Ellevo Software</strong><br><br>
-<em>Model: On-site | Cooperative | Current</em><br>
-Direct involvement in ITSM platform implementation projects, performing configuration, parameterization, functional testing and go-live support. Technical interface with enterprise clients, requirements gathering, API/REST integrations support and consultative guidance for process alignment and service management best practices.
-</li>
-
-<li>
-<strong>Network Analyst – VivaTech</strong><br><br>
-<em>Model: Remote | Contractor</em><br>
-Responsible for monitoring and supporting network infrastructure, ensuring availability, stability and service performance. Activities included link troubleshooting, incident analysis, SLA monitoring, use of specialized monitoring tools and support for mission-critical operational continuity.
-</li>
-
-<li>
-<strong>Master / Senior Network Technician – RR64 Network Intelligence</strong><br><br>
-<em>Location: Indaiatuba – SP | Model: Remote | Full-time</em><br>
-Senior-level work in network and infrastructure environments, focused on advanced incident analysis, continuous improvement, technical standardization and support for mission-critical environments. Participation in projects, high-level troubleshooting, technical documentation and strategic support for operational teams.
-</li>
-</ul>
-</section>
-
-<section id="referencias" class="section">
-<h2 class="section-title">Professional References</h2>
-<div class="references">
-<div class="reference-item">
-<div class="ref-name">Rôney Cordeiro</div>
-CEO | VivaTech (CNPJ 33.692.990/0001-25)<br>
-Phone: +1 (857) 204-7057<br>
-<em>Formal recommendation available | 2022–2025</em>
-</div>
-
-<div class="reference-item">
-<div class="ref-name">Lucas Costa</div>
-MetroNetwork<br>
-Phone: +55 47 9759-6283
-</div>
-</div>
 </section>
 
 <section class="section" style="text-align:center">
