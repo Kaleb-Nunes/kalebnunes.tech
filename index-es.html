@@ -2,350 +2,127 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<title>Kaleb Nunes | CV</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kaleb Nunes dos Santos | CV Profesional</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif}
+body{background:#0b1020;color:#e5e7eb;transition:.3s}
+body.light{background:#f4f6fb;color:#111827}
 
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+.lang-switch{position:fixed;top:16px;right:16px;display:flex;gap:8px;z-index:999}
+.lang-switch a{background:#fff;border:1px solid #d1d5db;padding:6px 10px;border-radius:10px;font-weight:700;text-decoration:none}
 
-body{
-font-family:Inter,sans-serif;
-background:#eef2f7;
-color:#1f2937;
-padding-top:90px;
-transition:.3s
-}
-body.dark{background:#020617;color:#e5e7eb}
+.toggle{position:fixed;top:16px;left:16px;background:#2563eb;color:#fff;border:none;padding:8px 14px;border-radius:20px;cursor:pointer;font-weight:700}
 
-/* NAVBAR */
-.navbar{
-position:fixed;top:0;width:100%;
-background:rgba(255,255,255,.95);
-backdrop-filter:blur(10px);
-display:flex;justify-content:center;gap:32px;
-padding:16px;box-shadow:0 2px 20px rgba(0,0,0,.08);z-index:999
-}
-body.dark .navbar{background:#020617}
-.navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
-body.dark .navbar a{color:#93c5fd}
+.container{display:grid;grid-template-columns:300px 1fr;max-width:1300px;margin:auto;min-height:100vh}
 
-/* LANGUAGE SWITCH */
-.lang-switch{
-position:fixed;
-top:16px;
-right:30px;
-background:#fff;
-border:2px solid #2563eb;
-border-radius:12px;
-padding:8px 14px;
-display:flex;
-align-items:center;
-gap:14px;
-z-index:1000
-}
-body.dark .lang-switch{
-background:#020617;
-border-color:#60a5fa
-}
-.lang-switch a{
-color:#1e3a8a;
-text-decoration:none;
-font-weight:600;
-display:flex;
-align-items:center;
-gap:6px
-}
-.lang-switch a.active{
-border-bottom:2px solid #2563eb
-}
-.lang-switch img{
-width:22px;
-height:16px;
-border-radius:3px
-}
+.sidebar{background:#111827;padding:26px 20px}
+body.light .sidebar{background:#ffffff;border-right:1px solid #e5e7eb}
 
-/* DARK MODE */
-#darkToggle{
-position:fixed;top:15px;left:30px;
-background:#1e3a8a;color:#fff;border:none;
-padding:8px 14px;border-radius:20px;
-font-weight:600;cursor:pointer;z-index:1000
-}
+.avatar{width:130px;height:130px;border-radius:50%;border:4px solid #2563eb;object-fit:cover;margin-bottom:12px}
+.name{color:#2563eb;font-size:22px;font-weight:900}
+.role{color:#22c55e;font-size:13px;font-weight:700;margin-top:6px}
 
-/* CONTAINER */
-.container{
-max-width:1100px;margin:auto;background:#fff;
-box-shadow:0 10px 40px rgba(0,0,0,.1)
-}
-body.dark .container{background:#020617}
+.sidebar h3{color:#60a5fa;margin:20px 0 8px;font-size:13px}
+.sidebar p,.sidebar a{color:#cbd5e1;font-size:13px;text-decoration:none;margin-bottom:6px;display:block}
+body.light .sidebar p,body.light .sidebar a{color:#1f2937}
 
-/* HEADER */
-.header{
-background:linear-gradient(135deg,#1e3a8a,#3b82f6);
-color:#fff;padding:55px
-}
-.header-content{display:flex;gap:40px;align-items:center}
-.photo{
-width:180px;height:180px;border-radius:50%;
-border:6px solid rgba(255,255,255,.95);
-object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.35)
-}
+.btn{background:#2563eb;color:#fff;padding:10px 14px;border-radius:14px;text-align:center;font-weight:700;margin-top:10px;text-decoration:none}
+.btn.secondary{background:#1f2937}
 
-/* CONTACT INFO */
-.contact-info{
-margin-top:18px;
-display:flex;
-flex-direction:column;
-gap:10px;
-font-size:.95em
-}
-.contact-info a,
-.contact-info span{
-color:#e0e7ff;
-text-decoration:none;
-display:flex;
-align-items:center;
-gap:8px
-}
+.main{padding:40px}
+.section{margin-top:28px}
+.section h2{color:#60a5fa;font-size:18px;margin-bottom:12px}
+body.light .section h2{color:#2563eb}
+.section p,.section li{color:#e5e7eb;line-height:1.6}
+body.light .section p,body.light .section li{color:#111827}
 
-/* BUTTONS */
-.btn-download{
-display:inline-flex;
-align-items:center;
-gap:10px;
-background:#fff;
-color:#1e3a8a;
-padding:14px 30px;
-border-radius:30px;
-font-weight:700;
-text-decoration:none;
-margin-top:18px;
-transition:.3s
-}
-.btn-download:hover{transform:translateY(-3px)}
+.job-title{color:#eab308;font-weight:900}
 
-/* METRICS */
-.dashboard-metrics{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;margin-top:35px
-}
-.metric{
-background:rgba(255,255,255,.15);
-padding:22px;border-radius:14px;text-align:center
-}
-.metric span{font-size:2em;font-weight:800;display:block}
+.highlight{background:#111827;border-left:4px solid #eab308;padding:12px;border-radius:12px;margin-top:12px}
+body.light .highlight{background:#ffffff;border-left:4px solid #a16207;border:1px solid #e5e7eb}
 
-/* SECTIONS */
-.section{padding:70px 55px}
-.section-title{
-font-size:1.6em;font-weight:700;color:#1e3a8a;
-margin-bottom:30px
-}
-body.dark .section-title{color:#93c5fd}
-ul{padding-left:20px;line-height:1.8}
-
-/* EXPERIENCE */
-.experience-item{margin-bottom:30px}
-.experience-item h3{font-size:1.1em;margin-bottom:6px}
-.experience-meta{font-size:.9em;color:#64748b}
-body.dark .experience-meta{color:#94a3b8}
-
-/* FOOTER */
-.footer{
-text-align:center;padding:40px;background:#f8fafc;color:#6b7280
-}
-body.dark .footer{background:#020617;color:#94a3b8}
-
-/* MOBILE */
-@media (max-width:900px){
-body{padding-top:120px}
-.header-content{flex-direction:column;text-align:center}
-.photo{width:150px;height:150px}
-.contact-info{align-items:center}
-.dashboard-metrics{grid-template-columns:1fr}
-.navbar{flex-wrap:wrap}
-.lang-switch{top:65px;right:50%;transform:translateX(50%)}
-#darkToggle{top:65px;left:50%;transform:translateX(-50%)}
-.section{padding:50px 25px}
-}
+@media(max-width:900px){.container{grid-template-columns:1fr}}
 </style>
 </head>
 
 <body>
 
-<button id="darkToggle">🌙 Dark</button>
-
-<nav class="navbar">
-<a href="#perfil">Perfil</a>
-<a href="#proyectos">Proyectos</a>
-<a href="#indicadores">Indicadores</a>
-<a href="#experiencia">Experiencia</a>
-<a href="#referencias">Referencias</a>
-</nav>
+<button class="toggle" id="themeToggle">🌙</button>
 
 <div class="lang-switch">
-  <a href="index.html"><img src="https://flagcdn.com/w20/br.png"> PT</a>
-  <a href="index-en.html"><img src="https://flagcdn.com/w20/us.png"> EN</a>
-  <a href="index-es.html" class="active"><img src="https://flagcdn.com/w20/es.png"> ES</a>
+  <a href="index.html">🇧🇷</a>
+  <a href="index-en.html">🇺🇸</a>
+  <a href="index-es.html">🇪🇸</a>
 </div>
 
 <div class="container">
 
-<header class="header">
-<div class="header-content">
-<img src="assets/Mídia%20(2).jpg" class="photo" alt="Kaleb Nunes dos Santos">
+<aside class="sidebar">
+  <img src="assets/foto.jpg" class="avatar">
+  <div class="name">KALEB<br>NUNES</div>
+  <div class="role">Consultor de Implementación<br>Infraestructura, NOC, Observabilidad</div>
 
-<div>
-<h1>KALEB NUNES DOS SANTOS</h1>
-<h2>Consultor de Implementación | Automatización, Redes y Observabilidad</h2>
+  <h3>contact.info</h3>
+  <p>Balneário Camboriú – SC – Brasil</p>
+  <p>+55 47 98890-1616</p>
+  <p>kalebdossantos59924@gmail.com</p>
+  <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">LinkedIn</a>
 
-<div class="contact-info">
-<a href="https://www.linkedin.com/in/kalebnunes/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-<a href="https://wa.me/5547988901616" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-<a href="mailto:kalebdossantos59924@gmail.com"><i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com</a>
-<span><i class="fas fa-location-dot"></i> Balneário Camboriú • SC • Brasil</span>
-</div>
+  <a class="btn" href="assets/portfolio_2026.pdf" target="_blank">⬇ Descargar Portafolio</a>
+  <a class="btn secondary" href="assets/carta-recomendacao-2026.pdf" target="_blank">✍ Carta de Recomendación</a>
+</aside>
 
-<a id="cvDownload" class="btn-download" target="_blank">
-<i class="fas fa-download"></i> Descargar Portafolio
-</a>
+<main class="main">
 
-</div>
-</div>
-
-<div class="dashboard-metrics">
-<div class="metric"><span>6+</span>Anos de experiência</div>
-<div class="metric"><span>40%</span>Redução no tempo</div>
-<div class="metric"><span>Enterprise</span>Ambientes críticos</div>
-<div class="metric"><span>Alta</span>Disponibilidade</div>
-</div>
-</header>
-
-<section id="perfil" class="section">
-<h2 class="section-title">Perfil Profesional</h2>
+<section class="section">
+<h2>about.me</h2>
 <p>
-Consultor de Implementación con sólida experiencia en entornos enterprise, trabajando en la implementación de soluciones tecnológicas, automatización de procesos, observabilidad e infraestructura de redes. Fuerte enfoque en eficiencia operativa, estandarización, estabilidad y mejora continua.
+Consultor de Implementación con experiencia en Infraestructura, Redes, NOC, Observabilidad e ITSM. 
+Actuación en entornos críticos, automatización, integraciones por API y soporte mission-critical.
 </p>
 </section>
 
-<section id="proyectos" class="section">
-<h2 class="section-title">Proyectos & Soluciones</h2>
+<section class="section">
+<h2>work.experience</h2>
+
+<div class="job-title">Consultor de Implementación — Ellevo Software (Ago/2025 – Actual)</div>
 <ul>
-<li>Implementación de plataformas ITSM y herramientas de gestión de servicios</li>
-<li>Automatización de procesos con PowerShell, scripts y APIs</li>
-<li>Desarrollo de paneles ejecutivos con Grafana</li>
-<li>Proyectos de observabilidad y monitoreo</li>
+<li>Modelo de trabajo: Cooperado.</li>
+<li>Promovido de Analista de Soporte N2 a Consultor en solo 1 mes.</li>
+<li>Dominio de las plataformas Ellevo Legacy y Ellevo Next.</li>
+<li>Formación técnica en la Universidad Ellevo (EAD).</li>
+<li>Proyectos de alta complejidad para clientes multinacionales.</li>
+<li>Clientes: Renault, Grupo Elfa Medicamentos, Grupo Bauminas, Cruz Azul Hospital, Yazaki, HIL Protección de Activos, Hill Saúde, ERP SIS PUMA.</li>
+<li>Implementación de la plataforma Ellevo Next.</li>
+<li>Migración de sistemas legados (Ellevo Legacy → Ellevo Next).</li>
+<li>Configuración de perfiles, flujos, catálogos y automatizaciones.</li>
+<li>Integraciones API con scripts SQL y PowerShell.</li>
+<li>Soporte técnico en proyectos CSC.</li>
+<li>Uso de la herramienta Ellevo Function.</li>
+<li>Trabajo en entornos críticos y corporativos.</li>
+<li>Proyectos validados en producción.</li>
 </ul>
 
-<br>
-
-<h3 style="font-size:1.2em;color:#1e3a8a;margin-top:30px;margin-bottom:16px;">
-Estudio de Caso – Migración de Sistema Legado a Ellevo Next
-</h3>
-
-<p><strong>Cliente:</strong><br>Grupo Elfa</p>
-<br>
-
-<p><strong>Proyecto:</strong><br>Migración de la plataforma Ellevo Legado a Ellevo Next</p>
-<br>
-
-<p><strong>Actuación:</strong><br>Implementación técnica junto al líder de Proyectos y Consultoría</p>
-<br>
-
-<p><strong>Desafío:</strong><br>
-El cliente utilizaba la plataforma Ellevo Legado y necesitaba migrar a Ellevo Next, garantizando continuidad operativa, estabilidad del entorno y validación de los flujos de atención.
-</p>
-<br>
-
-<p><strong>Solución:</strong><br>
-Se realizó la implementación completa de Ellevo Next, incluyendo configuración del entorno, ajustes de perfiles, validación de funcionalidades y migración de scripts en PowerShell utilizados en la operación de la empresa.
-</p>
-<br>
-
-<p><strong>Resultado:</strong><br>
-Sistema entregado funcional para homologación. Tras la validación del cliente, el entorno será promovido a producción.
-</p>
-<br>
-
-<p><strong>Próximo proyecto validado:</strong><br>
-Higex Ventas – https://higexvendas.com.br/
-</p>
-</section>
-
-<section id="indicadores" class="section">
-<h2 class="section-title">Indicadores Profesionales</h2>
-<ul>
-<li>Reducción promedio del 40% en el tiempo de implementación</li>
-<li>Mejora en la estabilidad de entornos de misión crítica</li>
-<li>Estandarización de procesos técnicos</li>
-<li>Soporte estratégico a equipos técnicos y gerentes</li>
-</ul>
-</section>
-
-<section id="experiencia" class="section">
-<h2 class="section-title">Experiencia Profesional</h2>
-
-<div class="experience-item">
-<h3>Bradesco Seguros – Consultoría Técnica</h3>
-<span class="experience-meta">Remoto | PJ</span>
-<p>
-Trabajo en un entorno corporativo de alta criticidad, enfocado en la integración y manejo de datos sensibles conforme a la LGPD. Responsable del consumo y pruebas de APIs con Postman, validación y procesamiento de datos, así como la recepción y gestión de incidencias vía correo electrónico. Soporte a operaciones de seguros a gran escala nacional, garantizando conformidad, trazabilidad y continuidad operativa.
-</p>
+<div class="highlight">
+<strong>Certificaciones de la Universidad Ellevo:</strong><br>
+• Curso de Atendente – Next<br>
+• Administración de la Plataforma Ellevo<br>
+• Administración Next<br>
+• Atendente Plataforma Ellevo<br><br>
+Estas certificaciones validaron el conocimiento técnico y aceleraron la promoción.
 </div>
 
-<div class="experience-item">
-<h3>Consultor de Implantación – Ellevo Software</h3>
-<span class="experience-meta">Presencial | Cooperado | Actual</span>
-<p>
-Participación directa en proyectos de implantación de plataformas ITSM, realizando configuración, parametrización, pruebas funcionales y soporte en go-live. Interfaz técnica con clientes enterprise, levantamiento de requisitos, apoyo en integraciones API/REST y consultoría para la adecuación de procesos y buenas prácticas de gestión de servicios.
-</p>
-</div>
-
-<div class="experience-item">
-<h3>Analista de Redes – VivaTech</h3>
-<span class="experience-meta">Remoto | PJ</span>
-<p>
-Responsable del monitoreo y soporte de infraestructura de redes, garantizando disponibilidad, estabilidad y desempeño de los servicios. Incluye troubleshooting de enlaces, análisis de incidentes, seguimiento de SLA, uso de herramientas especializadas y soporte a la continuidad operativa en entornos críticos.
-</p>
-</div>
-
-<div class="experience-item">
-<h3>Master / Senior Network Technician – RR64 Network Intelligence</h3>
-<span class="experience-meta">Remoto | CLT | Indaiatuba – SP</span>
-<p>
-Actuación senior en entornos de redes e infraestructura, con enfoque en análisis avanzado de incidentes, mejora continua, estandarización técnica y soporte a entornos de misión crítica. Participación en proyectos, troubleshooting de alto nivel, documentación técnica y apoyo estratégico a equipos operativos.
-</p>
-</div>
 </section>
 
-<section id="referencias" class="section" style="text-align:center">
-<h2 class="section-title">Referencias</h2>
-
-<a href="assets/carta-recomendacao-2026.pdf" target="_blank" class="btn-download">
-  <i class="fas fa-file-signature"></i> Carta de Recomendación Técnica (PDF)
-</a>
-</section>
-
-<footer class="footer">
-© 2026 Kaleb Nunes dos Santos • Portafolio Profesional
-</footer>
-
+</main>
 </div>
 
 <script>
-const toggle=document.getElementById("darkToggle");
-toggle.onclick=()=>{
-document.body.classList.toggle("dark");
-toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
+document.getElementById("themeToggle").onclick=()=>{
+  document.body.classList.toggle("light");
 };
-
-document.getElementById("cvDownload").href="assets/portfolio_2026.pdf";
 </script>
 
 </body>
