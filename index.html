@@ -2,113 +2,290 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Kaleb Nunes | CV</title>
+<title>Kaleb Nunes dos Santos | Consultor de Implantação</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif}
-body{background:#0b1020;color:#e5e7eb;transition:.3s}
-body.light{background:#f4f6fb;color:#111827}
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:#050b14;
+  color:#e5e7eb;
+}
+body.light{
+  background:#f4f7fb;
+  color:#111827;
+}
 
-.lang-switch{position:fixed;top:16px;right:16px;display:flex;gap:8px;z-index:999}
-.lang-switch a{background:#fff;border:1px solid #d1d5db;padding:6px 10px;border-radius:10px;font-weight:700;text-decoration:none}
+/* HEADER */
+.header{
+  background:linear-gradient(135deg,#1e3a8a,#3b82f6);
+  padding:60px 20px;
+  color:#fff;
+}
+.header-content{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  gap:40px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.avatar{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  border:5px solid #fff;
+  object-fit:cover;
+}
+.header h1{margin:0;font-size:32px;font-weight:900}
+.header h2{margin:8px 0 16px;font-size:18px;font-weight:600}
+.header a{color:#fff;text-decoration:none;display:block;margin:6px 0}
 
-.toggle{position:fixed;top:16px;left:16px;background:#2563eb;color:#fff;border:none;padding:8px 14px;border-radius:20px;cursor:pointer;font-weight:700}
+.btn{
+  background:#fff;
+  color:#1e3a8a;
+  padding:12px 24px;
+  border-radius:30px;
+  font-weight:700;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:12px;
+}
+.btn.secondary{
+  background:#111827;
+  color:#fff;
+}
 
-.container{display:grid;grid-template-columns:300px 1fr;max-width:1300px;margin:auto;min-height:100vh}
+/* LANGUAGE + THEME */
+.top-bar{
+  position:fixed;
+  top:16px;
+  right:16px;
+  display:flex;
+  gap:12px;
+  z-index:999;
+}
+.langs a{
+  border:1px solid #3b82f6;
+  padding:6px 10px;
+  border-radius:10px;
+  color:#3b82f6;
+  font-weight:700;
+  text-decoration:none;
+  background:#fff;
+}
+.langs a.active{
+  background:#3b82f6;
+  color:#fff;
+}
+.theme-btn{
+  background:#1e3a8a;
+  color:#fff;
+  border:none;
+  padding:8px 12px;
+  border-radius:20px;
+  cursor:pointer;
+}
 
-.sidebar{background:#111827;padding:26px 20px}
-body.light .sidebar{background:#ffffff;border-right:1px solid #e5e7eb}
+/* METRICS */
+.metrics{
+  max-width:1100px;
+  margin:40px auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+}
+.metric{
+  background:rgba(255,255,255,0.12);
+  padding:20px;
+  border-radius:16px;
+  text-align:center;
+}
+.metric .big{font-size:22px;font-weight:900;color:#facc15}
+.metric .small{font-size:13px}
 
-.avatar{width:130px;height:130px;border-radius:50%;border:4px solid #2563eb;object-fit:cover;margin-bottom:12px}
-.name{color:#2563eb;font-size:22px;font-weight:900}
-.role{color:#22c55e;font-size:13px;font-weight:700;margin-top:6px}
+/* SECTIONS */
+.section{
+  max-width:1100px;
+  margin:40px auto;
+  padding:0 20px;
+}
+.section h2{
+  color:#60a5fa;
+  font-size:20px;
+  margin-bottom:12px;
+}
+body.light .section h2{color:#1d4ed8}
 
-.sidebar h3{color:#60a5fa;margin:20px 0 8px;font-size:13px}
-.sidebar p,.sidebar a{color:#cbd5e1;font-size:13px;text-decoration:none;margin-bottom:6px;display:block}
-body.light .sidebar p,body.light .sidebar a{color:#1f2937}
+.section p, .section li{
+  line-height:1.7;
+}
 
-.btn{background:#2563eb;color:#fff;padding:10px 14px;border-radius:14px;text-align:center;font-weight:700;margin-top:10px;text-decoration:none}
-.btn.secondary{background:#1f2937}
+/* JOBS */
+.job{
+  border-bottom:1px solid rgba(255,255,255,0.15);
+  padding-bottom:20px;
+  margin-bottom:24px;
+}
+body.light .job{border-color:#e5e7eb}
 
-.main{padding:40px}
-.section{margin-top:28px}
-.section h2{color:#60a5fa;font-size:18px;margin-bottom:12px}
-body.light .section h2{color:#2563eb}
-.section p,.section li{color:#e5e7eb;line-height:1.6}
-body.light .section p,body.light .section li{color:#111827}
+.job-title{
+  color:#facc15;
+  font-weight:900;
+  font-size:17px;
+}
+.job-meta{
+  display:flex;
+  justify-content:space-between;
+  font-size:13px;
+  color:#9ca3af;
+  margin:6px 0 10px;
+}
+.job ul{margin-left:18px}
 
-.job-title{color:#eab308;font-weight:900}
+/* HIGHLIGHT */
+.highlight{
+  background:rgba(255,255,255,0.08);
+  border-left:4px solid #facc15;
+  padding:14px;
+  border-radius:12px;
+  margin-top:14px;
+}
 
-.highlight{background:#111827;border-left:4px solid #eab308;padding:12px;border-radius:12px;margin-top:12px}
-body.light .highlight{background:#ffffff;border-left:4px solid #a16207;border:1px solid #e5e7eb}
-
-@media(max-width:900px){.container{grid-template-columns:1fr}}
+/* FOOTER */
+.footer{
+  text-align:center;
+  padding:30px;
+  font-size:13px;
+  color:#9ca3af;
+}
+body.light .footer{color:#4b5563}
 </style>
 </head>
 
 <body>
 
-<button class="toggle" id="themeToggle">🌙</button>
-
-<div class="lang-switch">
-  <a href="index.html">🇧🇷</a>
-  <a href="index-en.html">🇺🇸</a>
-  <a href="index-es.html">🇪🇸</a>
+<div class="top-bar">
+  <button class="theme-btn" id="themeToggle">🌙</button>
+  <div class="langs">
+    <a href="index.html" class="active">🇧🇷 PT</a>
+    <a href="index-en.html">🇺🇸 EN</a>
+    <a href="index-es.html">🇪🇸 ES</a>
+  </div>
 </div>
 
-<div class="container">
+<header class="header">
+  <div class="header-content">
+    <img src="assets/Midia.jpg" class="avatar" alt="Foto de Kaleb Nunes">
 
-<aside class="sidebar">
-  <img src="assets/foto.jpg" class="avatar">
-  <div class="name">KALEB<br>NUNES</div>
-  <div class="role">Consultor de Implantação<br>Infra, Redes, NOC, Observabilidade</div>
+    <div>
+      <h1>KALEB NUNES DOS SANTOS</h1>
+      <h2>Consultor de Implantação | Automação, Redes e Observabilidade</h2>
 
-  <h3>contact.info</h3>
-  <p>Balneário Camboriú – SC – Brasil</p>
-  <p>+55 47 98890-1616</p>
-  <p>kalebdossantos59924@gmail.com</p>
-  <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://wa.me/5547988901616" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:kalebdossantos59924@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      <a><i class="fas fa-location-dot"></i> Balneário Camboriú - SC - Brasil</a>
 
-  <a class="btn" href="assets/portfolio_2026.pdf" target="_blank">⬇ Download Portfólio</a>
-  <a class="btn secondary" href="assets/carta-recomendacao-2026.pdf" target="_blank">✍ Carta de Recomendação</a>
-</aside>
+      <a class="btn" href="assets/portfolio_2026.pdf" target="_blank">⬇ Download Portfólio</a>
+      <a class="btn secondary" href="assets/carta-recomendacao-2026.pdf" target="_blank">✍ Carta de Recomendação</a>
+    </div>
+  </div>
+</header>
 
-<main class="main">
+<div class="metrics">
+  <div class="metric"><div class="big">6+</div><div class="small">Anos de experiência</div></div>
+  <div class="metric"><div class="big">40%</div><div class="small">Redução operacional</div></div>
+  <div class="metric"><div class="big">Enterprise</div><div class="small">Ambientes críticos</div></div>
+  <div class="metric"><div class="big">Alta</div><div class="small">Confiabilidade</div></div>
+</div>
 
 <section class="section">
-<h2>about.me</h2>
-<p>Consultor de Implantação com forte atuação em Infraestrutura, Redes, NOC, Observabilidade e ITSM. Experiência em ambientes críticos, automação, integrações via API e suporte mission-critical.</p>
+  <h2>about.me</h2>
+  <p>
+  Consultor de Implantação com forte atuação em Infraestrutura, Redes, NOC, Observabilidade e ITSM.
+  Experiência em ambientes críticos, automação, integrações via API, monitoramento e suporte a operações mission-critical.
+  </p>
 </section>
 
 <section class="section">
 <h2>work.experience</h2>
 
-<div class="job-title">Consultor de Implantação — Ellevo Software (Ago/2025 – Atual)</div>
-<ul>
-<li>Modelo de atuação: Cooperado.</li>
-<li>Promovido de Analista de Suporte N2 para Consultor em apenas 1 mês.</li>
-<li>Domínio das plataformas Ellevo Legacy e Next.</li>
-<li>Treinamentos pela Universidade Ellevo (EAD).</li>
-<li>Clientes: Renault, Grupo Elfa, Grupo Bauminas, Cruz Azul Hospital, Yazaki, HIL, Hill Saúde, ERP SIS PUMA.</li>
-<li>Implantação da plataforma Ellevo Next.</li>
-<li>Migração de sistemas legados.</li>
-<li>Integrações via API, SQL e PowerShell.</li>
-<li>Uso da Ellevo Function.</li>
-<li>Atuação em ambientes críticos.</li>
-</ul>
+<div class="job">
+  <div class="job-title">Consultor de Implantação — Ellevo Software</div>
+  <div class="job-meta"><span>Ago/2025 – Atual</span><span>ITSM • Automação • APIs</span></div>
+  <ul>
+    <li>Implantação ITSM e migração Ellevo Legado → Next.</li>
+    <li>Configuração de ambientes, catálogos, SLAs e fluxos.</li>
+    <li>Automação com PowerShell, SQL, CSC e Ellevo Function.</li>
+    <li>Integrações via API/REST e validações com Postman.</li>
+    <li>Clientes: Renault, Grupo Elfa, Bauminas, Yazaki, Cruz Azul, HIL.NET, SIS PUMA.</li>
+  </ul>
 
-<div class="highlight">
-<strong>Certificações Universidade Ellevo:</strong><br>
-• Atendente – Next<br>
-• Administração da Plataforma Ellevo<br>
-• Administração Next<br>
-• Atendente Plataforma Ellevo
+  <div class="highlight">
+    <strong>Projeto Especial – Shopping Iguatemi</strong><br>
+    VPN FortiClient, reuniões com Infra e Cibersegurança, alinhamento com Diretoria e estabilização de ambientes críticos.
+  </div>
+</div>
+
+<div class="job">
+  <div class="job-title">Bradesco Seguros — Consultoria Técnica</div>
+  <div class="job-meta"><span>2021 – 2022</span><span>APIs • Postman • Dados sensíveis</span></div>
+  <ul>
+    <li>Consumo e validação de APIs via Postman.</li>
+    <li>Manipulação segura de dados sensíveis (LGPD).</li>
+    <li>Gestão de chamados e integração com equipe N3.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-title">Analista de Redes — VivaTech</div>
+  <div class="job-meta"><span>2022 – 2023</span><span>NOC • SLA • Troubleshooting</span></div>
+  <ul>
+    <li>Monitoramento NOC com LibreNMS e PRTG.</li>
+    <li>Atuação em incidentes e continuidade operacional.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-title">Senior Network Technician — RR64</div>
+  <div class="job-meta"><span>2023 – 2025</span><span>Backbone • Zabbix • Grafana</span></div>
+  <ul>
+    <li>Ambientes críticos, DNS judicial e servidores SpeedTest.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-title">Analista de Redes — MetroNetwork</div>
+  <div class="job-meta"><span>2022 – 2023</span><span>NOC • Incidentes</span></div>
+  <ul>
+    <li>Monitoramento e suporte à infraestrutura.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-title">Analista de Suporte — Operadora Vetorial</div>
+  <div class="job-meta"><span>2019 – 2020</span><span>Suporte • Conectividade</span></div>
+  <ul>
+    <li>Atendimento técnico e infraestrutura básica.</li>
+  </ul>
 </div>
 
 </section>
 
-</main>
+<section class="section">
+<h2>references</h2>
+<ul>
+  <li><strong>Rôney Cordeiro</strong> — CEO VivaTech | +1 (857) 204-7057</li>
+  <li><strong>Lucas Costa</strong> — MetroNetwork | +55 47 9759-6283</li>
+</ul>
+</section>
+
+<div class="footer">
+© 2026 Kaleb Nunes dos Santos • Portfólio Profissional
 </div>
 
 <script>
