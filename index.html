@@ -1,249 +1,155 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<title>Kaleb Nunes | CV Profissional</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+import React, { useState } from 'react';
 
-<style>
-/* Reset e Estilos Base */
-*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+export default function KalebCV() {
+  const [theme, setTheme] = useState('dark');
+  const [lang, setLang] = useState('pt');
 
-body{background:#0b1020;color:#e5e7eb;transition: background 0.3s}
-body.light{background:#f4f6fb;color:#111827}
+  const isLight = theme === 'light';
 
-.container{display:grid;grid-template-columns:300px 1fr;max-width:1400px;margin:auto;min-height:100vh}
+  const content = {
+    pt: {
+      role: 'Consultor de Implantação',
+      subtitle: 'Infraestrutura, NOC, Observabilidade',
+      about: 'Consultor de Implantação com experiência em Infraestrutura, Redes, NOC, Observabilidade e ITSM. Atuação em ambientes críticos, automação, integrações via API, monitoramento e suporte a operações mission-critical.',
+      contact: 'contact.info',
+      aboutMe: 'about.me',
+      experience: 'work.experience',
+      references: 'references',
+      downloadPortfolio: '⬇ Download Portfólio',
+      recommendation: '👍 Carta de Recomendação'
+    }
+  };
 
-/* Sidebar */
-.sidebar{background:#111827;padding:30px 25px;position: sticky; top: 0; height: 100vh; overflow-y: auto;}
-body.light .sidebar{background:#ffffff;border-right:1px solid #e5e7eb}
+  const t = content[lang];
 
-.avatar-container { text-align: center; margin-bottom: 20px; }
-.avatar{width:140px;height:140px;border-radius:50%;border:4px solid #2563eb;object-fit:cover;box-shadow: 0 4px 15px rgba(0,0,0,0.3)}
+  return (
+    <div className={`min-h-screen ${isLight ? 'bg-gray-50' : 'bg-slate-900'} ${isLight ? 'text-gray-900' : 'text-gray-100'}`}>
 
-.name{color:#60a5fa;font-size:24px;font-weight:900;line-height:1.1;text-transform: uppercase;}
-.role{color:#4ade80;font-size:13px;font-weight:700;margin-top:8px;letter-spacing: 0.5px;}
+      {/* Toggle Theme */}
+      <button 
+        onClick={() => setTheme(isLight ? 'dark' : 'light')}
+        className={`fixed top-6 left-6 z-50 w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-lg ${
+          isLight ? 'bg-slate-800 text-white' : 'bg-blue-600 text-white'
+        }`}
+      >
+        {isLight ? '☀️' : '🌙'}
+      </button>
 
-.theme-toggle{cursor:pointer;margin:15px 0;padding:8px 15px;border-radius:20px;border:1px solid #2563eb;width:fit-content;font-size:12px;background:rgba(37,99,235,0.1);color:#60a5fa}
+      {/* Idiomas */}
+      <div className="fixed top-6 right-6 z-50 flex gap-2">
+        {[
+          { code: 'pt', label: 'BR' },
+          { code: 'en', label: 'US' },
+          { code: 'es', label: 'ES' }
+        ].map(l => (
+          <button
+            key={l.code}
+            onClick={() => setLang(l.code)}
+            className={`w-12 h-12 rounded-full font-bold text-sm shadow-lg transition ${
+              lang === l.code 
+                ? (isLight ? 'bg-blue-600 text-white' : 'bg-blue-500 text-white')
+                : (isLight ? 'bg-white text-gray-700' : 'bg-slate-800 text-gray-300')
+            }`}
+          >
+            {l.label}
+          </button>
+        ))}
+      </div>
 
-.langs{margin-bottom: 25px;}
-.langs a{
-  display:inline-block;
-  margin-right:8px;
-  padding:6px 12px;
-  border-radius:8px;
-  border:1px solid #2563eb;
-  color:#2563eb;
-  font-weight:700;
-  text-decoration:none;
-  font-size:12px;
-  transition: 0.3s;
-}
-.langs .active{background:#2563eb;color:#fff}
-.langs a:hover{background:rgba(37,99,235,0.2)}
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-[340px_1fr]">
 
-.sidebar-section h3{color:#93c5fd;margin:25px 0 12px;font-size:12px;text-transform: uppercase;letter-spacing: 1px;border-bottom: 1px solid #1f2937;padding-bottom:5px}
-.sidebar-section p, .sidebar-section a{color:#9ca3af;font-size:13px;text-decoration:none;margin-bottom:8px;display:block}
-body.light .sidebar-section p, body.light .sidebar-section a{color:#1f2937}
+        {/* SIDEBAR */}
+        <aside className={`p-8 min-h-screen ${isLight ? 'bg-white border-r border-gray-200' : 'bg-slate-800'}`}>
+          
+          {/* FOTO REAL */}
+          <img 
+            src="/assets/Mídia%20(2).jpg" 
+            alt="Kaleb Nunes"
+            className={`w-32 h-32 rounded-full object-cover mb-4 mx-auto shadow-lg ${
+              isLight ? 'border-4 border-blue-500' : 'border-4 border-blue-400'
+            }`}
+          />
 
-.btn{background:#2563eb;color:#fff;padding:12px;border-radius:10px;text-align:center;font-weight:700;margin-top:12px;text-decoration:none;display:block;font-size:13px;transition: 0.3s}
-.btn:hover{background:#1d4ed8;transform:translateY(-2px)}
-.btn.secondary{background:#374151;color:#ffffff;margin-top:8px}
+          <div className="text-center mb-6">
+            <div className={`text-2xl font-black ${isLight ? 'text-blue-700' : 'text-blue-400'}`}>
+              KALEB<br/>NUNES
+            </div>
+            <div className={`text-sm font-bold mt-2 ${isLight ? 'text-emerald-600' : 'text-emerald-400'}`}>
+              {t.role}<br/>{t.subtitle}
+            </div>
+          </div>
 
-.skill{margin-top:12px;font-size:12px;font-weight:600}
-.bar{height:6px;background:#1f2937;border-radius:999px;overflow:hidden;margin-top:6px}
-.bar span{height:100%;display:block;background:linear-gradient(90deg,#4ade80,#60a5fa)}
+          <div className="space-y-2 mb-6">
+            <h3 className={`text-xs font-bold ${isLight ? 'text-blue-700' : 'text-blue-400'}`}>{t.contact}</h3>
+            <p className="text-xs">Balneário Camboriú – SC – Brasil</p>
+            <p className="text-xs">+55 47 98890-1616</p>
+            <p className="text-xs break-all">kalebdossantos59924@gmail.com</p>
+            <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank" className="text-xs text-blue-400">LinkedIn</a>
+          </div>
 
-/* Main Content */
-.main{padding:40px 50px;background:#0b1020}
-body.light .main{background:#f4f6fb}
+          <a href="/assets/portfolio_2026.pdf" target="_blank" className="block w-full text-center py-3 rounded-xl font-bold text-sm bg-blue-600 text-white mb-3">
+            {t.downloadPortfolio}
+          </a>
 
-.section{margin-bottom:40px}
-.section h2{color:#93c5fd;font-size:18px;margin-bottom:15px;text-transform: uppercase;display:flex;align-items:center;gap:10px}
-.section h2::after{content:'';height:2px;background:#1f2937;flex:1}
-body.light .section h2{color:#2563eb}
+          <a href="/assets/carta-recomendacao-2026.pdf" target="_blank" className="block w-full text-center py-3 rounded-xl font-bold text-sm bg-slate-700 text-white">
+            {t.recommendation}
+          </a>
+        </aside>
 
-.section p, .section li{color:#e5e7eb;font-size:14.5px;line-height:1.7}
-body.light .section p, body.light .section li{color:#111827}
+        {/* MAIN */}
+        <main className="p-10 lg:p-12">
 
-.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:20px}
-.metric{background:#111827;border-radius:12px;padding:20px;border:1px solid #1f2937;text-align:center;transition: 0.3s}
-.metric:hover{border-color:#2563eb;transform:translateY(-5px)}
-body.light .metric{background:#ffffff;border:1px solid #e5e7eb}
+          <section className="mb-10">
+            <h2 className={`text-xl font-bold mb-4 ${isLight ? 'text-blue-700' : 'text-blue-400'}`}>
+              {t.aboutMe}
+            </h2>
+            <p className="text-base leading-relaxed">
+              {t.about}
+            </p>
+          </section>
 
-.metric .big{color:#eab308;font-size:24px;font-weight:900}
-body.light .metric .big{color:#a16207}
-.metric .small{font-size:11px;color:#9ca3af;text-transform: uppercase;margin-top:5px;font-weight:700}
+          <section className="mb-10">
+            <h2 className={`text-xl font-bold mb-6 ${isLight ? 'text-blue-700' : 'text-blue-400'}`}>
+              {t.experience}
+            </h2>
 
-.job{border-bottom:1px solid #1f2937;padding-bottom:20px;margin-bottom:25px}
-body.light .job{border-bottom:1px solid #e5e7eb}
+            <div className="mb-8">
+              <div className={`font-black text-lg mb-2 ${isLight ? 'text-amber-700' : 'text-amber-400'}`}>
+                Consultor de Implantação — Ellevo Software (Ago/2025 – Atual)
+              </div>
 
-.job-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.job-title{color:#eab308;font-size:16px;font-weight:800}
-body.light .job-title{color:#a16207}
+              <ul className="space-y-2 text-sm">
+                <li>• Modelo de trabalho: Cooperado</li>
+                <li>• Promovido de Analista de Suporte N2 para Consultor em 1 mês</li>
+                <li>• Domínio das plataformas Ellevo Legacy e Next</li>
+                <li>• Treinamentos técnicos pela Universidade Ellevo (EAD)</li>
+                <li>• Projetos de alta complexidade para clientes multinacionais</li>
+                <li>• Clientes: Renault, Grupo Elfa, Bauminas, Cruz Azul, Yazaki, HIL, Hill Saúde, ERP SIS PUMA</li>
+                <li>• Implantação da plataforma Ellevo Next</li>
+                <li>• Migração de sistemas legados</li>
+                <li>• Integrações via API, SQL e PowerShell</li>
+                <li>• Suporte técnico em projetos CSC</li>
+                <li>• Uso da ferramenta Ellevo Function</li>
+                <li>• Projetos validados em produção</li>
+              </ul>
+            </div>
+          </section>
 
-.job-meta{font-size:12px;color:#9ca3af;display:flex;gap:15px}
-body.light .job-meta{color:#4b5563}
+          <section className="mb-10">
+            <h2 className={`text-xl font-bold mb-4 ${isLight ? 'text-blue-700' : 'text-blue-400'}`}>
+              {t.references}
+            </h2>
+            <ul className="space-y-2 text-sm">
+              <li><strong>Rôney Cordeiro</strong> — CEO VivaTech | +1 (857) 204-7057</li>
+              <li><strong>Lucas Costa</strong> — MetroNetwork | +55 47 9759-6283</li>
+            </ul>
+          </section>
 
-.job ul{margin-left:20px;margin-top:10px}
-.job li{margin-bottom:5px}
-
-.highlight-box{background:rgba(234,179,8,0.05);border-left:4px solid #eab308;padding:15px;border-radius:0 10px 10px 0;margin:15px 0}
-
-.footer{text-align:center;font-size:12px;color:#9ca3af;border-top:1px solid #1f2937;padding:30px 0;margin-top:20px}
-
-@media(max-width:900px){
-  .container{grid-template-columns:1fr}
-  .sidebar{height:auto;position:relative}
-  .metrics{grid-template-columns:1fr 1fr}
-}
-</style>
-</head>
-
-<body>
-<div class="container">
-
-<aside class="sidebar">
-  <div class="avatar-container">
-    <img src="Mídia.jpg" class="avatar" alt="Kaleb Nunes dos Santos [cite: 1, 2]">
-  </div>
-
-  <div class="name">KALEB<br>NUNES</div>
-  <div class="role" id="job-role">Consultor de Implantação [cite: 47]<br>Redes, NOC e Observabilidade [cite: 10]</div>
-
-  <div class="theme-toggle" id="themeToggle">🌙 / ☀️ Alternar Tema</div>
-
-  <div class="langs">
-    <a href="index.html" class="active">PT</a>
-    <a href="index-en.html">EN</a>
-    <a href="index-es.html">ES</a>
-  </div>
-
-  <div class="sidebar-section">
-    <h3>contato</h3>
-    <p>📍 Balneário Camboriú – SC [cite: 4]</p>
-    <p>📱 +55 47 98890-1616 [cite: 5]</p>
-    <p>✉️ kalebdossantos59924@gmail.com [cite: 7]</p>
-    <a href="https://linkedin.com/in/kalebnunes" target="_blank">🔗 LinkedIn [cite: 7]</a>
-    <a href="https://wa.me/5547988901616" target="_blank">💬 WhatsApp</a>
-
-    <a class="btn" href="portfolio_2026.pdf" target="_blank">📄 Baixar Portfólio 2026</a>
-    <a class="btn secondary" href="carta-recomendacao-2026.pdf" target="_blank">📜 Carta de Recomendação [cite: 90]</a>
-  </div>
-
-  <div class="sidebar-section">
-    <h3>habilidades</h3>
-    <div class="skill">Monitoramento (Zabbix/Grafana) [cite: 77]</div>
-    <div class="bar"><span style="width:95%"></span></div>
-
-    <div class="skill">Infraestrutura de Redes [cite: 76]</div>
-    <div class="bar"><span style="width:90%"></span></div>
-
-    <div class="skill">Automação (PowerShell) [cite: 78]</div>
-    <div class="bar"><span style="width:85%"></span></div>
-
-    <div class="skill">ITSM (Ellevo Next) [cite: 79]</div>
-    <div class="bar"><span style="width:80%"></span></div>
-
-    <div class="skill">Segurança e LGPD [cite: 80]</div>
-    <div class="bar"><span style="width:75%"></span></div>
-  </div>
-</aside>
-
-<main class="main">
-
-<section class="section">
-  <h2>perfil.profissional</h2>
-  <p>
-    Profissional de TI com mais de 6 anos de experiência em ambientes NOC, redes corporativas e projetos enterprise[cite: 9]. Especialista em monitoramento, automação e ITSM, com foco em eficiência operacional e governança em ambientes críticos[cite: 10].
-  </p>
-
-  <div class="metrics">
-    <div class="metric"><div class="big">6+</div><div class="small">Anos de Experiência [cite: 9]</div></div>
-    <div class="metric"><div class="big">95%</div><div class="small">Nível em Monitoramento [cite: 69]</div></div>
-    <div class="metric"><div class="big">SaaS</div><div class="small">Implantação Ágil [cite: 20]</div></div>
-    <div class="metric"><div class="big">MTTR</div><div class="small">Redução de Incidentes [cite: 31]</div></div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>experiência.profissional</h2>
-
-  <div class="job">
-    <div class="job-header">
-      <div class="job-title">Consultor de Implantação — Ellevo Software [cite: 47, 48]</div>
-      <div class="job-period">Ago/2025 – Atual [cite: 49]</div>
+          <footer className="text-center text-xs pt-6 border-t border-slate-700 text-gray-400">
+            © 2026 Kaleb Nunes dos Santos • Portfólio Profissional
+          </footer>
+        </main>
+      </div>
     </div>
-    <div class="job-meta">Modelo Cooperado | Automação e Integrações via API [cite: 51]</div>
-    <ul>
-      <li>Implantação completa da plataforma Ellevo Next em ambientes enterprise[cite: 13, 50].</li>
-      <li>Configuração de catálogo de serviços, SLAs e fluxos de incidentes/mudanças[cite: 14].</li>
-      <li>Automação de setups e configurações via API REST, reduzindo esforço manual[cite: 21, 23].</li>
-      <li>Clientes: Renault, Yazaki, Grupo Elfa, Bauminas, Cruz Azul.</li>
-    </ul>
-
-    <div class="highlight-box">
-      <strong>Case de Sucesso: Shopping Iguatemi</strong><br>
-      Apoio técnico em configuração de VPN FortiClient e estabilização de ambiente de homologação crítica para diretoria.
-    </div>
-  </div>
-
-  <div class="job">
-    <div class="job-header">
-      <div class="job-title">Master Network Technician — RR64 Network Intelligence [cite: 53, 54]</div>
-      <div class="job-period">2023 – 2025 [cite: 55]</div>
-    </div>
-    <div class="job-meta">Ambientes Críticos e Backbone [cite: 56]</div>
-    <ul>
-      <li>Troubleshooting avançado em redes corporativas e garantia de SLA[cite: 57].</li>
-      <li>Monitoramento proativo e criação de dashboards executivos para redução de incidentes[cite: 28].</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <div class="job-header">
-      <div class="job-title">Analista NOC N1/N2 — VivaTech / MetroNetwork [cite: 58, 59]</div>
-      <div class="job-period">2022 – 2023 [cite: 60]</div>
-    </div>
-    <div class="job-meta">Monitoramento 24x7 e Resposta a Incidentes [cite: 61]</div>
-    <ul>
-      <li>Operação com ferramentas LibreNMS, Zabbix e Grafana[cite: 62].</li>
-      <li>Análise e verificação de links, mitigação de oscilações e suporte a ambientes críticos [cite: 93-98].</li>
-    </ul>
-  </div>
-</section>
-
-<section class="section">
-  <h2>formação.e.anexos</h2>
-  <div class="highlight-box">
-    <strong>Certificações Ellevo:</strong> Administrador Ellevo Next, Governança de Serviços e Implantação de Processos Corporativos.
-  </div>
-  <p>
-    <strong>Idiomas:</strong> Português (Nativo), Inglês e Espanhol (Técnico/Profissional).
-  </p>
-</section>
-
-<div class="footer">
-  © 2026 Kaleb Nunes dos Santos • Consultor de TI e Observabilidade [cite: 87]
-</div>
-
-</main>
-</div>
-
-<script>
-// Toggle de Tema
-document.getElementById("themeToggle").onclick=()=>{
-  document.body.classList.toggle("light");
+  );
 }
-
-// Log de Verificação da Foto
-window.onload = () => {
-  const img = document.getElementById('profile-img');
-  if (img && img.naturalWidth === 0) {
-    console.error("A foto 'Mídia.jpg' não foi encontrada na mesma pasta do HTML.");
-  }
-}
-</script>
-
-</body>
-</html>
