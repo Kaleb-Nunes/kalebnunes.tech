@@ -4,19 +4,111 @@
 <meta charset="UTF-8">
 <title>Kaleb Nunes | CV</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif}
+
+body{background:#0b1020;color:#e5e7eb}
+body.light{background:#f4f6fb;color:#111827}
+
+.container{display:grid;grid-template-columns:300px 1fr;max-width:1300px;margin:auto;min-height:100vh}
+
+.sidebar{background:#111827;padding:26px 20px}
+body.light .sidebar{background:#ffffff;border-right:1px solid #e5e7eb}
+
+.avatar{width:120px;height:120px;border-radius:50%;border:3px solid #2563eb;object-fit:cover;margin-bottom:12px}
+
+.name{color:#60a5fa;font-size:22px;font-weight:900}
+.role{color:#4ade80;font-size:13px;font-weight:700;margin-top:6px}
+
+.toggle{cursor:pointer;margin:14px 0;padding:6px 10px;border-radius:20px;border:1px solid #2563eb;width:fit-content}
+
+.langs a{
+  display:inline-block;
+  margin-right:6px;
+  padding:6px 10px;
+  border-radius:12px;
+  border:1px solid #2563eb;
+  color:#2563eb;
+  font-weight:700;
+  text-decoration:none;
+  font-size:12px;
+}
+.langs .active{background:#2563eb;color:#fff}
+
+.sidebar h3{color:#93c5fd;margin:20px 0 8px;font-size:13px}
+.sidebar p,.sidebar a{color:#9ca3af;font-size:13px;text-decoration:none;margin-bottom:6px;display:block}
+body.light .sidebar p, body.light .sidebar a{color:#1f2937}
+
+.btn{background:#2563eb;color:#fff;padding:10px 14px;border-radius:14px;text-align:center;font-weight:700;margin-top:10px;text-decoration:none}
+.btn.secondary{background:#1f2937}
+
+.skill{margin-top:10px;font-size:12px}
+.bar{height:6px;background:#1f2937;border-radius:999px;overflow:hidden;margin-top:6px}
+.bar span{height:100%;display:block;background:linear-gradient(90deg,#4ade80,#60a5fa)}
+
+.main{padding:30px 40px;background:#0b1020}
+body.light .main{background:#f4f6fb}
+
+.section{margin-top:28px}
+.section h2{color:#93c5fd;font-size:16px;margin-bottom:12px}
+body.light .section h2{color:#2563eb}
+
+.section p, .section li{color:#e5e7eb}
+body.light .section p, body.light .section li{color:#111827}
+
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+
+.metric{background:#111827;border-radius:16px;padding:14px;border:1px solid #1f2937}
+body.light .metric{background:#ffffff;border:1px solid #e5e7eb}
+
+.metric .big{color:#eab308;font-size:18px;font-weight:900}
+body.light .metric .big{color:#a16207}
+
+.metric .small{font-size:12px;color:#9ca3af}
+body.light .metric .small{color:#4b5563}
+
+.job{border-bottom:1px solid #1f2937;padding-bottom:18px;margin-bottom:22px}
+body.light .job{border-bottom:1px solid #e5e7eb}
+
+.job-title{color:#eab308;font-weight:900}
+body.light .job-title{color:#a16207}
+
+.job-meta{display:flex;justify-content:space-between;font-size:12px;color:#9ca3af;margin-bottom:8px}
+body.light .job-meta{color:#4b5563}
+
+.job ul{margin-left:18px}
+
+.highlight{background:#111827;border-left:4px solid #eab308;padding:12px;border-radius:12px;margin-top:12px}
+body.light .highlight{background:#ffffff;border-left:4px solid #a16207;border:1px solid #e5e7eb}
+
+.footer{text-align:center;font-size:12px;color:#9ca3af;border-top:1px solid #1f2937;padding-top:14px}
+body.light .footer{color:#4b5563;border-top:1px solid #e5e7eb}
+
+@media(max-width:900px){
+  .container{grid-template-columns:1fr}
+}
+</style>
 </head>
 
 <body>
 <div class="container">
 
+<!-- SIDEBAR -->
 <aside class="sidebar">
+
 <img src="assets/foto.jpg" class="avatar" alt="Kaleb Nunes">
 
 <div class="name">KALEB<br>NUNES</div>
 <div class="role">Implementation Consultant<br>Infrastructure, Networks, NOC, Observability</div>
 
 <div class="toggle" id="themeToggle">🌙 / ☀️</div>
+
+<div class="langs">
+  <a href="index.html">PT</a>
+  <a href="index-en.html" class="active">EN</a>
+  <a href="index-es.html">ES</a>
+</div>
 
 <h3>contact.info</h3>
 <p>Balneário Camboriú – SC – Brazil</p>
@@ -29,13 +121,25 @@
 <a class="btn secondary" href="assets/carta-recomendacao-2026.pdf" target="_blank">✍ Recommendation Letter</a>
 
 <h3>technical.skills</h3>
-<div class="skill">Infrastructure / Networks</div><div class="bar"><span style="width:90%"></span></div>
-<div class="skill">Observability</div><div class="bar"><span style="width:88%"></span></div>
-<div class="skill">ITSM / Ellevo</div><div class="bar"><span style="width:86%"></span></div>
-<div class="skill">Automation / Data</div><div class="bar"><span style="width:82%"></span></div>
-<div class="skill">Security / LGPD</div><div class="bar"><span style="width:76%"></span></div>
+
+<div class="skill">Infrastructure / Networks</div>
+<div class="bar"><span style="width:90%"></span></div>
+
+<div class="skill">Observability</div>
+<div class="bar"><span style="width:88%"></span></div>
+
+<div class="skill">ITSM / Ellevo</div>
+<div class="bar"><span style="width:86%"></span></div>
+
+<div class="skill">Automation / Data</div>
+<div class="bar"><span style="width:82%"></span></div>
+
+<div class="skill">Security / LGPD</div>
+<div class="bar"><span style="width:76%"></span></div>
+
 </aside>
 
+<!-- MAIN -->
 <main class="main">
 
 <section class="section">
@@ -81,6 +185,39 @@ Skilled in critical environments, automation, API integrations, monitoring and m
     <li>API consumption and validation with Postman.</li>
     <li>Secure handling of sensitive data (LGPD).</li>
     <li>Ticket management and N3 team integration.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-title">Network Analyst — VivaTech</div>
+  <div class="job-meta"><span>2022 – 2023</span><span>NOC • SLA • Troubleshooting</span></div>
+  <ul>
+    <li>NOC monitoring with LibreNMS and PRTG.</li>
+    <li>Incident response and operational continuity.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-title">Senior Network Technician — RR64</div>
+  <div class="job-meta"><span>2023 – 2025</span><span>Backbone • Zabbix • Grafana</span></div>
+  <ul>
+    <li>Critical environments, judicial DNS blocks and SpeedTest servers.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-title">Network Analyst — MetroNetwork</div>
+  <div class="job-meta"><span>2022 – 2023</span><span>NOC • Incidents</span></div>
+  <ul>
+    <li>Network monitoring and infrastructure support.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-title">Support Analyst — Vetorial ISP</div>
+  <div class="job-meta"><span>2019 – 2020</span><span>Support • Connectivity</span></div>
+  <ul>
+    <li>Technical support and basic infrastructure.</li>
   </ul>
 </div>
 
