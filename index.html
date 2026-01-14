@@ -16,7 +16,7 @@ body{
 }
 
 body.light{
-  background:#f1f4f9;
+  background:#f2f5fa;
   color:#1f2937;
 }
 
@@ -35,7 +35,7 @@ body.light{
 }
 
 body.light .sidebar{
-  background:#f7f9fc;
+  background:#ffffff;
   border-right:1px solid #dce1e7;
 }
 
@@ -43,21 +43,22 @@ body.light .sidebar{
   width:130px;
   height:130px;
   border-radius:50%;
-  border:4px solid #5b7cfa;
+  border:4px solid #4f8cff;
   object-fit:cover;
   margin:14px auto;
   display:block;
 }
 
 .name{
-  color:#5b7cfa;
+  color:#4f8cff;
   font-size:22px;
   font-weight:900;
-  text-align:center
+  text-align:center;
+  letter-spacing:1px;
 }
 
 .role{
-  color:#7ce3c3;
+  color:#6ee7c6;
   font-size:13px;
   font-weight:700;
   margin-top:6px;
@@ -69,15 +70,17 @@ body.light .sidebar{
   margin:14px auto;
   padding:6px 12px;
   border-radius:20px;
-  border:1px solid #5b7cfa;
+  border:1px solid #4f8cff;
   width:fit-content;
-  text-align:center
+  text-align:center;
+  color:#4f8cff;
 }
 
 .sidebar h3{
-  color:#9bb0ff;
+  color:#7aa2ff;
   margin:20px 0 8px;
-  font-size:13px
+  font-size:13px;
+  font-weight:800;
 }
 
 .sidebar p,.sidebar a{
@@ -94,7 +97,7 @@ body.light .sidebar a{
 }
 
 .btn{
-  background:#5b7cfa;
+  background:#4f8cff;
   color:#fff;
   padding:10px 14px;
   border-radius:14px;
@@ -106,7 +109,7 @@ body.light .sidebar a{
 }
 
 .btn.secondary{
-  background:#4b5563
+  background:#475569
 }
 
 /* SKILLS */
@@ -123,7 +126,7 @@ body.light .sidebar a{
 .bar span{
   height:100%;
   display:block;
-  background:linear-gradient(90deg,#7ce3c3,#5b7cfa)
+  background:linear-gradient(90deg,#6ee7c6,#4f8cff)
 }
 
 /* MAIN */
@@ -133,15 +136,16 @@ body.light .sidebar a{
 }
 
 body.light .main{
-  background:#f1f4f9
+  background:#f2f5fa
 }
 
 .section{margin-top:28px}
 
 .section h2{
-  color:#9bb0ff;
+  color:#7aa2ff;
   font-size:16px;
-  margin-bottom:12px
+  margin-bottom:12px;
+  font-weight:800;
 }
 
 body.light .section h2{
@@ -172,7 +176,7 @@ body.light .metric{
 }
 
 .metric .big{
-  color:#7ce3c3;
+  color:#6ee7c6;
   font-size:18px;
   font-weight:900
 }
@@ -198,16 +202,25 @@ body.light .job{
 }
 
 .job-title{
-  color:#5b7cfa;
-  font-weight:900
+  color:#4f8cff;
+  font-weight:900;
 }
 
 .job-meta{
   display:flex;
   justify-content:space-between;
   font-size:12px;
-  color:#9ca3af;
-  margin-bottom:8px
+  margin-bottom:8px;
+}
+
+.job-meta span:first-child{
+  color:#a78bfa;
+  font-weight:700;
+}
+
+.job-meta span:last-child{
+  color:#6ee7c6;
+  font-weight:700;
 }
 
 .job ul{margin-left:18px}
@@ -215,7 +228,7 @@ body.light .job{
 /* HIGHLIGHT */
 .highlight{
   background:#1b2340;
-  border-left:4px solid #7ce3c3;
+  border-left:4px solid #6ee7c6;
   padding:12px;
   border-radius:12px;
   margin-top:12px
@@ -223,7 +236,7 @@ body.light .job{
 
 body.light .highlight{
   background:#ffffff;
-  border-left:4px solid #7ce3c3;
+  border-left:4px solid #6ee7c6;
   border:1px solid #dce1e7;
 }
 
@@ -257,7 +270,7 @@ body.light .footer{
   font-weight:700;
   font-size:12px;
   text-decoration:none;
-  background:#5b7cfa;
+  background:#4f8cff;
   color:#fff
 }
 
@@ -345,7 +358,10 @@ Experiência em ambientes críticos, automação, integrações via API, monitor
 
 <div class="job">
   <div class="job-title">Consultor de Implantação — Ellevo Software</div>
-  <div class="job-meta"><span>Ago/2025 – Atual</span><span>ITSM • Automação • APIs</span></div>
+  <div class="job-meta">
+    <span>Ago/2025 – Atual</span>
+    <span>ITSM • Automação • APIs</span>
+  </div>
   <ul>
     <li>Modelo de trabalho: Cooperado.</li>
     <li>Promovido de Analista N2 para Consultor em 1 mês.</li>
@@ -366,7 +382,10 @@ Experiência em ambientes críticos, automação, integrações via API, monitor
 
 <div class="job">
   <div class="job-title">Bradesco Seguros — Consultoria Técnica</div>
-  <div class="job-meta"><span>2021 – 2022</span><span>APIs • Postman • LGPD</span></div>
+  <div class="job-meta">
+    <span>2021 – 2022</span>
+    <span>APIs • Postman • LGPD</span>
+  </div>
   <ul>
     <li>Validação de APIs via Postman.</li>
     <li>Tratamento seguro de dados sensíveis.</li>
@@ -376,7 +395,10 @@ Experiência em ambientes críticos, automação, integrações via API, monitor
 
 <div class="job">
   <div class="job-title">Analista de Redes — VivaTech</div>
-  <div class="job-meta"><span>2022 – 2023</span><span>NOC • SLA</span></div>
+  <div class="job-meta">
+    <span>2022 – 2023</span>
+    <span>NOC • SLA</span>
+  </div>
   <ul>
     <li>Monitoramento NOC com LibreNMS e PRTG.</li>
     <li>Atuação em incidentes.</li>
@@ -385,7 +407,10 @@ Experiência em ambientes críticos, automação, integrações via API, monitor
 
 <div class="job">
   <div class="job-title">Senior Network Technician — RR64</div>
-  <div class="job-meta"><span>2023 – 2025</span><span>Backbone • Zabbix</span></div>
+  <div class="job-meta">
+    <span>2023 – 2025</span>
+    <span>Backbone • Zabbix</span>
+  </div>
   <ul>
     <li>Ambientes críticos, DNS judicial e servidores SpeedTest.</li>
   </ul>
