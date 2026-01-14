@@ -8,82 +8,158 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif}
 
-body{background:#0b1020;color:#e5e7eb}
-body.light{background:#f4f6fb;color:#111827}
-
-.container{display:grid;grid-template-columns:300px 1fr;max-width:1300px;margin:auto;min-height:100vh}
-
-.sidebar{background:#111827;padding:26px 20px}
-body.light .sidebar{background:#ffffff;border-right:1px solid #e5e7eb}
-
-.avatar{width:120px;height:120px;border-radius:50%;border:3px solid #2563eb;object-fit:cover;margin-bottom:12px}
-
-.name{color:#60a5fa;font-size:22px;font-weight:900}
-.role{color:#4ade80;font-size:13px;font-weight:700;margin-top:6px}
-
-.toggle{cursor:pointer;margin:14px 0;padding:6px 10px;border-radius:20px;border:1px solid #2563eb;width:fit-content}
-
-.langs a{
-  display:inline-block;
-  margin-right:6px;
-  padding:6px 10px;
-  border-radius:12px;
-  border:1px solid #2563eb;
-  color:#2563eb;
-  font-weight:700;
-  text-decoration:none;
-  font-size:12px;
+body{
+  background:#0b1020;
+  color:#e5e7eb;
+  transition:.3s;
 }
-.langs .active{background:#2563eb;color:#fff}
 
-.sidebar h3{color:#93c5fd;margin:20px 0 8px;font-size:13px}
-.sidebar p,.sidebar a{color:#9ca3af;font-size:13px;text-decoration:none;margin-bottom:6px;display:block}
-body.light .sidebar p, body.light .sidebar a{color:#1f2937}
+body.light{
+  background:#f4f6fb;
+  color:#111827;
+}
 
-.btn{background:#2563eb;color:#fff;padding:10px 14px;border-radius:14px;text-align:center;font-weight:700;margin-top:10px;text-decoration:none}
-.btn.secondary{background:#374151;color:#ffffff}
+.lang-switch{
+  position:fixed;
+  top:16px;
+  right:16px;
+  display:flex;
+  gap:8px;
+  z-index:999;
+}
 
-.skill{margin-top:10px;font-size:12px}
-.bar{height:6px;background:#1f2937;border-radius:999px;overflow:hidden;margin-top:6px}
-.bar span{height:100%;display:block;background:linear-gradient(90deg,#4ade80,#60a5fa)}
+.lang-switch button{
+  background:#fff;
+  border:1px solid #d1d5db;
+  padding:6px 10px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:700;
+}
 
-.main{padding:30px 40px;background:#0b1020}
-body.light .main{background:#f4f6fb}
+.toggle{
+  position:fixed;
+  top:16px;
+  left:16px;
+  background:#2563eb;
+  color:#fff;
+  border:none;
+  padding:8px 14px;
+  border-radius:20px;
+  cursor:pointer;
+  font-weight:700;
+}
+
+.container{
+  display:grid;
+  grid-template-columns:300px 1fr;
+  max-width:1300px;
+  margin:auto;
+  min-height:100vh;
+}
+
+.sidebar{
+  background:#111827;
+  padding:26px 20px;
+}
+
+body.light .sidebar{
+  background:#ffffff;
+  border-right:1px solid #e5e7eb;
+}
+
+.avatar{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  border:4px solid #2563eb;
+  object-fit:cover;
+  margin-bottom:12px;
+}
+
+.name{color:#2563eb;font-size:22px;font-weight:900}
+.role{color:#22c55e;font-size:13px;font-weight:700;margin-top:6px}
+
+.sidebar h3{color:#60a5fa;margin:20px 0 8px;font-size:13px}
+
+.sidebar p,.sidebar a{
+  color:#cbd5e1;
+  font-size:13px;
+  text-decoration:none;
+  margin-bottom:6px;
+  display:block;
+}
+
+body.light .sidebar p,
+body.light .sidebar a{
+  color:#1f2937;
+}
+
+.btn{
+  background:#2563eb;
+  color:#fff;
+  padding:10px 14px;
+  border-radius:14px;
+  text-align:center;
+  font-weight:700;
+  margin-top:10px;
+  text-decoration:none;
+}
+
+.btn.secondary{background:#1f2937}
+
+.main{
+  padding:40px;
+}
 
 .section{margin-top:28px}
-.section h2{color:#93c5fd;font-size:16px;margin-bottom:12px}
-body.light .section h2{color:#2563eb}
 
-.section p, .section li{color:#e5e7eb}
-body.light .section p, body.light .section li{color:#111827}
+.section h2{
+  color:#60a5fa;
+  font-size:18px;
+  margin-bottom:12px;
+}
 
-.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+body.light .section h2{
+  color:#2563eb;
+}
 
-.metric{background:#111827;border-radius:16px;padding:14px;border:1px solid #1f2937}
-body.light .metric{background:#ffffff;border:1px solid #e5e7eb}
+.section p,.section li{
+  color:#e5e7eb;
+  line-height:1.6;
+}
 
-.metric .big{color:#eab308;font-size:18px;font-weight:900}
-body.light .metric .big{color:#a16207}
+body.light .section p,
+body.light .section li{
+  color:#111827;
+}
 
-.metric .small{font-size:12px;color:#9ca3af}
-body.light .metric .small{color:#4b5563}
+.metric{
+  background:#111827;
+  padding:14px;
+  border-radius:14px;
+  margin-top:10px;
+}
 
-.job{border-bottom:1px solid #1f2937;padding-bottom:18px;margin-bottom:22px}
-body.light .job{border-bottom:1px solid #e5e7eb}
+body.light .metric{
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+}
 
 .job-title{color:#eab308;font-weight:900}
-body.light .job-title{color:#a16207}
 
-.job-meta{display:flex;justify-content:space-between;font-size:12px;color:#9ca3af;margin-bottom:8px}
-body.light .job-meta{color:#4b5563}
+.highlight{
+  background:#111827;
+  border-left:4px solid #eab308;
+  padding:12px;
+  border-radius:12px;
+  margin-top:12px;
+}
 
-.job ul{margin-left:18px}
-
-.highlight{background:#111827;border-left:4px solid #eab308;padding:12px;border-radius:12px;margin-top:12px}
-body.light .highlight{background:#ffffff;border-left:4px solid #a16207;border:1px solid #e5e7eb}
-
-.footer{text-align:center;font-size:12px;color:#9ca3af;border-top:1px solid #1f2937;padding-top:14px}
-body.light .footer{color:#4b5563;border-top:1px solid #e5e7eb}
+body.light .highlight{
+  background:#ffffff;
+  border-left:4px solid #a16207;
+}
 
 @media(max-width:900px){
   .container{grid-template-columns:1fr}
@@ -92,154 +168,118 @@ body.light .footer{color:#4b5563;border-top:1px solid #e5e7eb}
 </head>
 
 <body>
+
+<button class="toggle" id="themeToggle">🌙</button>
+
+<div class="lang-switch">
+  <button onclick="setLang('pt')">🇧🇷</button>
+  <button onclick="setLang('en')">🇺🇸</button>
+  <button onclick="setLang('es')">🇪🇸</button>
+</div>
+
 <div class="container">
 
 <aside class="sidebar">
+  <img src="assets/foto.jpg" class="avatar" alt="Foto de Kaleb Nunes">
 
-<img src="assets/Midia.jpg" class="avatar" alt="Kaleb Nunes">
+  <div class="name">KALEB<br>NUNES</div>
+  <div class="role" id="role">Consultor de Implantação<br>Infra, Redes, NOC, Observabilidade</div>
 
-<div class="name">KALEB<br>NUNES</div>
-<div class="role">Consultor de Implantação<br>Infra, Redes, NOC, Observabilidade</div>
+  <h3>contact.info</h3>
+  <p>Balneário Camboriú – SC – Brasil</p>
+  <p>+55 47 98890-1616</p>
+  <p>kalebdossantos59924@gmail.com</p>
+  <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">LinkedIn</a>
 
-<div class="toggle" id="themeToggle">🌙 / ☀️</div>
-
-<div class="langs">
-  <a href="index.html" class="active">PT</a>
-  <a href="index-en.html">EN</a>
-  <a href="index-es.html">ES</a>
-</div>
-
-<h3>contact.info</h3>
-<p>Balneário Camboriú – SC – Brasil</p>
-<p>+55 47 98890-1616</p>
-<p>kalebdossantos59924@gmail.com</p>
-<a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">LinkedIn</a>
-<a href="https://wa.me/5547988901616" target="_blank">WhatsApp</a>
-
-<a class="btn" href="assets/portfolio_2026.pdf" target="_blank">⬇ Download Portfólio</a>
-<a class="btn secondary" href="assets/carta-recomendacao-2026.pdf" target="_blank">✍ Carta de Recomendação</a>
-
-<h3>technical.skills</h3>
-
-<div class="skill">Infraestrutura / Redes</div>
-<div class="bar"><span style="width:90%"></span></div>
-
-<div class="skill">Observabilidade</div>
-<div class="bar"><span style="width:88%"></span></div>
-
-<div class="skill">ITSM / Ellevo</div>
-<div class="bar"><span style="width:86%"></span></div>
-
-<div class="skill">Automação / Dados</div>
-<div class="bar"><span style="width:82%"></span></div>
-
-<div class="skill">Segurança / LGPD</div>
-<div class="bar"><span style="width:76%"></span></div>
-
+  <a class="btn" href="assets/portfolio_2026.pdf" target="_blank" id="btnPortfolio">⬇ Download Portfólio</a>
+  <a class="btn secondary" href="assets/carta-recomendacao-2026.pdf" target="_blank" id="btnCarta">✍ Carta de Recomendação</a>
 </aside>
 
 <main class="main">
 
 <section class="section">
-<h2>about.me</h2>
-<p>
-Consultor de Implantação com forte atuação em Infraestrutura, Redes, NOC, Observabilidade e ITSM.
-Experiência em ambientes críticos, automação, integrações via API, monitoramento e suporte a operações mission-critical.
-</p>
-
-<div class="metrics">
-  <div class="metric"><div class="big">6+</div><div class="small">Anos de experiência</div></div>
-  <div class="metric"><div class="big">40%</div><div class="small">Redução no tempo</div></div>
-  <div class="metric"><div class="big">Enterprise</div><div class="small">Ambientes críticos</div></div>
-  <div class="metric"><div class="big">Alta</div><div class="small">Disponibilidade</div></div>
-</div>
+  <h2 id="aboutTitle">about.me</h2>
+  <p id="aboutText"></p>
 </section>
 
 <section class="section">
-<h2>work.experience</h2>
+  <h2 id="expTitle">work.experience</h2>
 
-<div class="job">
-  <div class="job-title">Consultor de Implantação — Ellevo Software</div>
-  <div class="job-meta"><span>Ago/2025 – Atual</span><span>ITSM • Automação • APIs</span></div>
-  <ul>
-    <li>Implantação ITSM e migração Ellevo Legado → Next.</li>
-    <li>Configuração de ambientes, catálogos, SLAs e fluxos.</li>
-    <li>Automação com PowerShell, SQL, CSC e Ellevo Function.</li>
-    <li>Integrações via API/REST e validações com Postman.</li>
-    <li>Clientes: Renault, Grupo Elfa, Bauminas, Yazaki, Cruz Azul, HIL.NET, SIS PUMA.</li>
-  </ul>
+  <div class="job-title" id="jobTitle"></div>
+  <ul id="jobList"></ul>
 
-  <div class="highlight">
-    <strong>Projeto Especial – Shopping Iguatemi</strong><br>
-    VPN FortiClient, reuniões com Infra e Cibersegurança, alinhamento com Diretoria,
-    estabilização da conectividade entre ambientes críticos.
-  </div>
-</div>
-
-<div class="job">
-  <div class="job-title">Bradesco Seguros — Consultoria Técnica</div>
-  <div class="job-meta"><span>2021 – 2022</span><span>APIs • Postman • Dados sensíveis</span></div>
-  <ul>
-    <li>Consumo e validação de APIs via Postman.</li>
-    <li>Manipulação segura de dados sensíveis (LGPD).</li>
-    <li>Gestão de chamados e integração com equipe N3.</li>
-  </ul>
-</div>
-
-<div class="job">
-  <div class="job-title">Analista de Redes — VivaTech</div>
-  <div class="job-meta"><span>2022 – 2023</span><span>NOC • SLA • Troubleshooting</span></div>
-  <ul>
-    <li>Monitoramento NOC com LibreNMS e PRTG.</li>
-    <li>Atuação em incidentes e continuidade operacional.</li>
-  </ul>
-</div>
-
-<div class="job">
-  <div class="job-title">Master / Senior Network Technician — RR64</div>
-  <div class="job-meta"><span>2023 – 2025</span><span>Backbone • Zabbix • Grafana</span></div>
-  <ul>
-    <li>Ambientes críticos, DNS judicial e servidores SpeedTest.</li>
-  </ul>
-</div>
-
-<div class="job">
-  <div class="job-title">Analista de Redes — MetroNetwork</div>
-  <div class="job-meta"><span>2022 – 2023</span><span>NOC • Incidentes</span></div>
-  <ul>
-    <li>Monitoramento e suporte à infraestrutura.</li>
-  </ul>
-</div>
-
-<div class="job">
-  <div class="job-title">Analista de Suporte — Operadora Vetorial</div>
-  <div class="job-meta"><span>2019 – 2020</span><span>Suporte • Conectividade</span></div>
-  <ul>
-    <li>Atendimento técnico e infraestrutura básica.</li>
-  </ul>
-</div>
-
+  <div class="highlight" id="projectHighlight"></div>
 </section>
-
-<section class="section">
-<h2>references</h2>
-<ul>
-  <li><strong>Rôney Cordeiro</strong> — CEO VivaTech | +1 (857) 204-7057</li>
-  <li><strong>Lucas Costa</strong> — MetroNetwork | +55 47 9759-6283</li>
-</ul>
-</section>
-
-<div class="footer">
-© 2026 Kaleb Nunes dos Santos • Portfólio Profissional
-</div>
 
 </main>
 </div>
 
 <script>
-document.getElementById("themeToggle").onclick=()=>{
-  document.body.classList.toggle("light")
+const content = {
+  pt:{
+    role:"Consultor de Implantação<br>Infra, Redes, NOC, Observabilidade",
+    about:"Consultor de Implantação com forte atuação em Infraestrutura, Redes, NOC, Observabilidade e ITSM. Experiência em ambientes críticos, automação, integrações via API e suporte mission-critical.",
+    job:"Consultor de Implantação — Ellevo Software (Ago/2025 – Atual)",
+    list:[
+      "Implantação ITSM e migração Ellevo Legado → Next",
+      "Configuração de ambientes, SLAs e fluxos",
+      "Automação com PowerShell e SQL",
+      "Integrações via API/REST",
+      "Clientes: Renault, Elfa, Yazaki, Cruz Azul"
+    ],
+    project:"Projeto Especial – Shopping Iguatemi<br>VPN FortiClient, reuniões com Infra e Cibersegurança, alinhamento com Diretoria."
+  },
+
+  en:{
+    role:"Implementation Consultant<br>Infrastructure, NOC, Observability",
+    about:"Implementation Consultant focused on Infrastructure, Networking, NOC, Observability and ITSM. Experience in critical environments, automation and API integrations.",
+    job:"Implementation Consultant — Ellevo Software (2025 – Present)",
+    list:[
+      "ITSM implementation and platform migration",
+      "Environment and SLA configuration",
+      "Automation with PowerShell and SQL",
+      "API/REST integrations",
+      "Clients: Renault, Elfa, Yazaki, Cruz Azul"
+    ],
+    project:"Special Project – Shopping Iguatemi<br>VPN FortiClient, Cybersecurity meetings, infrastructure alignment."
+  },
+
+  es:{
+    role:"Consultor de Implementación<br>Infraestructura, NOC, Observabilidad",
+    about:"Consultor de Implementación con experiencia en Infraestructura, Redes, NOC, Observabilidad e ITSM.",
+    job:"Consultor de Implementación — Ellevo Software (2025 – Actual)",
+    list:[
+      "Implementación ITSM y migración de plataforma",
+      "Configuración de entornos y SLAs",
+      "Automatización con PowerShell y SQL",
+      "Integraciones API/REST",
+      "Clientes: Renault, Elfa, Yazaki, Cruz Azul"
+    ],
+    project:"Proyecto Especial – Shopping Iguatemi<br>VPN FortiClient, reuniones con Infra y Ciberseguridad."
+  }
+};
+
+function setLang(lang){
+  document.getElementById("role").innerHTML = content[lang].role;
+  document.getElementById("aboutText").innerText = content[lang].about;
+  document.getElementById("jobTitle").innerText = content[lang].job;
+
+  const ul = document.getElementById("jobList");
+  ul.innerHTML="";
+  content[lang].list.forEach(i=>{
+    const li=document.createElement("li");
+    li.innerText=i;
+    ul.appendChild(li);
+  });
+
+  document.getElementById("projectHighlight").innerHTML = content[lang].project;
 }
+
+setLang("pt");
+
+document.getElementById("themeToggle").onclick=()=>{
+  document.body.classList.toggle("light");
+};
 </script>
 
 </body>
