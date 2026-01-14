@@ -21,10 +21,15 @@ body.light{
 
 /* HEADER */
 .header{
-  background:#0f172a;
+  background:#ffffff;
   padding:60px 20px;
-  color:#fff;
+  color:#111827;
 }
+body:not(.light) .header{
+  background:#020617;
+  color:#e5e7eb;
+}
+
 .header-content{
   max-width:1100px;
   margin:auto;
@@ -44,7 +49,13 @@ body.light{
 
 .header h1{margin:0;font-size:32px;font-weight:900}
 .header h2{margin:8px 0 16px;font-size:18px;font-weight:600}
-.header a{color:#fff;text-decoration:none;display:block;margin:6px 0}
+
+.header a{
+  color:inherit;
+  text-decoration:none;
+  display:block;
+  margin:6px 0;
+}
 
 .btn{
   background:#2563eb;
@@ -107,8 +118,9 @@ body.light{
   border-radius:16px;
   text-align:center;
 }
-body.light .metric{background:#ffffff}
-.metric .big{font-size:22px;font-weight:900;color:#facc15}
+body.light .metric{background:#ffffff;border:1px solid #e5e7eb}
+
+.metric .big{font-size:22px;font-weight:900;color:#2563eb}
 .metric .small{font-size:13px}
 
 /* SECTIONS */
@@ -118,15 +130,11 @@ body.light .metric{background:#ffffff}
   padding:0 20px;
 }
 .section h2{
-  color:#60a5fa;
+  color:#2563eb;
   font-size:20px;
   margin-bottom:12px;
 }
-body.light .section h2{color:#1d4ed8}
-
-.section p, .section li{
-  line-height:1.7;
-}
+.section p, .section li{line-height:1.7}
 
 /* JOBS */
 .job{
@@ -137,7 +145,7 @@ body.light .section h2{color:#1d4ed8}
 body.light .job{border-color:#e5e7eb}
 
 .job-title{
-  color:#facc15;
+  color:#2563eb;
   font-weight:900;
   font-size:17px;
 }
@@ -152,16 +160,11 @@ body.light .job{border-color:#e5e7eb}
 
 /* HIGHLIGHT */
 .highlight{
-  background:#111827;
-  border-left:4px solid #facc15;
+  background:rgba(37,99,235,0.1);
+  border-left:4px solid #2563eb;
   padding:14px;
   border-radius:12px;
   margin-top:14px;
-}
-body.light .highlight{
-  background:#ffffff;
-  border:1px solid #e5e7eb;
-  border-left:4px solid #facc15;
 }
 
 /* FOOTER */
@@ -188,7 +191,8 @@ body.light .footer{color:#4b5563}
 
 <header class="header">
   <div class="header-content">
-    <img src="assets/Midia.jpg" alt="Kaleb Nunes" class="profile-photo">
+    <!-- FOTO COM NOME REAL -->
+    <img src="assets/Mídia%20(2).jpg" alt="Kaleb Nunes" class="profile-photo">
 
     <div>
       <h1>KALEB NUNES DOS SANTOS</h1>
