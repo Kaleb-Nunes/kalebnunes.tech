@@ -1,155 +1,338 @@
-import React, { useState } from 'react';
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Kaleb Nunes | Consultor de Implantação</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-export default function KalebCV() {
-  const [theme, setTheme] = useState('dark');
-  const [lang, setLang] = useState('pt');
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  const isLight = theme === 'light';
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif}
 
-  const content = {
-    pt: {
-      role: 'Consultor de Implantação',
-      subtitle: 'Infraestrutura, NOC, Observabilidade',
-      about: 'Consultor de Implantação com experiência em Infraestrutura, Redes, NOC, Observabilidade e ITSM. Atuação em ambientes críticos, automação, integrações via API, monitoramento e suporte a operações mission-critical.',
-      contact: 'contact.info',
-      aboutMe: 'about.me',
-      experience: 'work.experience',
-      references: 'references',
-      downloadPortfolio: '⬇ Download Portfólio',
-      recommendation: '👍 Carta de Recomendação'
-    }
-  };
-
-  const t = content[lang];
-
-  return (
-    <div className={`min-h-screen ${isLight ? 'bg-gray-50' : 'bg-slate-900'} ${isLight ? 'text-gray-900' : 'text-gray-100'}`}>
-
-      {/* Toggle Theme */}
-      <button 
-        onClick={() => setTheme(isLight ? 'dark' : 'light')}
-        className={`fixed top-6 left-6 z-50 w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-lg ${
-          isLight ? 'bg-slate-800 text-white' : 'bg-blue-600 text-white'
-        }`}
-      >
-        {isLight ? '☀️' : '🌙'}
-      </button>
-
-      {/* Idiomas */}
-      <div className="fixed top-6 right-6 z-50 flex gap-2">
-        {[
-          { code: 'pt', label: 'BR' },
-          { code: 'en', label: 'US' },
-          { code: 'es', label: 'ES' }
-        ].map(l => (
-          <button
-            key={l.code}
-            onClick={() => setLang(l.code)}
-            className={`w-12 h-12 rounded-full font-bold text-sm shadow-lg transition ${
-              lang === l.code 
-                ? (isLight ? 'bg-blue-600 text-white' : 'bg-blue-500 text-white')
-                : (isLight ? 'bg-white text-gray-700' : 'bg-slate-800 text-gray-300')
-            }`}
-          >
-            {l.label}
-          </button>
-        ))}
-      </div>
-
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-[340px_1fr]">
-
-        {/* SIDEBAR */}
-        <aside className={`p-8 min-h-screen ${isLight ? 'bg-white border-r border-gray-200' : 'bg-slate-800'}`}>
-          
-          {/* FOTO REAL */}
-          <img 
-            src="/assets/Mídia%20(2).jpg" 
-            alt="Kaleb Nunes"
-            className={`w-32 h-32 rounded-full object-cover mb-4 mx-auto shadow-lg ${
-              isLight ? 'border-4 border-blue-500' : 'border-4 border-blue-400'
-            }`}
-          />
-
-          <div className="text-center mb-6">
-            <div className={`text-2xl font-black ${isLight ? 'text-blue-700' : 'text-blue-400'}`}>
-              KALEB<br/>NUNES
-            </div>
-            <div className={`text-sm font-bold mt-2 ${isLight ? 'text-emerald-600' : 'text-emerald-400'}`}>
-              {t.role}<br/>{t.subtitle}
-            </div>
-          </div>
-
-          <div className="space-y-2 mb-6">
-            <h3 className={`text-xs font-bold ${isLight ? 'text-blue-700' : 'text-blue-400'}`}>{t.contact}</h3>
-            <p className="text-xs">Balneário Camboriú – SC – Brasil</p>
-            <p className="text-xs">+55 47 98890-1616</p>
-            <p className="text-xs break-all">kalebdossantos59924@gmail.com</p>
-            <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank" className="text-xs text-blue-400">LinkedIn</a>
-          </div>
-
-          <a href="/assets/portfolio_2026.pdf" target="_blank" className="block w-full text-center py-3 rounded-xl font-bold text-sm bg-blue-600 text-white mb-3">
-            {t.downloadPortfolio}
-          </a>
-
-          <a href="/assets/carta-recomendacao-2026.pdf" target="_blank" className="block w-full text-center py-3 rounded-xl font-bold text-sm bg-slate-700 text-white">
-            {t.recommendation}
-          </a>
-        </aside>
-
-        {/* MAIN */}
-        <main className="p-10 lg:p-12">
-
-          <section className="mb-10">
-            <h2 className={`text-xl font-bold mb-4 ${isLight ? 'text-blue-700' : 'text-blue-400'}`}>
-              {t.aboutMe}
-            </h2>
-            <p className="text-base leading-relaxed">
-              {t.about}
-            </p>
-          </section>
-
-          <section className="mb-10">
-            <h2 className={`text-xl font-bold mb-6 ${isLight ? 'text-blue-700' : 'text-blue-400'}`}>
-              {t.experience}
-            </h2>
-
-            <div className="mb-8">
-              <div className={`font-black text-lg mb-2 ${isLight ? 'text-amber-700' : 'text-amber-400'}`}>
-                Consultor de Implantação — Ellevo Software (Ago/2025 – Atual)
-              </div>
-
-              <ul className="space-y-2 text-sm">
-                <li>• Modelo de trabalho: Cooperado</li>
-                <li>• Promovido de Analista de Suporte N2 para Consultor em 1 mês</li>
-                <li>• Domínio das plataformas Ellevo Legacy e Next</li>
-                <li>• Treinamentos técnicos pela Universidade Ellevo (EAD)</li>
-                <li>• Projetos de alta complexidade para clientes multinacionais</li>
-                <li>• Clientes: Renault, Grupo Elfa, Bauminas, Cruz Azul, Yazaki, HIL, Hill Saúde, ERP SIS PUMA</li>
-                <li>• Implantação da plataforma Ellevo Next</li>
-                <li>• Migração de sistemas legados</li>
-                <li>• Integrações via API, SQL e PowerShell</li>
-                <li>• Suporte técnico em projetos CSC</li>
-                <li>• Uso da ferramenta Ellevo Function</li>
-                <li>• Projetos validados em produção</li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="mb-10">
-            <h2 className={`text-xl font-bold mb-4 ${isLight ? 'text-blue-700' : 'text-blue-400'}`}>
-              {t.references}
-            </h2>
-            <ul className="space-y-2 text-sm">
-              <li><strong>Rôney Cordeiro</strong> — CEO VivaTech | +1 (857) 204-7057</li>
-              <li><strong>Lucas Costa</strong> — MetroNetwork | +55 47 9759-6283</li>
-            </ul>
-          </section>
-
-          <footer className="text-center text-xs pt-6 border-t border-slate-700 text-gray-400">
-            © 2026 Kaleb Nunes dos Santos • Portfólio Profissional
-          </footer>
-        </main>
-      </div>
-    </div>
-  );
+body{
+  background:#050b14;
+  color:#e5e7eb;
 }
+
+body.light{
+  background:#f3f6fb;
+  color:#111827;
+}
+
+.container{
+  display:grid;
+  grid-template-columns:300px 1fr;
+  max-width:1300px;
+  margin:auto;
+  min-height:100vh
+}
+
+/* SIDEBAR */
+.sidebar{
+  background:linear-gradient(180deg,#081229,#0b1735);
+  padding:26px 20px
+}
+
+body.light .sidebar{
+  background:#ffffff;
+  border-right:1px solid #e5e7eb;
+}
+
+.avatar{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  border:4px solid #3b82f6;
+  object-fit:cover;
+  margin-bottom:14px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.name{color:#3b82f6;font-size:22px;font-weight:900;text-align:center}
+.role{color:#22c55e;font-size:13px;font-weight:700;margin-top:6px;text-align:center}
+
+.toggle{
+  cursor:pointer;margin:14px auto;
+  padding:6px 12px;border-radius:20px;
+  border:1px solid #3b82f6;
+  width:fit-content;
+  text-align:center
+}
+
+.sidebar h3{color:#60a5fa;margin:20px 0 8px;font-size:13px}
+.sidebar p,.sidebar a{color:#cbd5e1;font-size:13px;text-decoration:none;margin-bottom:6px;display:block}
+
+body.light .sidebar p,
+body.light .sidebar a{color:#1f2937}
+
+.btn{
+  background:#1d4ed8;color:#fff;
+  padding:10px 14px;border-radius:14px;
+  text-align:center;font-weight:700;
+  margin-top:10px;text-decoration:none;
+  display:block
+}
+
+.btn.secondary{background:#1f2937}
+
+.skill{margin-top:10px;font-size:12px}
+.bar{height:6px;background:#1f2937;border-radius:999px;overflow:hidden;margin-top:6px}
+.bar span{height:100%;display:block;background:linear-gradient(90deg,#22c55e,#3b82f6)}
+
+/* MAIN */
+.main{
+  padding:30px 40px;
+  background:radial-gradient(circle at top,#020617,#000)
+}
+
+body.light .main{background:#f8fafc}
+
+.section{margin-top:28px}
+.section h2{color:#60a5fa;font-size:16px;margin-bottom:12px}
+
+body.light .section h2{color:#1d4ed8}
+
+.section p,.section li{line-height:1.7}
+
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px
+}
+
+.metric{
+  background:#0b1220;
+  border-radius:16px;
+  padding:14px;
+  border:1px solid #1f2937
+}
+
+body.light .metric{
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+}
+
+.metric .big{color:#facc15;font-size:18px;font-weight:900}
+.metric .small{font-size:12px;color:#cbd5e1}
+
+body.light .metric .small{color:#374151}
+
+.job{
+  border-bottom:1px solid #1f2937;
+  padding-bottom:18px;
+  margin-bottom:22px
+}
+
+body.light .job{border-bottom:1px solid #e5e7eb}
+
+.job-title{color:#facc15;font-weight:900}
+.job-meta{
+  display:flex;
+  justify-content:space-between;
+  font-size:12px;
+  color:#9ca3af;
+  margin-bottom:8px
+}
+
+.job ul{margin-left:18px}
+
+.highlight{
+  background:#0b1220;
+  border-left:4px solid #facc15;
+  padding:12px;border-radius:12px;
+  margin-top:12px
+}
+
+body.light .highlight{
+  background:#ffffff;
+  border-left:4px solid #facc15;
+  border:1px solid #e5e7eb;
+}
+
+.footer{
+  text-align:center;
+  font-size:12px;
+  color:#9ca3af;
+  border-top:1px solid #1f2937;
+  padding-top:14px
+}
+
+body.light .footer{
+  color:#4b5563;
+  border-top:1px solid #e5e7eb;
+}
+
+/* LANGUAGE BUTTONS */
+.langs{
+  position:fixed;
+  top:20px;
+  right:20px;
+  display:flex;
+  gap:10px;
+  z-index:999
+}
+
+.langs a{
+  padding:6px 12px;
+  border-radius:20px;
+  font-weight:700;
+  font-size:12px;
+  text-decoration:none;
+  background:#1d4ed8;
+  color:#fff
+}
+
+.langs a:hover{opacity:.85}
+
+@media(max-width:900px){
+  .container{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<div class="langs">
+  <a href="index.html">🇧🇷 PT</a>
+  <a href="index-en.html">🇺🇸 EN</a>
+  <a href="index-es.html">🇪🇸 ES</a>
+</div>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+<img src="assets/Midia.jpg" class="avatar" alt="Kaleb Nunes">
+
+<div class="name">KALEB<br>NUNES</div>
+<div class="role">Consultor de Implantação<br>Infra, Redes, NOC, Observabilidade</div>
+
+<div class="toggle" id="themeToggle">🌙 / ☀️</div>
+
+<h3>contact.info</h3>
+<p>Balneário Camboriú – SC – Brasil</p>
+<p>+55 47 98890-1616</p>
+<p>kalebdossantos59924@gmail.com</p>
+<a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">LinkedIn</a>
+<a href="https://wa.me/5547988901616" target="_blank">WhatsApp</a>
+
+<a class="btn" href="assets/portfolio_2026.pdf" target="_blank">⬇ Download Portfólio</a>
+<a class="btn secondary" href="assets/carta-recomendacao-2026.pdf" target="_blank">✍ Carta de Recomendação</a>
+
+<h3>technical.skills</h3>
+
+<div class="skill">Infraestrutura / Redes</div>
+<div class="bar"><span style="width:90%"></span></div>
+
+<div class="skill">Observabilidade</div>
+<div class="bar"><span style="width:88%"></span></div>
+
+<div class="skill">ITSM / Ellevo</div>
+<div class="bar"><span style="width:86%"></span></div>
+
+<div class="skill">Automação / Dados</div>
+<div class="bar"><span style="width:82%"></span></div>
+
+<div class="skill">Segurança / LGPD</div>
+<div class="bar"><span style="width:76%"></span></div>
+
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+<section class="section">
+<h2>about.me</h2>
+<p>
+Consultor de Implantação com forte atuação em Infraestrutura, Redes, NOC, Observabilidade e ITSM.
+Experiência em ambientes críticos, automação, integrações via API, monitoramento e suporte a operações mission-critical.
+</p>
+
+<div class="metrics">
+  <div class="metric"><div class="big">6+</div><div class="small">Anos de experiência</div></div>
+  <div class="metric"><div class="big">40%</div><div class="small">Redução operacional</div></div>
+  <div class="metric"><div class="big">Enterprise</div><div class="small">Ambientes críticos</div></div>
+  <div class="metric"><div class="big">Alta</div><div class="small">Confiabilidade</div></div>
+</div>
+</section>
+
+<section class="section">
+<h2>work.experience</h2>
+
+<div class="job">
+  <div class="job-title">Consultor de Implantação — Ellevo Software</div>
+  <div class="job-meta"><span>Ago/2025 – Atual</span><span>ITSM • Automação • APIs</span></div>
+  <ul>
+    <li>Modelo de trabalho: Cooperado.</li>
+    <li>Promovido de Analista N2 para Consultor em 1 mês.</li>
+    <li>Domínio Ellevo Legacy e Next.</li>
+    <li>Treinamentos pela Universidade Ellevo (EAD).</li>
+    <li>Clientes: Renault, Grupo Elfa, Bauminas, Cruz Azul, Yazaki, HIL, Hill Saúde, SIS PUMA.</li>
+    <li>Implantação Ellevo Next e migração de sistemas.</li>
+    <li>Integrações via API, SQL e PowerShell.</li>
+    <li>Atuação em projetos CSC e ambientes críticos.</li>
+  </ul>
+
+  <div class="highlight">
+    <strong>Projeto Especial – Shopping Iguatemi</strong><br>
+    VPN FortiClient, reuniões com Infra e Cibersegurança, alinhamento com Diretoria,
+    estabilização da conectividade entre ambientes críticos.
+  </div>
+</div>
+
+<div class="job">
+  <div class="job-title">Bradesco Seguros — Consultoria Técnica</div>
+  <div class="job-meta"><span>2021 – 2022</span><span>APIs • Postman • LGPD</span></div>
+  <ul>
+    <li>Validação de APIs via Postman.</li>
+    <li>Tratamento seguro de dados sensíveis.</li>
+    <li>Integração com equipe N3.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-title">Analista de Redes — VivaTech</div>
+  <div class="job-meta"><span>2022 – 2023</span><span>NOC • SLA</span></div>
+  <ul>
+    <li>Monitoramento NOC com LibreNMS e PRTG.</li>
+    <li>Atuação em incidentes.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-title">Senior Network Technician — RR64</div>
+  <div class="job-meta"><span>2023 – 2025</span><span>Backbone • Zabbix</span></div>
+  <ul>
+    <li>Ambientes críticos, DNS judicial e servidores SpeedTest.</li>
+  </ul>
+</div>
+
+</section>
+
+<section class="section">
+<h2>references</h2>
+<ul>
+  <li><strong>Rôney Cordeiro</strong> — CEO VivaTech | +1 (857) 204-7057</li>
+  <li><strong>Lucas Costa</strong> — MetroNetwork | +55 47 9759-6283</li>
+</ul>
+</section>
+
+<div class="footer">
+© 2026 Kaleb Nunes dos Santos • Portfólio Profissional
+</div>
+
+</main>
+</div>
+
+<script>
+document.getElementById("themeToggle").onclick=()=>{
+  document.body.classList.toggle("light")
+}
+</script>
+
+</body>
+</html>
