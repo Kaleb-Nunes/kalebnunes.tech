@@ -4,28 +4,126 @@
 <meta charset="UTF-8">
 <title>Kaleb Nunes | CV</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- MESMO CSS DO PT -->
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif}
+body{background:#0b1020;color:#e5e7eb;transition:.3s}
+body.light{background:#f4f6fb;color:#111827}
+
+.lang-switch{position:fixed;top:16px;right:16px;display:flex;gap:8px;z-index:999}
+.lang-switch a{background:#fff;border:1px solid #d1d5db;padding:6px 10px;border-radius:10px;font-weight:700;text-decoration:none}
+
+.toggle{position:fixed;top:16px;left:16px;background:#2563eb;color:#fff;border:none;padding:8px 14px;border-radius:20px;cursor:pointer;font-weight:700}
+
+.container{display:grid;grid-template-columns:300px 1fr;max-width:1300px;margin:auto;min-height:100vh}
+
+.sidebar{background:#111827;padding:26px 20px}
+body.light .sidebar{background:#ffffff;border-right:1px solid #e5e7eb}
+
+.avatar{width:130px;height:130px;border-radius:50%;border:4px solid #2563eb;object-fit:cover;margin-bottom:12px}
+.name{color:#2563eb;font-size:22px;font-weight:900}
+.role{color:#22c55e;font-size:13px;font-weight:700;margin-top:6px}
+
+.sidebar h3{color:#60a5fa;margin:20px 0 8px;font-size:13px}
+.sidebar p,.sidebar a{color:#cbd5e1;font-size:13px;text-decoration:none;margin-bottom:6px;display:block}
+body.light .sidebar p,body.light .sidebar a{color:#1f2937}
+
+.btn{background:#2563eb;color:#fff;padding:10px 14px;border-radius:14px;text-align:center;font-weight:700;margin-top:10px;text-decoration:none}
+.btn.secondary{background:#1f2937}
+
+.main{padding:40px}
+.section{margin-top:28px}
+.section h2{color:#60a5fa;font-size:18px;margin-bottom:12px}
+body.light .section h2{color:#2563eb}
+.section p,.section li{color:#e5e7eb;line-height:1.6}
+body.light .section p,body.light .section li{color:#111827}
+
+.job-title{color:#eab308;font-weight:900}
+
+.highlight{background:#111827;border-left:4px solid #eab308;padding:12px;border-radius:12px;margin-top:12px}
+body.light .highlight{background:#ffffff;border-left:4px solid #a16207;border:1px solid #e5e7eb}
+
+@media(max-width:900px){.container{grid-template-columns:1fr}}
+</style>
 </head>
 
 <body>
-<!-- MESMA ESTRUTURA -->
-<div class="role">Implementation Consultant<br>Infrastructure, NOC, Observability</div>
 
-<section>
+<button class="toggle" id="themeToggle">🌙</button>
+
+<div class="lang-switch">
+  <a href="index.html">🇧🇷</a>
+  <a href="index-en.html">🇺🇸</a>
+  <a href="index-es.html">🇪🇸</a>
+</div>
+
+<div class="container">
+
+<aside class="sidebar">
+  <img src="assets/foto.jpg" class="avatar">
+  <div class="name">KALEB<br>NUNES</div>
+  <div class="role">Implementation Consultant<br>Infrastructure, NOC, Observability</div>
+
+  <h3>contact.info</h3>
+  <p>Balneário Camboriú – SC – Brazil</p>
+  <p>+55 47 98890-1616</p>
+  <p>kalebdossantos59924@gmail.com</p>
+  <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">LinkedIn</a>
+
+  <a class="btn" href="assets/portfolio_2026.pdf" target="_blank">⬇ Download Portfolio</a>
+  <a class="btn secondary" href="assets/carta-recomendacao-2026.pdf" target="_blank">✍ Recommendation Letter</a>
+</aside>
+
+<main class="main">
+
+<section class="section">
 <h2>about.me</h2>
-<p>Implementation Consultant with strong experience in Infrastructure, Networking, NOC, Observability and ITSM.</p>
+<p>
+Implementation Consultant with strong experience in Infrastructure, Networking, NOC, Observability and ITSM. 
+Skilled in critical environments, automation, API integrations and mission-critical operations support.
+</p>
 </section>
 
-<section>
+<section class="section">
 <h2>work.experience</h2>
-<div class="job-title">Implementation Consultant — Ellevo Software (2025 – Present)</div>
+
+<div class="job-title">Implementation Consultant — Ellevo Software (Aug/2025 – Present)</div>
 <ul>
-<li>Cooperative contractor model.</li>
-<li>Promoted from Support Analyst N2 in 1 month.</li>
-<li>Expert in Ellevo Legacy and Next platforms.</li>
-<li>Trained at Ellevo University.</li>
-<li>Clients: Renault, Elfa, Bauminas, Cruz Azul, Yazaki, HIL, Hill Saúde, ERP SIS PUMA.</li>
+<li>Work model: Cooperative contractor.</li>
+<li>Promoted from Support Analyst N2 to Implementation Consultant in just 1 month.</li>
+<li>Strong expertise in Ellevo Legacy and Ellevo Next platforms.</li>
+<li>Completed technical training at Ellevo University (EAD).</li>
+<li>Large-scale and high-complexity projects for multinational clients.</li>
+<li>Clients: Renault, Grupo Elfa Medicamentos, Grupo Bauminas, Cruz Azul Hospital, Yazaki, HIL Asset Protection, Hill Saúde, ERP SIS PUMA.</li>
+<li>Implementation of Ellevo Next platform.</li>
+<li>Legacy system migration (Ellevo Legacy → Ellevo Next).</li>
+<li>Configuration of profiles, workflows, catalogs and automations.</li>
+<li>API integrations using SQL and PowerShell scripts.</li>
+<li>Technical support for CSC projects.</li>
+<li>Use of Ellevo Function automation tool.</li>
+<li>Work in critical and corporate environments.</li>
+<li>Participation in production-validated projects.</li>
 </ul>
+
+<div class="highlight">
+<strong>Ellevo University Certifications:</strong><br>
+• Attendant – Next<br>
+• Ellevo Platform Administration<br>
+• Next Administration<br>
+• Ellevo Platform Attendant<br><br>
+These certifications validated technical and operational expertise, accelerating promotion and enabling participation in strategic projects.
+</div>
+
 </section>
+
+</main>
+</div>
+
+<script>
+document.getElementById("themeToggle").onclick=()=>{
+  document.body.classList.toggle("light");
+};
+</script>
+
 </body>
 </html>
