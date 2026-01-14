@@ -3,299 +3,208 @@
 <head>
   <meta charset="UTF-8" />
   <title>Kaleb Nunes | CV</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
     * { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #0b0f14;
-      color: #e5e7eb;
-      transition: .3s;
+    :root{
+      --bg:#0b0f14;--text:#e5e7eb;--muted:#cbd5e1;--panel:#0f172a;
+      --border:#1f2937;--accent:#3b82f6;--good:#22c55e;
+      --warn:#facc15;--card:#111827;--btn:#1e40af;--btn2:#374151;
     }
 
-    body.light {
-      background: #eef2f7;
-      color: #1f2937;
+    body{margin:0;font-family:"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);transition:.25s}
+    body.light{
+      --bg:#eef2f7;--text:#111827;--muted:#374151;--panel:#fff;
+      --border:#d1d5db;--card:#fff;--btn2:#e5e7eb;
     }
 
-    .container {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      min-height: 100vh;
-      max-width: 1200px;
-      margin: 0 auto;
-      border-left: 1px solid #1f2937;
-      border-right: 1px solid #1f2937;
+    .container{display:grid;grid-template-columns:300px 1fr;min-height:100vh;max-width:1200px;margin:0 auto;border-left:1px solid var(--border);border-right:1px solid var(--border)}
+
+    .sidebar{background:var(--panel);padding:26px 20px;border-right:1px solid var(--border);position:sticky;top:0;height:100vh;overflow:auto}
+
+    .avatar{
+      width:112px;
+      height:112px;
+      border-radius:50%;
+      border:3px solid var(--accent);
+      object-fit:cover;
+      margin-bottom:14px;
     }
 
-    body.light .container {
-      border-color: #d1d5db;
-    }
+    .name{font-size:20px;font-weight:900;color:var(--accent);text-transform:uppercase;line-height:1.15}
+    .role{margin-top:7px;color:var(--good);font-size:13px;line-height:1.35;font-weight:700}
 
-    /* Sidebar */
-    .sidebar {
-      background: #0f172a;
-      padding: 30px 20px;
-      border-right: 1px solid #1f2937;
-    }
+    .pill{border:1px solid var(--border);padding:8px 12px;border-radius:999px;font-weight:800;font-size:12px;cursor:pointer;margin:12px 0;display:inline-block}
 
-    body.light .sidebar {
-      background: #ffffff;
-      border-color: #d1d5db;
-    }
+    .sidebar h3{margin:22px 0 8px;font-size:12.5px;color:var(--accent)}
+    .sidebar p,.sidebar a{margin:6px 0;font-size:12.6px;color:var(--muted);text-decoration:none}
 
-    .avatar {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      border: 3px solid #3b82f6;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 48px;
-      color: #3b82f6;
-      margin-bottom: 16px;
-    }
+    .btn-link{display:block;text-align:center;margin-top:12px;background:var(--btn);color:#fff;padding:11px 14px;border-radius:14px;font-weight:900;text-decoration:none}
+    .btn-link.secondary{background:var(--btn2);color:var(--text);border:1px solid var(--border)}
 
-    .name {
-      font-size: 20px;
-      font-weight: 800;
-      color: #3b82f6;
-      text-transform: uppercase;
-      line-height: 1.2;
-    }
+    .skill-label{font-size:12.6px;color:var(--muted);margin-top:10px}
+    .skill-bar{height:7px;background:var(--border);border-radius:999px;overflow:hidden;margin:7px 0 4px}
+    .skill-bar span{display:block;height:100%;background:linear-gradient(90deg,var(--good),var(--accent))}
 
-    .role {
-      color: #22c55e;
-      font-size: 13px;
-      margin-top: 6px;
-      line-height: 1.4;
-    }
+    .main{padding:34px 44px}
+    .lang-switch button{border:1px solid var(--accent);background:transparent;color:var(--accent);padding:7px 10px;border-radius:12px;font-weight:900;margin-right:6px;cursor:pointer}
+    .lang-switch .active{background:var(--accent);color:#fff}
 
-    .sidebar h3 {
-      margin: 26px 0 8px;
-      font-size: 13px;
-      color: #3b82f6;
-      text-transform: lowercase;
-    }
+    .section{margin:22px 0 34px}
+    .section h2{font-size:16px;color:#60a5fa;margin-bottom:12px}
+    .section p{line-height:1.7;text-align:justify}
 
-    .sidebar p {
-      font-size: 12.5px;
-      margin: 4px 0;
-    }
+    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .metric{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px}
+    .metric .big{font-size:18px;font-weight:900;color:var(--warn)}
+    .metric .small{font-size:12.6px;color:var(--muted);font-weight:700}
 
-    /* Main */
-    .main {
-      padding: 40px 50px;
-    }
+    .job{margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid var(--border)}
+    .job-title{font-weight:900;color:var(--warn)}
+    .job-meta{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-bottom:8px;font-weight:700}
+    ul{margin:10px 0 0 18px;color:var(--muted)}
+    li{margin-bottom:6px}
 
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
+    .highlight{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--warn);padding:12px;border-radius:14px;margin-top:12px;font-size:13.2px}
 
-    .btn {
-      background: #1e40af;
-      color: #fff;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      margin-right: 8px;
-    }
+    .footer{text-align:center;font-size:12px;color:var(--muted);border-top:1px solid var(--border);padding-top:14px}
 
-    .btn.secondary {
-      background: #374151;
-    }
-
-    body.light .btn.secondary {
-      background: #e5e7eb;
-      color: #1f2937;
-    }
-
-    .lang-switch button {
-      background: transparent;
-      border: 1px solid #3b82f6;
-      color: #3b82f6;
-      padding: 6px 10px;
-      border-radius: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      margin-right: 6px;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .section h2 {
-      font-size: 16px;
-      color: #60a5fa;
-      margin-bottom: 12px;
-      text-transform: lowercase;
-    }
-
-    .job {
-      margin-bottom: 28px;
-      border-bottom: 1px solid #1f2937;
-      padding-bottom: 20px;
-    }
-
-    body.light .job {
-      border-color: #d1d5db;
-    }
-
-    ul {
-      margin: 10px 0 0 18px;
-    }
-
-    li {
-      margin-bottom: 6px;
-    }
-
-    .highlight {
-      background: #111827;
-      border-left: 4px solid #facc15;
-      padding: 12px;
-      font-size: 13px;
-      margin-top: 10px;
-    }
-
-    body.light .highlight {
-      background: #fff7ed;
-    }
+    @media(max-width:980px){.container{grid-template-columns:1fr}.sidebar{position:relative;height:auto}.metrics{grid-template-columns:repeat(2,1fr)}.main{padding:26px 18px}}
+    @media(max-width:520px){.metrics{grid-template-columns:1fr}}
   </style>
 </head>
 
 <body>
-
 <div class="container">
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
 
-    <div class="avatar">{ }</div>
+    <!-- FOTO REAL -->
+    <img src="assets/foto.jpg" class="avatar" alt="Foto de Kaleb Nunes">
 
     <div class="name">KALEB<br>NUNES</div>
-    <div class="role">Consultor de Implantação<br>Infraestrutura, Redes, NOC e Observabilidade</div>
+    <div class="role">Consultor de Implantação<br>Infra, Redes, NOC, Observabilidade</div>
+
+    <span class="pill" id="themeToggle">🌙 / ☀️</span>
 
     <h3>contact.info</h3>
     <p>Balneário Camboriú – SC – Brasil</p>
     <p>+55 47 98890-1616</p>
     <p>kalebdossantos59924@gmail.com</p>
-    <p>linkedin.com/in/kalebnunes</p>
+    <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">LinkedIn</a>
+    <a href="https://wa.me/5547988901616" target="_blank">WhatsApp</a>
 
+    <a class="btn-link" href="assets/portfolio_2026.pdf" target="_blank">⬇️ Download Portfólio</a>
+    <a class="btn-link secondary" href="assets/carta-recomendacao-2026.pdf" target="_blank">✍️ Carta de Recomendação</a>
+
+    <h3>technical.skills</h3>
+    <div class="skill-label">Infraestrutura / Redes</div>
+    <div class="skill-bar"><span style="width:90%"></span></div>
+    <div class="skill-label">Observabilidade</div>
+    <div class="skill-bar"><span style="width:88%"></span></div>
+    <div class="skill-label">ITSM / Ellevo</div>
+    <div class="skill-bar"><span style="width:86%"></span></div>
+    <div class="skill-label">Automação / Dados</div>
+    <div class="skill-bar"><span style="width:82%"></span></div>
+    <div class="skill-label">Segurança / LGPD</div>
+    <div class="skill-bar"><span style="width:76%"></span></div>
   </aside>
 
   <!-- MAIN -->
   <main class="main">
 
-    <!-- TOP BAR -->
-    <div class="top-bar">
-
-      <div>
-        <a href="assets/portfolio_2026.pdf" target="_blank" class="btn">Download Portfólio</a>
-        <a href="assets/carta-recomendacao-2026.pdf" target="_blank" class="btn secondary">Carta de Recomendação</a>
-      </div>
-
-      <div>
-        <button class="btn secondary" onclick="toggleTheme()">🌙 / ☀️</button>
-      </div>
-
-    </div>
-
-    <!-- LANGUAGE SWITCH -->
     <div class="lang-switch">
-      <button onclick="setLang('pt')">PT</button>
-      <button onclick="setLang('en')">EN</button>
-      <button onclick="setLang('es')">ES</button>
+      <button class="active" data-langbtn="pt">PT</button>
+      <button data-langbtn="en">EN</button>
+      <button data-langbtn="es">ES</button>
     </div>
 
-    <!-- CONTENT PT -->
     <div data-lang="pt">
-
       <section class="section">
         <h2>about.me</h2>
-        <p>
-          Consultor de Implantação com forte atuação em Infraestrutura, Redes, NOC,
-          Observabilidade e ITSM. Experiência em ambientes corporativos críticos,
-          automação de processos, integrações via API, monitoramento, troubleshooting
-          e suporte a operações de missão crítica.
-        </p>
+        <p>Consultor de Implantação com forte atuação em Infraestrutura, Redes, NOC, Observabilidade e ITSM. Experiência em ambientes críticos, automação, integrações via API, monitoramento e suporte a operações mission-critical.</p>
+
+        <div class="metrics">
+          <div class="metric"><div class="big">6+</div><div class="small">Anos de experiência</div></div>
+          <div class="metric"><div class="big">40%</div><div class="small">Redução no tempo</div></div>
+          <div class="metric"><div class="big">Enterprise</div><div class="small">Ambientes críticos</div></div>
+          <div class="metric"><div class="big">Alta</div><div class="small">Disponibilidade</div></div>
+        </div>
       </section>
 
       <section class="section">
         <h2>work.experience</h2>
 
         <div class="job">
-          <strong>Consultor de Implantação – Ellevo Software (Ago/2025 – Atual)</strong>
+          <div class="job-title">Consultor de Implantação — Ellevo Software</div>
+          <div class="job-meta"><span>Ago/2025 – Atual</span><span>ITSM • Automação • APIs</span></div>
           <ul>
-            <li>Implantação ITSM, migração Ellevo Legado → Next, integração via API.</li>
-            <li>Automação com PowerShell, suporte a homologação e produção.</li>
+            <li>Implantação ITSM, migração Ellevo Legado → Next.</li>
+            <li>Configuração de ambientes, catálogos, SLAs e fluxos.</li>
+            <li>Automação com PowerShell, SQL, CSC e Ellevo Function.</li>
             <li>Clientes: Renault, Grupo Elfa, Bauminas, Yazaki, Cruz Azul, HIL.NET.</li>
           </ul>
 
           <div class="highlight">
             <strong>Projeto Especial – Shopping Iguatemi</strong><br>
-            VPN FortiClient, alinhamento com Infra e Cibersegurança, estabilização de ambientes críticos.
+            VPN FortiClient, reuniões com Infra e Cibersegurança, estabilização de ambientes críticos.
           </div>
         </div>
 
         <div class="job">
-          <strong>Master / Senior Network Technician – RR64 (2023 – 2025)</strong>
+          <div class="job-title">Master / Senior Network Technician — RR64</div>
+          <div class="job-meta"><span>2023 – 2025</span><span>Backbone • Zabbix • Grafana</span></div>
           <ul>
-            <li>Ambientes críticos, Zabbix, Grafana, DUDE, DNS judicial.</li>
+            <li>Ambientes críticos, DNS judicial, servidores SpeedTest.</li>
           </ul>
         </div>
 
+        <div class="job">
+          <div class="job-title">Analista de Redes — MetroNetwork</div>
+          <div class="job-meta"><span>2022 – 2023</span><span>NOC • Incidentes</span></div>
+          <ul><li>Monitoramento e suporte à infraestrutura.</li></ul>
+        </div>
+
+        <div class="job">
+          <div class="job-title">Analista de Suporte — Operadora Vetorial</div>
+          <div class="job-meta"><span>2019 – 2020</span><span>Suporte • Conectividade</span></div>
+          <ul><li>Atendimento técnico e infraestrutura básica.</li></ul>
+        </div>
       </section>
 
-    </div>
-
-    <!-- CONTENT EN -->
-    <div data-lang="en" style="display:none">
       <section class="section">
-        <h2>about.me</h2>
-        <p>
-          Implementation Consultant with strong experience in Infrastructure,
-          Networks, NOC, Observability and ITSM. Skilled in critical enterprise
-          environments, automation, API integrations and mission-critical operations.
-        </p>
+        <h2>references</h2>
+        <ul>
+          <li><strong>Rôney Cordeiro</strong> — CEO VivaTech | +1 (857) 204-7057</li>
+          <li><strong>Lucas Costa</strong> — MetroNetwork | +55 47 9759-6283</li>
+        </ul>
       </section>
-    </div>
 
-    <!-- CONTENT ES -->
-    <div data-lang="es" style="display:none">
-      <section class="section">
-        <h2>about.me</h2>
-        <p>
-          Consultor de Implementación con experiencia en Infraestructura, Redes,
-          NOC, Observabilidad e ITSM. Actuación en entornos críticos, automatización,
-          integraciones API y operaciones empresariales.
-        </p>
-      </section>
+      <div class="footer">© 2026 Kaleb Nunes dos Santos • Portfólio Profissional</div>
     </div>
 
   </main>
-
 </div>
 
 <script>
-function toggleTheme(){
-  document.body.classList.toggle("light");
-}
+  document.getElementById("themeToggle").onclick = () => {
+    document.body.classList.toggle("light");
+  };
 
-function setLang(lang){
-  document.querySelectorAll("[data-lang]").forEach(div=>{
-    div.style.display = div.getAttribute("data-lang") === lang ? "block" : "none";
+  const buttons = document.querySelectorAll("[data-langbtn]");
+  const blocks = document.querySelectorAll("[data-lang]");
+
+  function setLang(lang){
+    blocks.forEach(b=>b.style.display=b.getAttribute("data-lang")==lang?"block":"none");
+    buttons.forEach(btn=>btn.classList.toggle("active",btn.getAttribute("data-langbtn")==lang));
+  }
+
+  buttons.forEach(btn=>{
+    btn.onclick=()=>setLang(btn.getAttribute("data-langbtn"));
   });
-}
 </script>
 
 </body>
