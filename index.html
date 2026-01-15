@@ -1,378 +1,233 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<title>Kaleb Nunes dos Santos | CV</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kaleb Nunes dos Santos | Consultor de Implantação</title>
-
-<meta name="description" content="Consultor de Implantação com foco em Infraestrutura, Redes, NOC e Observabilidade. Experiência em ambientes enterprise e projetos críticos." />
-<meta name="author" content="Kaleb Nunes dos Santos" />
-<meta name="robots" content="index, follow" />
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<meta name="description" content="Consultor de Implantação com foco em Infraestrutura, Redes, NOC e Observabilidade. Experiência em ambientes enterprise e projetos críticos.">
+<meta name="author" content="Kaleb Nunes dos Santos">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-
-body{
-  font-family:Inter,sans-serif;
-  background:#eef2f7;
-  color:#1f2937;
-  padding-top:140px;
-  transition:.3s
-}
-body.dark{background:#020617;color:#e5e7eb}
-
-/* NAVBAR */
-.navbar{
-  position:fixed;top:0;width:100%;
-  background:rgba(255,255,255,.95);
-  backdrop-filter:blur(10px);
-  display:flex;justify-content:center;gap:32px;
-  padding:16px;box-shadow:0 2px 20px rgba(0,0,0,.08);z-index:999
-}
-body.dark .navbar{background:#020617}
-.navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
-body.dark .navbar a{color:#93c5fd}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif}
+body{background:#0b1020;color:#e5e7eb;transition:.3s}
+body.light{background:#f4f6fb;color:#111827}
 
 /* LANGUAGE */
-.lang-switch{
-  position:fixed;
-  top:16px;
-  right:16px;
-  background:#fff;
-  border:2px solid #2563eb;
-  border-radius:14px;
-  padding:6px 12px;
-  display:flex;
-  gap:12px;
-  z-index:1000
-}
-body.dark .lang-switch{background:#020617;border-color:#60a5fa}
-.lang-switch a{display:flex;gap:6px;font-weight:600;text-decoration:none;color:#1e3a8a}
-body.dark .lang-switch a{color:#93c5fd}
-.lang-switch img{width:22px;height:16px;border-radius:3px}
-.lang-switch a.active{border-bottom:2px solid #2563eb}
+.lang-switch{position:fixed;top:16px;right:16px;display:flex;gap:8px;z-index:999}
+.lang-switch a{background:#fff;border:1px solid #d1d5db;padding:6px 10px;border-radius:10px;font-weight:700;text-decoration:none}
 
-/* DARK BUTTON */
-#darkToggle{
-  position:fixed;
-  top:16px;
-  left:16px;
-  background:#1e3a8a;
-  color:#fff;
-  border:none;
-  padding:8px 14px;
-  border-radius:20px;
-  font-weight:600;
-  cursor:pointer;
-  z-index:1000
-}
+/* TOGGLE */
+.toggle{position:fixed;top:16px;left:16px;background:#2563eb;color:#fff;border:none;padding:8px 14px;border-radius:20px;cursor:pointer;font-weight:700}
 
-/* CONTAINER */
-.container{
-  max-width:1100px;
-  margin:auto;
-  background:#fff;
-  box-shadow:0 10px 40px rgba(0,0,0,.1)
-}
-body.dark .container{background:#020617}
+/* LAYOUT */
+.container{display:grid;grid-template-columns:320px 1fr;max-width:1400px;margin:auto;min-height:100vh}
 
-/* HEADER */
-.header{
-  background:linear-gradient(135deg,#1e3a8a,#3b82f6);
-  color:#fff;
-  padding:55px
-}
-.header-content{
-  display:flex;
-  gap:40px;
-  align-items:center;
-  flex-wrap:wrap
-}
-.photo{
-  width:180px;
-  height:180px;
+/* SIDEBAR */
+.sidebar{background:#111827;padding:26px 22px}
+body.light .sidebar{background:#ffffff;border-right:1px solid #e5e7eb}
+
+.avatar{
+  width:140px;
+  height:140px;
   border-radius:50%;
-  border:6px solid #fff;
+  border:4px solid #2563eb;
   object-fit:cover;
-  background:rgba(255,255,255,.25);
+  margin-bottom:14px;
+  background:#1f2937;
 }
 
-/* CONTACT */
-.contact-info{
-  margin-top:16px;
-  display:flex;
-  flex-direction:column;
-  gap:10px
+.name{
+  display:block;
+  color:#2563eb;
+  font-size:22px;
+  font-weight:900;
+  line-height:1.2;
 }
-.contact-info a,
-.contact-info span{
+
+.role{color:#22c55e;font-size:13px;font-weight:700;margin-top:6px}
+
+.sidebar h3{color:#60a5fa;margin:20px 0 8px;font-size:13px}
+.sidebar p,.sidebar a{color:#cbd5e1;font-size:13px;text-decoration:none;margin-bottom:6px;display:block}
+body.light .sidebar p,body.light .sidebar a{color:#1f2937}
+
+.btn{
+  background:#2563eb;
   color:#fff;
-  text-decoration:none;
-  display:flex;
-  align-items:center;
-  gap:8px
-}
-
-/* BUTTON */
-.btn-download{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  background:#fff;
-  color:#1e3a8a;
-  padding:14px 30px;
-  border-radius:30px;
-  font-weight:700;
-  text-decoration:none;
-  margin-top:20px
-}
-
-/* METRICS */
-.dashboard-metrics{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  margin-top:35px
-}
-.metric{
-  background:rgba(255,255,255,.15);
-  padding:22px;
+  padding:10px 14px;
   border-radius:14px;
-  text-align:center
-}
-.metric span{font-size:2em;font-weight:800;display:block}
-
-/* SECTIONS */
-.section{padding:70px 55px}
-.section-title{
-  font-size:1.6em;
+  text-align:center;
   font-weight:700;
-  color:#1e3a8a;
-  margin-bottom:30px
+  margin-top:10px;
+  text-decoration:none
 }
-body.dark .section-title{color:#93c5fd}
-ul{padding-left:20px;line-height:1.8}
-p{line-height:1.8}
 
-/* CARDS */
-.card{
-  background:#f1f5f9;
-  border-radius:14px;
-  padding:20px;
-  box-shadow:0 2px 10px rgba(0,0,0,.06);
+.btn.secondary{
+  background:#374151;
+  color:#ffffff;
+}
+
+body.light .btn.secondary{
+  background:#e5e7eb;
+  color:#111827;
+  border:1px solid #d1d5db;
+}
+
+/* MAIN */
+.main{padding:40px 50px}
+.section{margin-top:32px}
+.section h2{color:#60a5fa;font-size:18px;margin-bottom:14px}
+body.light .section h2{color:#2563eb}
+
+.section p,.section li{line-height:1.7;margin-bottom:6px}
+body.light .section p,
+body.light .section li{color:#1f2937}
+
+.job-title{
+  font-weight:900;
+  margin-top:16px;
+  color:#facc15;
+}
+
+body.light .job-title{
+  color:#92400e;
+}
+
+.highlight{
+  background:#111827;
+  border-left:4px solid #eab308;
+  padding:14px;
+  border-radius:12px;
   margin-top:14px
 }
-body.dark .card{background:#0b1220}
 
-/* FOOTER */
-.footer{
-  text-align:center;
-  padding:40px;
-  background:#f8fafc;
-  color:#6b7280
+body.light .highlight{
+  background:#ffffff;
+  border-left:4px solid #92400e;
+  border:1px solid #e5e7eb
 }
-body.dark .footer{background:#020617;color:#94a3b8}
 
-/* MOBILE */
-@media (max-width: 900px){
-  body{padding-top:120px}
-  .header{padding:40px 25px}
-  .header-content{flex-direction:column;text-align:center}
-  .photo{width:150px;height:150px}
-  .contact-info{align-items:center}
-  .dashboard-metrics{grid-template-columns:1fr}
-  .navbar{flex-wrap:wrap;gap:14px;padding:14px 10px}
-  .lang-switch{top:65px;right:50%;transform:translateX(50%)}
-  #darkToggle{top:65px;left:50%;transform:translateX(-50%)}
-  .section{padding:50px 25px}
+/* RESPONSIVE */
+@media(max-width:900px){
+  .container{grid-template-columns:1fr}
+  .main{padding:30px 24px}
 }
 </style>
 </head>
 
 <body>
 
-<button id="darkToggle">🌙 Dark</button>
-
-<nav class="navbar">
-  <a href="#perfil">Perfil</a>
-  <a href="#competencias">Competências</a>
-  <a href="#experiencia">Experiência</a>
-  <a href="#projetos">Projetos</a>
-  <a href="#referencias">Referências</a>
-</nav>
+<button class="toggle" id="themeToggle">🌙</button>
 
 <div class="lang-switch">
-  <a href="index.html" class="active"><img src="https://flagcdn.com/w20/br.png" alt="PT"> PT</a>
-  <a href="index-en.html"><img src="https://flagcdn.com/w20/us.png" alt="EN"> EN</a>
-  <a href="index-es.html"><img src="https://flagcdn.com/w20/es.png" alt="ES"> ES</a>
+  <a href="index.html">🇧🇷</a>
+  <a href="index-en.html">🇺🇸</a>
+  <a href="index-es.html">🇪🇸</a>
 </div>
 
 <div class="container">
 
-<header class="header">
-  <div class="header-content">
-    <!-- FOTO: mantenha SEM acento/sem espaço no nome do arquivo -->
-    <img src="assets/foto.jpg" class="photo" alt="Kaleb Nunes dos Santos">
+<aside class="sidebar">
+  <!-- FOTO: caminho corrigido para GitHub Pages -->
+  <img src="./assets/foto.jpg" class="avatar" alt="Kaleb Nunes dos Santos">
 
-    <div>
-      <h1>KALEB NUNES DOS SANTOS</h1>
-      <h2>Consultor de Implantação | Infra, Redes, NOC e Observabilidade</h2>
+  <div class="name">KALEB<br>NUNES DOS SANTOS</div>
+  <div class="role">Consultor de Implantação<br>Infraestrutura, Redes, NOC, Observabilidade</div>
 
-      <div class="contact-info">
-        <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://wa.me/5547988901616" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        <a href="mailto:kalebdossantos59924@gmail.com"><i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com</a>
-        <span><i class="fas fa-location-dot"></i> Balneário Camboriú • SC • Brasil</span>
-      </div>
+  <h3>contact.info</h3>
+  <p>Balneário Camboriú – SC – Brasil</p>
+  <p>+55 47 98890-1616</p>
+  <p>kalebdossantos59924@gmail.com</p>
+  <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">LinkedIn</a>
 
-      <a class="btn-download" href="assets/portfolio_2026.pdf" target="_blank" rel="noopener">
-        <i class="fas fa-download"></i> Download CV (PDF)
-      </a>
-    </div>
-  </div>
+  <a class="btn" href="./assets/portfolio_2026.pdf" target="_blank">⬇ Download CV</a>
+  <a class="btn secondary" href="./assets/carta-recomendacao-2026.pdf" target="_blank">✍ Carta de Recomendação</a>
+</aside>
 
-  <div class="dashboard-metrics">
-    <div class="metric"><span>6+</span>Anos de experiência</div>
-    <div class="metric"><span>40%</span>Redução no MTTR</div>
-    <div class="metric"><span>Enterprise</span>Ambientes críticos</div>
-    <div class="metric"><span>Alta</span>Disponibilidade</div>
-  </div>
-</header>
+<main class="main">
 
-<section id="perfil" class="section">
-  <h2 class="section-title">Resumo Profissional</h2>
-  <p>
-    Profissional de TI com mais de 6 anos de experiência em NOC, redes corporativas e projetos de implantação enterprise.
-    Atuação sólida em monitoramento, automação, observabilidade e ITSM, com foco em eficiência operacional, governança,
-    redução de incidentes e padronização de processos em ambientes críticos.
-  </p>
+<section class="section">
+<h2>Resumo Profissional</h2>
+<p>
+Profissional de TI com mais de 6 anos de experiência em NOC, redes corporativas e projetos de implantação enterprise.
+Atuação sólida em monitoramento, automação, observabilidade e ITSM, com foco em eficiência operacional,
+governança, redução de incidentes e padronização de processos em ambientes críticos.
+</p>
 
-  <div class="card">
-    <strong>Diferencial:</strong> Promovido de Analista de Suporte N2 para Consultor de Implantação em 1 mês na Ellevo,
-    após acelerar o aprendizado técnico e de negócio (Plataforma Ellevo Legado e Ellevo Next) via treinamentos internos e prática em projetos.
-  </div>
+<div class="highlight">
+<strong>Diferencial:</strong><br>
+Promovido de Analista de Suporte N2 para Consultor de Implantação em apenas 1 mês na Ellevo Software,
+após rápida absorção técnica das plataformas Ellevo Legacy e Ellevo Next e atuação prática em projetos enterprise.
+</div>
 </section>
 
-<section id="competencias" class="section">
-  <h2 class="section-title">Competências Técnicas</h2>
-  <ul>
-    <li><strong>Infraestrutura de Redes:</strong> LAN, WAN, VPN, DNS, Backbone, alta disponibilidade</li>
-    <li><strong>Monitoramento e Observabilidade:</strong> Zabbix, Grafana, PRTG, LibreNMS, The Dude</li>
-    <li><strong>ITSM / Implantação:</strong> Ellevo Next (Catálogo, SLAs, Incidentes, Requisições, Mudanças)</li>
-    <li><strong>Automação e Dados:</strong> PowerShell, SQL Server, Integrações API REST, conformidade LGPD</li>
-    <li><strong>Processos:</strong> governança, troubleshooting avançado, suporte N2/N3</li>
-  </ul>
+<section class="section">
+<h2>Competências Técnicas</h2>
+<ul>
+<li>Infraestrutura de Redes: LAN, WAN, VPN, DNS, Backbone, Alta Disponibilidade</li>
+<li>Monitoramento e Observabilidade: Zabbix, Grafana, PRTG, LibreNMS, The Dude</li>
+<li>ITSM / Implantação: Ellevo Next (Catálogo, SLAs, Incidentes, Requisições, Mudanças)</li>
+<li>Automação e Dados: PowerShell, SQL Server, APIs REST, LGPD</li>
+<li>Governança, troubleshooting avançado, suporte N2/N3</li>
+</ul>
 </section>
 
-<section id="experiencia" class="section">
-  <h2 class="section-title">Experiência Profissional</h2>
+<section class="section">
+<h2>Experiência Profissional</h2>
 
-  <div class="card">
-    <strong>Consultor de Implantação – Ellevo Software</strong><br>
-    <em>Ago/2025 – Atual | Modelo Cooperado</em>
-    <ul>
-      <li>Implantação e consultoria ITSM para clientes enterprise, com foco em governança e processos.</li>
-      <li>Implantação completa do Ellevo Next: parametrização, catálogo, SLAs, fluxos (Incidentes/Requisições/Mudanças).</li>
-      <li>Automação de configurações via API REST, PowerShell e scripts SQL quando aplicável.</li>
-      <li>Homologação técnica, suporte a Go-Live e redução de retrabalho com padronização e checklist.</li>
-      <li><strong>Clientes:</strong> Renault, Grupo Elfa, Grupo Bauminas, Yazaki, Cruz Azul, HIL, Hill Saúde, SIS PUMA e Shopping Iguatemi.</li>
-    </ul>
-  </div>
+<div class="job-title">Consultor de Implantação — Ellevo Software (Ago/2025 – Atual)</div>
+<ul>
+<li>Implantação e consultoria ITSM para clientes enterprise.</li>
+<li>Implantação completa da plataforma Ellevo Next.</li>
+<li>Automação via API REST, PowerShell e SQL.</li>
+<li>Homologação técnica, Go-Live e padronização de processos.</li>
+<li><strong>Clientes:</strong> Renault, Grupo Elfa, Grupo Bauminas, Yazaki, Cruz Azul, HIL, Hill Saúde, SIS PUMA, Shopping Iguatemi.</li>
+</ul>
 
-  <div class="card">
-    <strong>Master / Senior Network Technician – RR64 Network Intelligence</strong><br>
-    <em>2023 – 2025 | CLT | Remoto</em>
-    <ul>
-      <li>Atuação sênior em ambientes críticos de backbone e redes corporativas.</li>
-      <li>Monitoramento e observabilidade com PRTG, Zabbix, Grafana e The Dude.</li>
-      <li>Atendimento a demandas de bloqueio/desbloqueio via DNS por solicitações formais (contexto jurídico).</li>
-      <li>Implementação/apoio em servidores de Speed Test em produção (ambiente do cliente).</li>
-    </ul>
-  </div>
+<div class="job-title">Master / Senior Network Technician — RR64 Network Intelligence (2023 – 2025)</div>
+<ul>
+<li>Atuação sênior em ambientes críticos de backbone.</li>
+<li>Monitoramento com PRTG, Zabbix, Grafana e The Dude.</li>
+</ul>
 
-  <div class="card">
-    <strong>Analista de Redes / NOC – VivaTech / MetroNetwork</strong><br>
-    <em>2022 – 2023</em>
-    <ul>
-      <li>Monitoramento 24x7 e resposta a incidentes utilizando LibreNMS, PRTG, Zabbix e Grafana.</li>
-      <li>Troubleshooting para estabilidade e continuidade operacional.</li>
-    </ul>
-  </div>
+<div class="job-title">Analista de Redes / NOC — VivaTech / MetroNetwork (2022 – 2023)</div>
+<ul>
+<li>Monitoramento 24x7 e resposta a incidentes.</li>
+</ul>
 
-  <div class="card">
-    <strong>Bradesco Seguros – Consultoria Técnica</strong><br>
-    <em>2021 – 2022 | PJ | Remoto</em>
-    <ul>
-      <li>Consumo e testes de APIs via Postman, com manipulação segura de dados sensíveis (LGPD).</li>
-      <li>Demandas recebidas da Gerência e do time N3 (triagem/validação/monitoramento).</li>
-    </ul>
-  </div>
+<div class="job-title">Consultoria Técnica — Bradesco Seguros (2021 – 2022)</div>
+<ul>
+<li>Consumo e testes de APIs (Postman) em ambiente LGPD.</li>
+</ul>
 
-  <div class="card">
-    <strong>Técnico de Redes – Operadora Vetorial</strong><br>
-    <em>2019 – 2020</em>
-    <ul>
-      <li>Atuação em infraestrutura de redes corporativas e suporte em telecomunicações.</li>
-    </ul>
-  </div>
+<div class="job-title">Técnico de Redes — Operadora Vetorial (2019 – 2020)</div>
+<ul>
+<li>Infraestrutura de redes corporativas e telecom.</li>
+</ul>
 </section>
 
-<section id="projetos" class="section">
-  <h2 class="section-title">Projetos de Destaque</h2>
-
-  <div class="card">
-    <strong>Implantação ITSM – Ellevo Next (Enterprise)</strong>
-    <ul>
-      <li>Catálogo de serviços, SLAs, fluxos de Incidentes/Requisições/Mudanças.</li>
-      <li>Homologação técnica + Go-Live com foco em reduzir retrabalho e acelerar adoção.</li>
-      <li>Automação com PowerShell/API quando aplicável.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <strong>Shopping Iguatemi (Projeto validado em produção)</strong>
-    <ul>
-      <li>Apoio ao time DEV com configuração de VPN (FortiClient).</li>
-      <li>Participação com Infra/Cyber do cliente para estabilizar homologação e conectividade do legado.</li>
-      <li>Problema resolvido e validado em reunião com stakeholders do cliente.</li>
-    </ul>
-  </div>
+<section class="section">
+<h2>Projetos de Destaque</h2>
+<ul>
+<li>Implantação ITSM Ellevo Next (Enterprise)</li>
+<li>Shopping Iguatemi — Projeto validado em produção</li>
+</ul>
 </section>
 
-<section id="referencias" class="section">
-  <h2 class="section-title">Referências Profissionais</h2>
-  <div class="card">
-    <strong>Rôney Cordeiro</strong> — CEO (VivaTech)<br>
-    Telefone: +1 (857) 204-7057
-  </div>
-  <div class="card">
-    <strong>Lucas Costa</strong> — MetroNetwork<br>
-    Telefone: +55 47 9759-6283
-  </div>
+<section class="section">
+<h2>Referências Profissionais</h2>
+<ul>
+<li><strong>Rôney Cordeiro</strong> — CEO (VivaTech) | +1 (857) 204-7057</li>
+<li><strong>Lucas Costa</strong> — MetroNetwork | +55 47 9759-6283</li>
+</ul>
 </section>
 
-<section class="section" style="text-align:center">
-  <a href="assets/carta-recomendacao-2026.pdf" target="_blank" rel="noopener" class="btn-download">
-    <i class="fas fa-file-signature"></i> Carta de Recomendação Técnica (PDF)
-  </a>
-</section>
-
-<footer class="footer">
-  © 2026 Kaleb Nunes dos Santos • Portfólio Profissional
-</footer>
-
+</main>
 </div>
 
 <script>
-const toggle=document.getElementById("darkToggle");
-toggle.onclick=()=>{
-  document.body.classList.toggle("dark");
-  toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
+document.getElementById("themeToggle").onclick=()=>{
+  document.body.classList.toggle("light");
 };
 </script>
 
