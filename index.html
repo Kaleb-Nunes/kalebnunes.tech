@@ -3,95 +3,215 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kaleb Nunes dos Santos – Portfolio</title>
+<title>Kaleb Nunes dos Santos – Portfólio Profissional</title>
+
 <style>
-body{font-family:Arial,sans-serif;margin:0;padding:0;color:#333;background:#fff}
-header{background:#f8f9fa;padding:40px;text-align:center}
-header h1{margin:0;font-size:2.2em;color:#1e3a8a}
-header p{font-size:1.1em;color:#555}
-section{padding:50px 20px}
-h2{color:#1e3a8a;margin-bottom:15px}
-.container{max-width:1000px;margin:auto}
-.profile, .skills, .projects, .experience, .tools, .references{margin-bottom:40px}
-.skill-list, .tool-list{display:flex;flex-wrap:wrap;gap:10px}
-.skill-list div, .tool-list div{background:#eef2f7;padding:10px 15px;border-radius:5px;font-size:0.95em}
-.project-item, .exp-item{margin-bottom:20px}
-.btn-download{display:inline-block;padding:10px 18px;background:#1e3a8a;color:#fff;border-radius:4px;text-decoration:none;margin-top:10px}
+body{
+  font-family: Arial, sans-serif;
+  margin:0;
+  padding:0;
+  background:#ffffff;
+  color:#333;
+  line-height:1.6;
+}
+
+header{
+  background:#f5f7fa;
+  padding:40px 20px;
+  text-align:center;
+  border-bottom:2px solid #e5e7eb;
+}
+
+header h1{
+  margin:0;
+  font-size:2.3em;
+  color:#1e3a8a;
+}
+
+header p{
+  margin:8px 0;
+  font-size:1.1em;
+  color:#555;
+}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+h2{
+  color:#1e3a8a;
+  margin-bottom:15px;
+  border-bottom:2px solid #e5e7eb;
+  padding-bottom:5px;
+}
+
+.section{
+  margin-bottom:45px;
+}
+
+.skill-list, .tool-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.skill-list div, .tool-list div{
+  background:#eef2f7;
+  padding:10px 15px;
+  border-radius:6px;
+  font-size:0.95em;
+}
+
+.project-item, .exp-item{
+  margin-bottom:25px;
+}
+
+.project-item h3, .exp-item h3{
+  margin-bottom:5px;
+  color:#1e3a8a;
+}
+
+.btn-download{
+  display:inline-block;
+  padding:12px 20px;
+  background:#1e3a8a;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:bold;
+}
+
+footer{
+  background:#f5f7fa;
+  text-align:center;
+  padding:20px;
+  font-size:0.9em;
+  color:#666;
+  border-top:2px solid #e5e7eb;
+}
 </style>
 </head>
+
 <body>
 
 <header>
   <h1>Kaleb Nunes dos Santos</h1>
   <p>Consultor de Implantação | Infraestrutura, Redes, NOC e Observabilidade</p>
   <p>Balneário Camboriú • SC • Brasil</p>
+  <p>
+    <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">LinkedIn</a> • 
+    <a href="mailto:kalebdossantos59924@gmail.com">E-mail</a> • 
+    <a href="https://wa.me/5547988901616" target="_blank">WhatsApp</a>
+  </p>
 </header>
 
-<section class="container profile">
+<div class="container">
+
+<!-- PERFIL -->
+<section class="section">
   <h2>Perfil Profissional</h2>
-  <p>Consultor de Implantação com sólida experiência em ambientes enterprise, atuando em infraestrutura, redes, monitoramento, automação e integração de sistemas. Foco em estabilidade operacional, melhoria contínua e projetos de missão crítica.</p>
+  <p>
+    Consultor de Implantação com sólida experiência em ambientes enterprise, atuando em infraestrutura, redes, monitoramento, automação e integração de sistemas.
+    Forte foco em estabilidade operacional, padronização de processos, observabilidade e projetos de missão crítica.
+  </p>
 </section>
 
-<section class="container skills">
+<!-- COMPETÊNCIAS -->
+<section class="section">
   <h2>Principais Competências</h2>
   <div class="skill-list">
     <div>Infraestrutura de Redes</div>
     <div>NOC & Observabilidade</div>
     <div>ITSM / Implantação</div>
     <div>PowerShell</div>
-    <div>APIs / Postman</div>
+    <div>APIs / REST</div>
+    <div>Postman</div>
     <div>SQL</div>
-    <div>PRTG, Zabbix, Grafana</div>
-    <div>LibreNMS, The Dude</div>
+    <div>PRTG</div>
+    <div>Zabbix</div>
+    <div>Grafana</div>
+    <div>LibreNMS</div>
+    <div>The Dude</div>
   </div>
 </section>
 
-<section class="container projects">
+<!-- PROJETOS / CASES -->
+<section class="section">
   <h2>Projetos & Cases</h2>
 
   <div class="project-item">
     <h3>Case – Migração Ellevo Next (Grupo Elfa)</h3>
-    <p><strong>Projeto:</strong> Migração da plataforma Ellevo Legado para Ellevo Next, com validação funcional e implementação completa.</p>
-    <p><strong>Atuação:</strong> Parametrização, automação PowerShell, integrações API/REST, observabilidade e suporte a homologação.</p>
+    <p><strong>Projeto:</strong> Migração da plataforma Ellevo Legado para Ellevo Next.</p>
+    <p><strong>Atuação:</strong> Parametrização, automação PowerShell, integrações API/REST, validações funcionais e suporte à homologação.</p>
+    <p><strong>Resultado:</strong> Sistema entregue e validado para produção.</p>
   </div>
 
   <div class="project-item">
     <h3>Shopping Iguatemi – Infra & VPN</h3>
-    <p>Configuração de VPN FortiClient, suporte de infraestrutura, reuniões com times de Infra e Cibersegurança, validação com diretoria e entrega validada em produção.</p>
+    <p>Configuração de VPN FortiClient, apoio em infraestrutura, reuniões com times de Infra e Cibersegurança, validação com diretoria e entrega do projeto em produção.</p>
   </div>
 
   <div class="project-item">
-    <h3>Speed Test em Produção (RR64)</h3>
-    <p>Projeto de servidores Speed Test para ambientes críticos com monitoramento avançado.</p>
+    <h3>Servidores Speed Test em Produção (RR64)</h3>
+    <p>Implantação de servidores de teste de velocidade para clientes corporativos com monitoramento avançado.</p>
+  </div>
+
+  <div class="project-item">
+    <h3>Clientes Multinacionais</h3>
+    <p>Renault, Grupo Bauminas, Yazaki, Grupo Elfa, Higex, CRUZ AZUL Hospital, Hill Saúde, SIS PUMA ERP.</p>
   </div>
 </section>
 
-<section class="container experience">
+<!-- EXPERIÊNCIA -->
+<section class="section">
   <h2>Experiência Profissional</h2>
 
   <div class="exp-item">
     <h3>Consultor de Implantação – Ellevo Software (Ago/2025 – Atual)</h3>
-    <p>Implantação de ITSM, automação com PowerShell, integrações API/REST, validações com Postman, suporte go-live e migração Ellevo Next.</p>
+    <p>
+      Promoção de Analista N2 para Consultor de Implantação em 1 mês.
+      Atuação em projetos de grande escala com clientes multinacionais.
+      Parametrização de ITSM, integrações API/REST, PowerShell, Postman, migração Ellevo Next e suporte a go-live.
+    </p>
   </div>
 
   <div class="exp-item">
     <h3>Master / Senior Network Technician – RR64 (2023 – 2025)</h3>
-    <p>Monitoramento com PRTG, Zabbix, Grafana e The Dude. DNS judicial, Speed Test em produção e análise de incidentes.</p>
+    <p>
+      Monitoramento com PRTG, Zabbix, Grafana e The Dude.
+      Gestão de DNS judicial, bloqueios/desbloqueios por ordem judicial e servidores Speed Test em produção.
+    </p>
   </div>
 
   <div class="exp-item">
     <h3>Analista de Redes – VivaTech (2022 – 2023)</h3>
-    <p>Monitoramento NOC com LibreNMS e PRTG, troubleshootings e suporte operacional.</p>
+    <p>
+      Monitoramento NOC com LibreNMS e PRTG, troubleshooting de links, análise de incidentes e suporte operacional.
+    </p>
   </div>
 
   <div class="exp-item">
     <h3>Bradesco Seguros – Consultoria Técnica</h3>
-    <p>Consumo de APIs via Postman, manipulação de dados sensíveis e integração com times N2/N3.</p>
+    <p>
+      Consumo de APIs via Postman, manipulação de dados sensíveis, monitoramento e atendimento de demandas vindas dos times N2, N3 e Gerência.
+    </p>
   </div>
 
+  <div class="exp-item">
+    <h3>MetroNetwork (2022 – 2023)</h3>
+    <p>Suporte em redes e infraestrutura corporativa.</p>
+  </div>
+
+  <div class="exp-item">
+    <h3>Operadora Vetorial (2019 – 2020)</h3>
+    <p>Atuação inicial em infraestrutura e suporte técnico.</p>
+  </div>
 </section>
 
-<section class="container tools">
+<!-- FERRAMENTAS -->
+<section class="section">
   <h2>Ferramentas & Tecnologias</h2>
   <div class="tool-list">
     <div>PRTG</div>
@@ -106,18 +226,24 @@ h2{color:#1e3a8a;margin-bottom:15px}
   </div>
 </section>
 
-<section class="container references">
+<!-- REFERÊNCIAS -->
+<section class="section">
   <h2>Referências Profissionais</h2>
-  <p><strong>Rôney Cordeiro</strong> – CEO VivaTech</p>
-  <p>Telefone: +1 (857) 204-7057</p>
-
-  <p><strong>Lucas Costa</strong> – MetroNetwork</p>
-  <p>Telefone: +55 47 9759-6283</p>
+  <p><strong>Rôney Cordeiro</strong> – CEO VivaTech<br>Telefone: +1 (857) 204-7057</p>
+  <p><strong>Lucas Costa</strong> – MetroNetwork<br>Telefone: +55 47 9759-6283</p>
 </section>
 
-<section class="container">
-  <a href="assets/portfolio_2026.pdf" class="btn-download">Download CV Completo</a>
+<!-- DOWNLOAD -->
+<section class="section">
+  <a href="assets/portfolio_2026.pdf" class="btn-download">Download CV Completo (PDF)</a><br><br>
+  <a href="assets/carta-recomendacao-2026.pdf" class="btn-download">Carta de Recomendação</a>
 </section>
+
+</div>
+
+<footer>
+  © 2026 Kaleb Nunes dos Santos • Portfólio Profissional
+</footer>
 
 </body>
 </html>
