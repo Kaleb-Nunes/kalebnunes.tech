@@ -9,109 +9,192 @@
 <meta name="author" content="Kaleb Nunes dos Santos">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif}
-body{background:#0b1020;color:#e5e7eb;transition:.3s}
-body.light{background:#f4f6fb;color:#111827}
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif}
+    body{background:#0b1020;color:#e5e7eb;transition:.3s}
+    body.light{background:#f4f6fb;color:#111827}
 
-/* LANGUAGE */
-.lang-switch{position:fixed;top:16px;right:16px;display:flex;gap:8px;z-index:999}
-.lang-switch a{background:#fff;border:1px solid #d1d5db;padding:6px 10px;border-radius:10px;font-weight:700;text-decoration:none}
+    /* LANGUAGE */
+    .lang-switch{position:fixed;top:16px;right:16px;display:flex;gap:8px;z-index:999}
+    .lang-switch a{background:#fff;border:1px solid #d1d5db;padding:6px 10px;border-radius:10px;font-weight:700;text-decoration:none}
 
-/* TOGGLE */
-.toggle{position:fixed;top:16px;left:16px;background:#2563eb;color:#fff;border:none;padding:8px 14px;border-radius:20px;cursor:pointer;font-weight:700}
+    /* TOGGLE */
+    .toggle{position:fixed;top:16px;left:16px;background:#2563eb;color:#fff;border:none;padding:8px 14px;border-radius:20px;cursor:pointer;font-weight:700}
 
-/* LAYOUT */
-.container{display:grid;grid-template-columns:320px 1fr;max-width:1400px;margin:auto;min-height:100vh}
+    /* LAYOUT */
+    .container{display:grid;grid-template-columns:320px 1fr;max-width:1400px;margin:auto;min-height:100vh}
 
-/* SIDEBAR */
-.sidebar{background:#111827;padding:26px 22px}
-body.light .sidebar{background:#ffffff;border-right:1px solid #e5e7eb}
+    /* SIDEBAR */
+    .sidebar{background:#111827;padding:26px 22px}
+    body.light .sidebar{background:#ffffff;border-right:1px solid #e5e7eb}
 
-.avatar{
-  width:140px;
-  height:140px;
-  border-radius:50%;
-  border:4px solid #2563eb;
-  object-fit:cover;
-  margin-bottom:14px;
-  background:#1f2937;
-}
+    .avatar{
+        width:140px;
+        height:140px;
+        border-radius:50%;
+        border:4px solid #2563eb;
+        object-fit:cover;
+        margin-bottom:14px;
+        background:#1f2937;
+    }
 
-.name{
-  display:block;
-  color:#2563eb;
-  font-size:22px;
-  font-weight:900;
-  line-height:1.2;
-}
+    .name{
+        display:block;
+        color:#2563eb;
+        font-size:22px;
+        font-weight:900;
+        line-height:1.2;
+    }
 
-.role{color:#22c55e;font-size:13px;font-weight:700;margin-top:6px}
+    .role{color:#22c55e;font-size:13px;font-weight:700;margin-top:6px}
 
-.sidebar h3{color:#60a5fa;margin:20px 0 8px;font-size:13px}
-.sidebar p,.sidebar a{color:#cbd5e1;font-size:13px;text-decoration:none;margin-bottom:6px;display:block}
-body.light .sidebar p,body.light .sidebar a{color:#1f2937}
+    .sidebar h3{color:#60a5fa;margin:20px 0 8px;font-size:13px}
+    .sidebar p,.sidebar a{color:#cbd5e1;font-size:13px;text-decoration:none;margin-bottom:6px;display:block}
+    body.light .sidebar p,body.light .sidebar a{color:#1f2937}
 
-.btn{
-  background:#2563eb;
-  color:#fff;
-  padding:10px 14px;
-  border-radius:14px;
-  text-align:center;
-  font-weight:700;
-  margin-top:10px;
-  text-decoration:none
-}
+    .btn{
+        background:#2563eb;
+        color:#fff;
+        padding:10px 14px;
+        border-radius:14px;
+        text-align:center;
+        font-weight:700;
+        margin-top:10px;
+        text-decoration:none
+    }
 
-.btn.secondary{
-  background:#374151;
-  color:#ffffff;
-}
+    .btn.secondary{
+        background:#374151;
+        color:#ffffff;
+    }
 
-body.light .btn.secondary{
-  background:#e5e7eb;
-  color:#111827;
-  border:1px solid #d1d5db;
-}
+    body.light .btn.secondary{
+        background:#e5e7eb;
+        color:#111827;
+        border:1px solid #d1d5db;
+    }
 
-/* MAIN */
-.main{padding:40px 50px}
-.section{margin-top:32px}
-.section h2{color:#60a5fa;font-size:18px;margin-bottom:14px}
-body.light .section h2{color:#2563eb}
+    /* MAIN */
+    .main{padding:40px 50px}
+    .section{margin-top:32px}
+    .section h2{color:#60a5fa;font-size:18px;margin-bottom:14px}
+    body.light .section h2{color:#2563eb}
 
-.section p,.section li{line-height:1.7;margin-bottom:6px}
-body.light .section p,
-body.light .section li{color:#1f2937}
+    .section p,.section li{line-height:1.7;margin-bottom:6px}
+    body.light .section p,
+    body.light .section li{color:#1f2937}
 
-.job-title{
-  font-weight:900;
-  margin-top:16px;
-  color:#facc15;
-}
+    .job-title{
+        font-weight:900;
+        margin-top:16px;
+        color:#facc15;
+    }
 
-body.light .job-title{
-  color:#92400e;
-}
+    body.light .job-title{
+        color:#92400e;
+    }
 
-.highlight{
-  background:#111827;
-  border-left:4px solid #eab308;
-  padding:14px;
-  border-radius:12px;
-  margin-top:14px
-}
+    .highlight{
+        background:#111827;
+        border-left:4px solid #eab308;
+        padding:14px;
+        border-radius:12px;
+        margin-top:14px
+    }
 
-body.light .highlight{
-  background:#ffffff;
-  border-left:4px solid #92400e;
-  border:1px solid #e5e7eb
-}
+    body.light .highlight{
+        background:#ffffff;
+        border-left:4px solid #92400e;
+        border:1px solid #e5e7eb
+    }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-  .container{grid-template-columns:1fr}
-  .main{padding:30px 24px}
-}
+    /* KNS CARD STYLES (Adicionado) */
+    .kns-card-container {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: flex-start; /* Alinhado à esquerda para seguir o texto */
+        padding: 20px 0; /* Ajuste de padding */
+    }
+    .kns-card {
+        background: #0a0a0a;
+        border: 1px solid #333;
+        border-left: 4px solid #00ff41; /* Hacker Green */
+        border-radius: 8px;
+        width: 100%;
+        max-width: 600px;
+        padding: 25px;
+        box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    .kns-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 30px rgba(0, 255, 65, 0.2);
+        border-color: #00ff41;
+    }
+    .kns-badge {
+        background: rgba(0, 255, 65, 0.1);
+        color: #00ff41;
+        padding: 4px 10px;
+        font-size: 0.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        border: 1px solid rgba(0, 255, 65, 0.3);
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+    .kns-title {
+        color: #fff;
+        margin: 0 0 10px 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    .kns-desc {
+        color: #a0a0a0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    .kns-tech-stack {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 25px;
+        flex-wrap: wrap;
+    }
+    .kns-tech {
+        background: #1a1a1a;
+        color: #ccc;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        border: 1px solid #333;
+    }
+    .kns-btn {
+        background: transparent;
+        color: #00ff41;
+        text-decoration: none;
+        font-weight: bold;
+        border: 1px solid #00ff41;
+        padding: 10px 20px;
+        border-radius: 4px;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+    .kns-btn:hover {
+        background: #00ff41;
+        color: #000;
+        box-shadow: 0 0 15px #00ff41;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+        .container{grid-template-columns:1fr}
+        .main{padding:30px 24px}
+        .kns-card-container { justify-content: center; }
+    }
 </style>
 </head>
 
@@ -120,115 +203,136 @@ body.light .highlight{
 <button class="toggle" id="themeToggle">🌙</button>
 
 <div class="lang-switch">
-  <a href="index.html">🇧🇷</a>
-  <a href="index-en.html">🇺🇸</a>
-  <a href="index-es.html">🇪🇸</a>
+    <a href="index.html">🇧🇷</a>
+    <a href="index-en.html">🇺🇸</a>
+    <a href="index-es.html">🇪🇸</a>
 </div>
 
 <div class="container">
 
-<aside class="sidebar">
-  <!-- FOTO: caminho corrigido para GitHub Pages -->
-  <img src="./assets/foto.jpg" class="avatar" alt="Kaleb Nunes dos Santos">
+    <aside class="sidebar">
+        <img src="./assets/foto.jpg" class="avatar" alt="Kaleb Nunes dos Santos">
 
-  <div class="name">KALEB<br>NUNES DOS SANTOS</div>
-  <div class="role">Consultor de Implantação<br>Infraestrutura, Redes, NOC, Observabilidade</div>
+        <div class="name">KALEB<br>NUNES DOS SANTOS</div>
+        <div class="role">Consultor de Implantação<br>Infraestrutura, Redes, NOC, Observabilidade</div>
 
-  <h3>contact.info</h3>
-  <p>Balneário Camboriú – SC – Brasil</p>
-  <p>+55 47 98890-1616</p>
-  <p>kalebdossantos59924@gmail.com</p>
-  <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">LinkedIn</a>
+        <h3>contact.info</h3>
+        <p>Balneário Camboriú – SC – Brasil</p>
+        <p>+55 47 98890-1616</p>
+        <p>kalebdossantos59924@gmail.com</p>
+        <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">LinkedIn</a>
 
-  <a class="btn" href="./assets/portfolio_2026.pdf" target="_blank">⬇ Download CV</a>
-  <a class="btn secondary" href="./assets/carta-recomendacao-2026.pdf" target="_blank">✍ Carta de Recomendação</a>
-</aside>
+        <a class="btn" href="./assets/portfolio_2026.pdf" target="_blank">⬇ Download CV</a>
+        <a class="btn secondary" href="./assets/carta-recomendacao-2026.pdf" target="_blank">✍ Carta de Recomendação</a>
+    </aside>
 
-<main class="main">
+    <main class="main">
 
-<section class="section">
-<h2>Resumo Profissional</h2>
-<p>
-Profissional de TI com mais de 6 anos de experiência em NOC, redes corporativas e projetos de implantação enterprise.
-Atuação sólida em monitoramento, automação, observabilidade e ITSM, com foco em eficiência operacional,
-governança, redução de incidentes e padronização de processos em ambientes críticos.
-</p>
+        <section class="section">
+            <h2>Resumo Profissional</h2>
+            <p>
+            Profissional de TI com mais de 6 anos de experiência em NOC, redes corporativas e projetos de implantação enterprise.
+            Atuação sólida em monitoramento, automação, observabilidade e ITSM, com foco em eficiência operacional,
+            governança, redução de incidentes e padronização de processos em ambientes críticos.
+            </p>
 
-<div class="highlight">
-<strong>Diferencial:</strong><br>
-Promovido de Analista de Suporte N2 para Consultor de Implantação em apenas 1 mês na Ellevo Software,
-após rápida absorção técnica das plataformas Ellevo Legacy e Ellevo Next e atuação prática em projetos enterprise.
-</div>
-</section>
+            <div class="highlight">
+            <strong>Diferencial:</strong><br>
+            Promovido de Analista de Suporte N2 para Consultor de Implantação em apenas 1 mês na Ellevo Software,
+            após rápida absorção técnica das plataformas Ellevo Legacy e Ellevo Next e atuação prática em projetos enterprise.
+            </div>
+        </section>
 
-<section class="section">
-<h2>Competências Técnicas</h2>
-<ul>
-<li>Infraestrutura de Redes: LAN, WAN, VPN, DNS, Backbone, Alta Disponibilidade</li>
-<li>Monitoramento e Observabilidade: Zabbix, Grafana, PRTG, LibreNMS, The Dude</li>
-<li>ITSM / Implantação: Ellevo Next (Catálogo, SLAs, Incidentes, Requisições, Mudanças)</li>
-<li>Automação e Dados: PowerShell, SQL Server, APIs REST, LGPD</li>
-<li>Governança, troubleshooting avançado, suporte N2/N3</li>
-</ul>
-</section>
+        <section class="section">
+            <h2>Competências Técnicas</h2>
+            <ul>
+            <li>Infraestrutura de Redes: LAN, WAN, VPN, DNS, Backbone, Alta Disponibilidade</li>
+            <li>Monitoramento e Observabilidade: Zabbix, Grafana, PRTG, LibreNMS, The Dude</li>
+            <li>ITSM / Implantação: Ellevo Next (Catálogo, SLAs, Incidentes, Requisições, Mudanças)</li>
+            <li>Automação e Dados: PowerShell, SQL Server, APIs REST, LGPD</li>
+            <li>Governança, troubleshooting avançado, suporte N2/N3</li>
+            </ul>
+        </section>
 
-<section class="section">
-<h2>Experiência Profissional</h2>
+        <section class="section">
+            <h2>Experiência Profissional</h2>
 
-<div class="job-title">Consultor de Implantação — Ellevo Software (Ago/2025 – Atual)</div>
-<ul>
-<li>Implantação e consultoria ITSM para clientes enterprise.</li>
-<li>Implantação completa da plataforma Ellevo Next.</li>
-<li>Automação via API REST, PowerShell e SQL.</li>
-<li>Homologação técnica, Go-Live e padronização de processos.</li>
-<li><strong>Clientes:</strong> Renault, Grupo Elfa, Grupo Bauminas, Yazaki, Cruz Azul, HIL, Hill Saúde, SIS PUMA, Shopping Iguatemi.</li>
-</ul>
+            <div class="job-title">Consultor de Implantação — Ellevo Software (Ago/2025 – Atual)</div>
+            <ul>
+            <li>Implantação e consultoria ITSM para clientes enterprise.</li>
+            <li>Implantação completa da plataforma Ellevo Next.</li>
+            <li>Automação via API REST, PowerShell e SQL.</li>
+            <li>Homologação técnica, Go-Live e padronização de processos.</li>
+            <li><strong>Clientes:</strong> Renault, Grupo Elfa, Grupo Bauminas, Yazaki, Cruz Azul, HIL, Hill Saúde, SIS PUMA, Shopping Iguatemi.</li>
+            </ul>
 
-<div class="job-title">Master / Senior Network Technician — RR64 Network Intelligence (2023 – 2025)</div>
-<ul>
-<li>Atuação sênior em ambientes críticos de backbone.</li>
-<li>Monitoramento com PRTG, Zabbix, Grafana e The Dude.</li>
-</ul>
+            <div class="job-title">Master / Senior Network Technician — RR64 Network Intelligence (2023 – 2025)</div>
+            <ul>
+            <li>Atuação sênior em ambientes críticos de backbone.</li>
+            <li>Monitoramento com PRTG, Zabbix, Grafana e The Dude.</li>
+            </ul>
 
-<div class="job-title">Analista de Redes / NOC — VivaTech / MetroNetwork (2022 – 2023)</div>
-<ul>
-<li>Monitoramento 24x7 e resposta a incidentes.</li>
-</ul>
+            <div class="job-title">Analista de Redes / NOC — VivaTech / MetroNetwork (2022 – 2023)</div>
+            <ul>
+            <li>Monitoramento 24x7 e resposta a incidentes.</li>
+            </ul>
 
-<div class="job-title">Consultoria Técnica — Bradesco Seguros (2021 – 2022)</div>
-<ul>
-<li>Consumo e testes de APIs (Postman) em ambiente LGPD.</li>
-</ul>
+            <div class="job-title">Consultoria Técnica — Bradesco Seguros (2021 – 2022)</div>
+            <ul>
+            <li>Consumo e testes de APIs (Postman) em ambiente LGPD.</li>
+            </ul>
 
-<div class="job-title">Técnico de Redes — Operadora Vetorial (2019 – 2020)</div>
-<ul>
-<li>Infraestrutura de redes corporativas e telecom.</li>
-</ul>
-</section>
+            <div class="job-title">Técnico de Redes — Operadora Vetorial (2019 – 2020)</div>
+            <ul>
+            <li>Infraestrutura de redes corporativas e telecom.</li>
+            </ul>
+        </section>
 
-<section class="section">
-<h2>Projetos de Destaque</h2>
-<ul>
-<li>Implantação ITSM Ellevo Next (Enterprise)</li>
-<li>Shopping Iguatemi — Projeto validado em produção</li>
-</ul>
-</section>
+        <section class="section">
+            <h2>Projetos de Destaque</h2>
+            <ul>
+            <li>Implantação ITSM Ellevo Next (Enterprise)</li>
+            <li>Shopping Iguatemi — Projeto validado em produção</li>
+            </ul>
 
-<section class="section">
-<h2>Referências Profissionais</h2>
-<ul>
-<li><strong>Rôney Cordeiro</strong> — CEO (VivaTech) | +1 (857) 204-7057</li>
-<li><strong>Lucas Costa</strong> — MetroNetwork | +55 47 9759-6283</li>
-</ul>
-</section>
+            <div class="kns-card-container">
+                <div class="kns-card">
+                    <div class="kns-badge">System Status: Production</div>
+                    <h3 class="kns-title">🛡️ KNS Command Center</h3>
+                    <p class="kns-desc">
+                        Plataforma Full Stack de Observabilidade Híbrida. Monitoramento unificado de Docker (Linux) e Infraestrutura Física (Windows) com capacidade de Defesa Ativa via Automação Python.
+                    </p>
+                    
+                    <div class="kns-tech-stack">
+                        <span class="kns-tech">Docker</span>
+                        <span class="kns-tech">Python</span>
+                        <span class="kns-tech">Zabbix</span>
+                        <span class="kns-tech">Grafana</span>
+                        <span class="kns-tech">PowerShell</span>
+                    </div>
 
-</main>
+                    <a href="https://github.com/Kaleb-Nunes/KNS-Command-Center" target="_blank" class="kns-btn">
+                        VER PROJETO NO GITHUB &rarr;
+                    </a>
+                </div>
+            </div>
+            </section>
+
+        <section class="section">
+            <h2>Referências Profissionais</h2>
+            <ul>
+            <li><strong>Rôney Cordeiro</strong> — CEO (VivaTech) | +1 (857) 204-7057</li>
+            <li><strong>Lucas Costa</strong> — MetroNetwork | +55 47 9759-6283</li>
+            </ul>
+        </section>
+
+    </main>
 </div>
 
 <script>
-document.getElementById("themeToggle").onclick=()=>{
-  document.body.classList.toggle("light");
-};
+    document.getElementById("themeToggle").onclick=()=>{
+        document.body.classList.toggle("light");
+    };
 </script>
 
 </body>
