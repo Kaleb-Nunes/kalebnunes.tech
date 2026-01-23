@@ -4,152 +4,136 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <title>Kaleb Nunes | Consultor KNS - Infraestrutura & SOC/NOC</title>
-    <meta name="description" content="Especialista em monitoramento híbrido, Zabbix e Grafana. Consultoria KNS.">
+    <title>Kaleb Nunes | Consultoria KNS</title>
+    <meta name="description" content="Especialista em monitoramento e infraestrutura.">
     <meta property="og:image" content="https://kaleb-nunes.github.io/KNS-Command-Center/assets/dashboard-full.png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
             --bg-main: #01080e; --card-bg: rgba(6, 18, 26, 0.9); --text-main: #ffffff;
             --neon-cyan: #00f3ff; --neon-red: #ff0055; --neon-green: #0aff00; --border-color: rgba(0, 243, 255, 0.2);
-            --overlay: rgba(1, 8, 14, 0.7);
         }
 
+        /* CONTRASTE DE LEITURA PARA CLIENTES (LIGHT THEME) */
         body.light-theme {
-            --bg-main: #dce2e9; --card-bg: #ffffff; --text-main: #2d3748; 
+            --bg-main: #f0f4f8; --card-bg: #ffffff; --text-main: #2d3748; 
             --neon-cyan: #1a56db; --neon-red: #c53030; --neon-green: #2f855a; --border-color: #cbd5e0;
-            --overlay: rgba(220, 226, 233, 0.6);
         }
 
         * { box-sizing: border-box; transition: all 0.2s ease; }
         body {
-            margin: 0; padding: 15px; background-color: var(--bg-main); color: var(--text-main);
-            font-family: 'Rajdhani', sans-serif; height: 100vh; overflow: hidden;
-            background-image: linear-gradient(var(--overlay), var(--overlay)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070');
-            background-size: cover; background-position: center;
+            margin: 0; padding: 20px; background-color: var(--bg-main); color: var(--text-main);
+            font-family: 'Rajdhani', sans-serif;
+            background-image: radial-gradient(circle at 50% 50%, rgba(0, 243, 255, 0.05), transparent);
         }
 
-        .cyber-grid { display: grid; grid-template-columns: 320px 1fr; grid-template-rows: 60px 1fr 40px; gap: 15px; height: calc(100vh - 30px); }
-        .header { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; border: 1px solid var(--border-color); background: var(--card-bg); }
+        /* HEADER DISCRETO (MELHORIA SOLICITADA) */
+        .header { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 10px 20px; border-bottom: 1px solid var(--border-color); margin-bottom: 30px;
+        }
         
-        /* CONTROLES DISCRETOS */
-        .top-controls { display: flex; gap: 12px; align-items: center; background: rgba(0, 0, 0, 0.1); padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border-color); }
-        .theme-switch { cursor: pointer; font-size: 13px; color: var(--neon-cyan); opacity: 0.6; }
-        .lang-flags img { width: 16px; cursor: pointer; filter: grayscale(100%); opacity: 0.3; }
+        .top-controls { 
+            display: flex; gap: 15px; align-items: center; background: rgba(0,0,0,0.1); 
+            padding: 5px 15px; border-radius: 20px; border: 1px solid var(--border-color);
+        }
+
+        .lang-flags img { width: 18px; cursor: pointer; filter: grayscale(100%); opacity: 0.4; }
         .lang-flags img.active { filter: grayscale(0%); opacity: 1; }
 
-        /* CARDS E SIDEBAR */
-        .sidebar { grid-row: 2; display: flex; flex-direction: column; gap: 12px; }
-        .cyber-card { 
-            padding: 12px; background: var(--card-bg); border: 1px solid var(--border-color);
-            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+        /* SEÇÃO DE CARDS (SEU PORTFÓLIO ORIGINAL) */
+        .portfolio-container {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
+            max-width: 1200px; margin: 0 auto;
         }
+
+        .cyber-card { 
+            padding: 25px; background: var(--card-bg); border: 1px solid var(--border-color);
+            clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+            position: relative;
+        }
+
+        .card-title { font-family: 'Orbitron'; color: var(--neon-cyan); font-size: 14px; margin-bottom: 15px; display: block; }
         
-        .nav-link { display: block; color: var(--text-main); text-decoration: none; padding: 8px; font-size: 13px; border-left: 2px solid transparent; margin-bottom: 5px; }
-        .nav-link:hover { background: rgba(0, 243, 255, 0.1); border-left-color: var(--neon-cyan); }
-        .nav-link i { margin-right: 10px; color: var(--neon-cyan); }
+        .btn-link {
+            display: inline-block; padding: 10px 20px; background: transparent; 
+            border: 1px solid var(--neon-cyan); color: var(--neon-cyan);
+            text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 13px;
+        }
+        .btn-link:hover { background: var(--neon-cyan); color: #000; }
 
-        .btn-mitigate { display: none; width: 100%; margin-top: 10px; background: var(--neon-red); color: white; border: none; padding: 10px; font-family: 'Orbitron'; font-size: 10px; cursor: pointer; }
-        #timer-display { display: none; font-family: 'Share Tech Mono'; font-size: 32px; color: var(--neon-red); text-align: center; }
-
-        .main-stage { grid-column: 2; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-        .grafana-frame { width: 100%; height: 100%; border: 0; }
-        .footer { grid-column: 1 / -1; font-family: 'Share Tech Mono'; font-size: 11px; padding: 10px; background: var(--card-bg); color: var(--neon-cyan); border-top: 1px solid var(--border-color); }
+        /* SEÇÃO DO COMMAND CENTER (INTEGRADA DISCRETAMENTE) */
+        .soc-preview { margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 20px; }
+        #btn-mitigate { display: none; background: var(--neon-red); color: white; border: none; padding: 10px; margin-top: 10px; cursor: pointer; }
     </style>
 </head>
 <body class="dark-theme">
-    <div class="cyber-grid">
-        <header class="header">
-            <div class="logo" style="font-family:'Orbitron'; font-size:18px;">KNS // <span>KALEB_NUNES</span></div>
-            <div style="display: flex; align-items: center; gap: 15px;">
-                <div class="top-controls">
-                    <div id="lbl-sim" style="cursor:pointer; color:var(--neon-red); font-size:9px; margin-right: 8px;" onclick="triggerChaos()">[ SIMULAR ]</div>
-                    <i class="fa-solid fa-circle-half-stroke theme-switch" onclick="document.body.classList.toggle('light-theme')"></i>
-                    <div class="lang-flags">
-                        <img src="https://flagcdn.com/w40/br.png" class="active">
-                        <a href="index-en.html"><img src="https://flagcdn.com/w40/us.png"></a>
-                    </div>
-                </div>
+
+    <header class="header">
+        <div class="logo" style="font-family:'Orbitron';">KNS // <span>PORTFOLIO</span></div>
+        <div class="top-controls">
+            <div id="lbl-sim" style="cursor:pointer; color:var(--neon-red); font-size:10px; margin-right:10px;" onclick="triggerChaos()">[ SIMULAR SOC ]</div>
+            <i class="fa-solid fa-circle-half-stroke" style="cursor:pointer; color:var(--neon-cyan); font-size:14px;" onclick="document.body.classList.toggle('light-theme')"></i>
+            <div class="lang-flags">
+                <img src="https://flagcdn.com/w40/br.png" class="active">
+                <a href="index-en.html"><img src="https://flagcdn.com/w40/us.png"></a>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <aside class="sidebar">
-            <div class="cyber-card">
-                <span style="font-size:10px; color:var(--neon-cyan); font-weight:bold;">SOCIAL_LINKS</span>
-                <nav style="margin-top:10px;">
-                    <a href="https://linkedin.com/in/kalebnunes" target="_blank" class="nav-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                    <a href="https://github.com/Kaleb-Nunes" target="_blank" class="nav-link"><i class="fa-brands fa-github"></i> GitHub</a>
-                    <a href="mailto:kaleb@knsconsultoria.com.br" class="nav-link"><i class="fa-solid fa-envelope"></i> E-mail</a>
-                </nav>
+    <main class="portfolio-container">
+        <section class="cyber-card">
+            <span class="card-title">DOCUMENTAÇÃO PROFISSIONAL</span>
+            <p>Especialista em monitoramento híbrido e infraestrutura de TI.</p>
+            <a href="assets/carta-recomendacao.pdf" target="_blank" class="btn-link"><i class="fa-solid fa-file-pdf"></i> CARTA DE RECOMENDAÇÃO</a>
+        </section>
+
+        <section class="cyber-card">
+            <span class="card-title">CANAL DIRETO</span>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <a href="https://linkedin.com/in/kalebnunes" target="_blank" style="color:var(--text-main); text-decoration:none;"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:kaleb@knsconsultoria.com.br" style="color:var(--text-main); text-decoration:none;"><i class="fa-solid fa-envelope"></i> kaleb@knsconsultoria.com.br</a>
             </div>
+        </section>
 
-            <div class="cyber-card">
-                <span style="font-size:10px; color:var(--neon-cyan); font-weight:bold;">CERTIFICATIONS</span>
-                <nav style="margin-top:10px;">
-                    <a href="assets/carta-recomendacao.pdf" target="_blank" class="nav-link"><i class="fa-solid fa-file-pdf"></i> Carta Recomendação</a>
-                    <a href="https://kaleb-nunes.github.io/kalebnunes.tech" target="_blank" class="nav-link"><i class="fa-solid fa-briefcase"></i> Portfólio Web</a>
-                </nav>
-            </div>
+        <section class="cyber-card">
+            <span class="card-title">SISTEMA SOC/NOC ATIVO</span>
+            <div id="sec-status" style="font-family:'Orbitron'; color:var(--neon-green); font-size:20px;">SEGURO</div>
+            <div id="timer-display" style="display:none; font-size:24px; color:var(--neon-red);">10</div>
+            <button id="btn-mitigate" onclick="startMitigation()">MITIGAR AGORA</button>
+            <a href="https://github.com/Kaleb-Nunes/KNS-Command-Center" target="_blank" class="btn-link">VER CÓDIGO FONTE</a>
+        </section>
+    </main>
 
-            <div class="cyber-card">
-                <span style="font-size:10px; color:var(--neon-cyan); font-weight:bold;">DEFENSE_PROTOCOL</span>
-                <div class="sec-box" style="margin-top:10px;"><div id="sec-status" style="font-family:'Orbitron'; font-size:14px; color:var(--neon-green);">SEGURO</div></div>
-                <div id="timer-display">10</div>
-                <button id="btn-mitigate" onclick="startMitigation()">MITIGAR AMEAÇA</button>
-            </div>
-        </aside>
+    <script>
+        // MODO DEMONSTRAÇÃO SEGURO
+        let countdown;
+        function triggerChaos() {
+            document.getElementById('sec-status').innerText = 'INVASÃO';
+            document.getElementById('sec-status').style.color = 'var(--neon-red)';
+            document.getElementById('btn-mitigate').style.display = 'block';
+            document.getElementById('timer-display').style.display = 'block';
+            let count = 10;
+            clearInterval(countdown);
+            countdown = setInterval(() => {
+                count--; document.getElementById('timer-display').innerText = count;
+                if(count <= 0) clearInterval(countdown);
+            }, 1000);
+        }
 
-        <main class="main-stage">
-            <div class="cyber-card" style="grid-column: span 2;"><iframe class="grafana-frame" id="g1"></iframe></div>
-            <div class="cyber-card"><iframe class="grafana-frame" id="g2"></iframe></div>
-            <div class="cyber-card"><iframe class="grafana-frame" id="g3"></iframe></div>
-            <div class="cyber-card"><iframe class="grafana-frame" id="g4"></iframe></div>
-            <div class="cyber-card"><iframe class="grafana-frame" id="g5"></iframe></div>
-        </main>
-
-        <footer class="footer" id="terminal-log">> [SYS]: KNS_CONSULTORIA_MONITORING_ACTIVE...</footer>
-    </div>
-
-<script>
-    const serverIP = window.location.hostname === "localhost" ? "localhost" : window.location.hostname;
-    const isLocal = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
-    const grafanaBase = `http://${serverIP}:3000/d-solo/adlvx49/kns-monitor?orgId=1&refresh=2s&theme=dark`;
-    
-    ['g1','g2','g3','g4','g5'].forEach((id, idx) => {
-        const frame = document.getElementById(id);
-        if(frame) frame.src = `${grafanaBase}&panelId=${[4,2,1,3,6][idx]}`;
-    });
-
-    let countdownInterval;
-    function triggerChaos() {
-        document.getElementById('sec-status').innerText = 'INVASÃO';
-        document.getElementById('sec-status').style.color = 'var(--neon-red)';
-        document.getElementById('btn-mitigate').style.display = 'block';
-        document.getElementById('timer-display').style.display = 'block';
-        let count = 10;
-        clearInterval(countdownInterval);
-        countdownInterval = setInterval(() => {
-            count--; document.getElementById('timer-display').innerText = count;
-            if (count <= 0) { clearInterval(countdownInterval); }
-        }, 1000);
-    }
-
-    function startMitigation() {
-        clearInterval(countdownInterval);
-        document.getElementById('btn-mitigate').style.display = 'none';
-        document.getElementById('timer-display').style.display = 'none';
-        setTimeout(finishMitigation, 2000);
-    }
-
-    async function finishMitigation() {
-        if (isLocal) { await fetch(`http://${serverIP}:5001/api/mitigate`, {method:'POST'}).catch(() => {}); }
-        document.getElementById('sec-status').innerText = 'SEGURO';
-        document.getElementById('sec-status').style.color = 'var(--neon-green)';
-        document.getElementById('terminal-log').innerText = "> [SYS]: AMEAÇA_NEUTRALIZADA_SUCESSO";
-    }
-</script>
+        function startMitigation() {
+            clearInterval(countdown);
+            document.getElementById('btn-mitigate').innerText = 'LIMPANDO...';
+            setTimeout(() => {
+                document.getElementById('sec-status').innerText = 'SEGURO';
+                document.getElementById('sec-status').style.color = 'var(--neon-green)';
+                document.getElementById('btn-mitigate').style.display = 'none';
+                document.getElementById('timer-display').style.display = 'none';
+            }, 2000);
+        }
+    </script>
 </body>
 </html>
