@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Kaleb Nunes | CV</title>
+<title>Kaleb Nunes | CV NOC & Redes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
     *{box-sizing:border-box;margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif}
@@ -26,10 +26,11 @@
     .section{margin-top:28px}
     .section h2{color:#60a5fa;font-size:18px;margin-bottom:12px}
     body.light .section h2{color:#2563eb}
-    .section p,.section li{color:#e5e7eb;line-height:1.6}
+    .section p,.section li{color:#e5e7eb;line-height:1.6;margin-left: 15px;}
     body.light .section p,body.light .section li{color:#111827}
-    .job-title{color:#eab308;font-weight:900}
-    .highlight{background:#111827;border-left:4px solid #eab308;padding:12px;border-radius:12px;margin-top:12px}
+    .section p {margin-left: 0;}
+    .job-title{color:#eab308;font-weight:900;margin-top: 20px;margin-bottom: 5px;}
+    .highlight{background:#111827;border-left:4px solid #eab308;padding:12px;border-radius:12px;margin-top:12px;line-height: 1.8;}
     body.light .highlight{background:#ffffff;border-left:4px solid #a16207;border:1px solid #e5e7eb}
     .kns-card-container {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;display: flex;justify-content: flex-start;padding: 20px 0;}
     .kns-card {background: #0a0a0a;border: 1px solid #333;border-left: 4px solid #00ff41;border-radius: 8px;width: 100%;max-width: 600px;padding: 25px;box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);transition: transform 0.3s ease, box-shadow 0.3s ease;position: relative;overflow: hidden;}
@@ -45,15 +46,15 @@
 </style>
 </head>
 <body>
-<button class="toggle" id="themeToggle"></button>
-<div class="lang-switch"><a href="index.html"></a><a href="index-en.html"></a><a href="index-es.html"></a></div>
+<button class="toggle" id="themeToggle">Light/Dark</button>
+<div class="lang-switch"><a href="index.html">PT</a><a href="index-en.html">EN</a><a href="index-es.html">ES</a></div>
 <div class="container">
     <aside class="sidebar">
         <img src="assets/foto.jpg" class="avatar" alt="Kaleb Nunes">
         <div class="name">KALEB<br>NUNES</div>
-        <div class="role">Implementation Consultant<br>Infrastructure, NOC, Observability</div>
+        <div class="role">Analista de Redes | NOC<br>Infraestrutura e Observabilidade</div>
         <h3>contact.info</h3>
-        <p>Balneário Camboriú  SC  Brazil</p>
+        <p>Balneário Camboriú · SC · Brasil</p>
         <p>+55 47 98890-1616</p>
         <p>kalebdossantos59924@gmail.com</p>
         <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">LinkedIn</a>
@@ -61,22 +62,57 @@
         <a class="btn secondary" href="assets/carta-recomendacao-2026.pdf" target="_blank"> Recommendation Letter</a>
     </aside>
     <main class="main">
-        <section class="section"><h2>about.me</h2><p>Implementation Consultant with strong experience in Infrastructure, Networking, NOC, Observability and ITSM.</p></section>
+        <section class="section">
+            <h2>about.me</h2>
+            <p>Especialista em Infraestrutura Crítica, Observabilidade e Operações de NOC, com foco em Engenharia de Continuidade. Possuo experiência comprovada em migrar operações reativas para modelos inteligentes de decisão, utilizando monitoramento proativo avançado e troubleshooting estruturado (Modelo OSI). Atuo desde a análise de backbone (BGP/OSPF) até a última milha de ISPs (GPON/FTTH e PPPoE).</p>
+        </section>
+
+        <section class="section">
+            <h2>hard.skills</h2>
+            <div class="highlight">
+                <strong>Monitoramento & Observabilidade:</strong> Zabbix, Grafana, LibreNMS, PRTG, MikroTik The Dude.<br>
+                <strong>Redes & Roteamento:</strong> BGP (Engenharia de tráfego e filtros), OSPF, IPv4/IPv6, CGNAT, MPLS.<br>
+                <strong>Infraestrutura ISP:</strong> Redes GPON, OLTs, ONUs/ONTs, PPPoE (Logs/BRAS), DNS (Autoritativo/Recursivo).<br>
+                <strong>Automação & Processos:</strong> Python (NetSecOps), Docker/Containers, ITSM, Gestão de SLA.
+            </div>
+        </section>
+
         <section class="section">
             <h2>work.experience</h2>
-            <div class="job-title">Implementation Consultant  Ellevo Software (Aug/2025  Present)</div>
-            <ul><li>Promoted from Support Analyst N2 to Implementation Consultant in just 1 month.</li><li>Clients: Renault, Grupo Elfa, Yazaki, Cruz Azul, etc.</li></ul>
-            <div class="highlight"><strong>Certifications:</strong><br>Ellevo University (Next & Platform).</div>
+            <div class="job-title" style="margin-top: 0;">Consultor de Implantação (ITSM) · Ellevo Software (Ago/2025 – Presente)</div>
+            <ul>
+                <li>Implantação de sistemas de governança e gestão de incidentes em grandes contas corporativas.</li>
+                <li>Estruturação de fluxos operacionais focados em redução de SLA para ambientes críticos e resolução rápida de falhas.</li>
+            </ul>
+
+            <div class="job-title">Senior Network Technician · RR64 Network Intelligence (2023 – 2025)</div>
+            <ul>
+                <li>Troubleshooting avançado em redes de Backbone utilizando BGP e OSPF, incluindo análise de rotas e ASN.</li>
+                <li>Garantia de uptime através de monitoramento proativo em Zabbix e Grafana, identificando gargalos de tráfego, saturação e falhas em CDNs.</li>
+            </ul>
+
+            <div class="job-title">Analista de NOC (N1/N2) · MetroNetwork (2022 – 2023)</div>
+            <ul>
+                <li>Monitoramento 24x7 de infraestrutura ISP e redes ópticas GPON, identificando alarmes críticos de quedas massivas (portas PON LOS).</li>
+                <li>Tratativa técnica via Modelo OSI para isolar falhas físicas (rompimento de fibra) de lógicas (CGNAT, bloqueios de portas e PPPoE).</li>
+            </ul>
         </section>
+
         <section class="section">
             <h2>featured.projects</h2>
             <div class="kns-card-container">
                 <div class="kns-card">
                     <div class="kns-badge">System Status: Production</div>
-                    <h3 class="kns-title"> KNS Command Center</h3>
-                    <p class="kns-desc">Full Stack Hybrid Observability Platform. Unified monitoring of Docker (Linux) and Physical Infrastructure (Windows) with Active Defense capabilities via Python Automation.</p>
-                    <div class="kns-tech-stack"><span class="kns-tech">Docker</span><span class="kns-tech">Python</span><span class="kns-tech">Zabbix</span><span class="kns-tech">Grafana</span><span class="kns-tech">PowerShell</span></div>
-                    <a href="https://github.com/Kaleb-Nunes/KNS-Command-Center" target="_blank" class="kns-btn">VIEW PROJECT ON GITHUB &rarr;</a>
+                    <h3 class="kns-title"> Protocolo 09 Core Engine</h3>
+                    <p class="kns-desc">Plataforma Híbrida de Observabilidade Full Stack. Monitoramento unificado de containers Docker (Linux) e Infraestrutura Física com mitigação ativa de falhas de rede em tempo real via automação (Webhooks/Safety Layer).</p>
+                    <div class="kns-tech-stack">
+                        <span class="kns-tech">Docker</span>
+                        <span class="kns-tech">Python</span>
+                        <span class="kns-tech">Zabbix</span>
+                        <span class="kns-tech">Grafana</span>
+                        <span class="kns-tech">Webhooks</span>
+                    </div>
+                    <a href="https://github.com/Kaleb-Nunes/KNS-Command-Center" target="_blank" class="kns-btn">VER ARQUITETURA NO GITHUB &rarr;</a>
                 </div>
             </div>
         </section>
