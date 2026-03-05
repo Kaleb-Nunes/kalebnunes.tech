@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Kaleb Nunes | Engenharia de Continuidade</title>
+<title>Kaleb Nunes | CV Analista de NOC e Suporte</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
     *{box-sizing:border-box;margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif}
@@ -11,29 +11,27 @@
     .lang-switch{position:fixed;top:16px;right:16px;display:flex;gap:8px;z-index:999}
     .lang-switch a{background:#fff;border:1px solid #d1d5db;padding:6px 10px;border-radius:10px;font-weight:700;text-decoration:none}
     .toggle{position:fixed;top:16px;left:16px;background:#2563eb;color:#fff;border:none;padding:8px 14px;border-radius:20px;cursor:pointer;font-weight:700}
-    .container{display:grid;grid-template-columns:320px 1fr;max-width:1400px;margin:auto;min-height:100vh}
-    .sidebar{background:#111827;padding:26px 22px}
+    .container{display:grid;grid-template-columns:300px 1fr;max-width:1300px;margin:auto;min-height:100vh}
+    .sidebar{background:#111827;padding:26px 20px}
     body.light .sidebar{background:#ffffff;border-right:1px solid #e5e7eb}
-    .avatar{width:140px;height:140px;border-radius:50%;border:4px solid #2563eb;object-fit:cover;margin-bottom:14px;background:#1f2937;}
-    .name{display:block;color:#2563eb;font-size:22px;font-weight:900;line-height:1.2;}
+    .avatar{width:130px;height:130px;border-radius:50%;border:4px solid #2563eb;object-fit:cover;margin-bottom:12px}
+    .name{color:#2563eb;font-size:22px;font-weight:900}
     .role{color:#22c55e;font-size:13px;font-weight:700;margin-top:6px}
     .sidebar h3{color:#60a5fa;margin:20px 0 8px;font-size:13px}
     .sidebar p,.sidebar a{color:#cbd5e1;font-size:13px;text-decoration:none;margin-bottom:6px;display:block}
     body.light .sidebar p,body.light .sidebar a{color:#1f2937}
     .btn{background:#2563eb;color:#fff;padding:10px 14px;border-radius:14px;text-align:center;font-weight:700;margin-top:10px;text-decoration:none}
-    .btn.secondary{background:#374151;color:#ffffff;}
-    body.light .btn.secondary{background:#e5e7eb;color:#111827;border:1px solid #d1d5db;}
-    .main{padding:40px 50px}
-    .section{margin-top:32px}
-    .section h2{color:#60a5fa;font-size:18px;margin-bottom:14px}
+    .btn.secondary{background:#1f2937}
+    .main{padding:40px}
+    .section{margin-top:28px}
+    .section h2{color:#60a5fa;font-size:18px;margin-bottom:12px}
     body.light .section h2{color:#2563eb}
-    .section p,.section li{line-height:1.7;margin-bottom:6px}
-    body.light .section p, body.light .section li{color:#1f2937}
-    .job-title{font-weight:900;margin-top:16px;color:#facc15;}
-    body.light .job-title{color:#92400e;}
-    .job-meta{font-size: 0.9em; color: #9ca3af; margin-bottom: 8px; font-style: italic;}
-    .highlight{background:#111827;border-left:4px solid #eab308;padding:14px;border-radius:12px;margin-top:14px}
-    body.light .highlight{background:#ffffff;border-left:4px solid #92400e;border:1px solid #e5e7eb}
+    .section p,.section li{color:#e5e7eb;line-height:1.6;margin-left: 15px;}
+    body.light .section p,body.light .section li{color:#111827}
+    .section p {margin-left: 0;}
+    .job-title{color:#eab308;font-weight:900;margin-top: 20px;margin-bottom: 5px;}
+    .highlight{background:#111827;border-left:4px solid #eab308;padding:12px;border-radius:12px;margin-top:12px;line-height: 1.8;}
+    body.light .highlight{background:#ffffff;border-left:4px solid #a16207;border:1px solid #e5e7eb}
     .kns-card-container {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;display: flex;justify-content: flex-start;padding: 20px 0;}
     .kns-card {background: #0a0a0a;border: 1px solid #333;border-left: 4px solid #00ff41;border-radius: 8px;width: 100%;max-width: 600px;padding: 25px;box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);transition: transform 0.3s ease, box-shadow 0.3s ease;position: relative;overflow: hidden;}
     .kns-card:hover {transform: translateY(-5px);box-shadow: 0 0 30px rgba(0, 255, 65, 0.2);border-color: #00ff41;}
@@ -44,95 +42,80 @@
     .kns-tech {background: #1a1a1a;color: #ccc;padding: 4px 8px;border-radius: 4px;font-size: 0.8rem;border: 1px solid #333;}
     .kns-btn {background: transparent;color: #00ff41;text-decoration: none;font-weight: bold;border: 1px solid #00ff41;padding: 10px 20px;border-radius: 4px;display: inline-flex;align-items: center;transition: all 0.3s ease;}
     .kns-btn:hover {background: #00ff41;color: #000;box-shadow: 0 0 15px #00ff41;}
-    @media(max-width:900px){.container{grid-template-columns:1fr}.main{padding:30px 24px}.kns-card-container { justify-content: center; }}
+    @media(max-width:900px){.container{grid-template-columns:1fr}.kns-card-container { justify-content: center; }}
 </style>
 </head>
 <body>
-<button class="toggle" id="themeToggle">🌗</button>
-<div class="lang-switch">
-    <a href="index.html" title="Português">🇧🇷</a>
-    <a href="index-en.html" title="English">🇺🇸</a>
-    <a href="index-es.html" title="Español">🇪🇸</a>
-</div>
+<button class="toggle" id="themeToggle">Light/Dark</button>
+<div class="lang-switch"><a href="index.html">PT</a><a href="index-en.html">EN</a><a href="index-es.html">ES</a></div>
 <div class="container">
     <aside class="sidebar">
-        <img src="./assets/foto.jpg" class="avatar" alt="Kaleb Nunes">
-        <div class="name">KALEB<br>NUNES DOS SANTOS</div>
-        <div class="role">Engenharia de Continuidade<br>Decision Engine | NetSecOps</div>
+        <img src="assets/foto.jpg" class="avatar" alt="Kaleb Nunes">
+        <div class="name">KALEB<br>NUNES</div>
+        <div class="role">Analista de NOC<br>Suporte Técnico & Redes</div>
         <h3>contact.info</h3>
-        <p>Balneário Camboriú - SC - Brasil</p>
+        <p>Balneário Camboriú · SC · Brasil</p>
         <p>+55 47 98890-1616</p>
         <p>kalebdossantos59924@gmail.com</p>
-        
-        <div class="badge-base LI-profile-badge" data-locale="pt_BR" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="kalebnunes" data-version="v1" style="margin-bottom: 15px;"><a class="badge-base__link LI-simple-link" href="https://br.linkedin.com/in/kalebnunes/pt?trk=profile-badge">Kaleb Nunes Dos Santos</a></div>
-        
-        <a class="btn secondary" href="./assets/carta-recomendacao-2026.pdf" target="_blank"> Carta de Recomendação</a>
+        <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">LinkedIn</a>
+        <a class="btn" href="assets/portfolio_2026.pdf" target="_blank"> Download Portfolio</a>
+        <a class="btn secondary" href="assets/carta-recomendacao-2026.pdf" target="_blank"> Recommendation Letter</a>
     </aside>
     <main class="main">
         <section class="section">
-            <h2>Resumo Profissional</h2>
-            <p>Profissional de Tecnologia com foco em <strong>Infraestrutura Crítica, Observabilidade e Engenharia de Continuidade</strong>. Minha atuação central é mover a operação do "reativo" para o "inteligente" (Decision Engine).</p>
-            <p>Possuo experiência consolidada em ambientes de missão crítica (NOC/SOC), redes ópticas (DWDM/OLT) e automação defensiva. Construo sistemas que não apenas monitoram, mas tomam decisões de proteção baseadas em governança e compliance.</p>
-            <div class="highlight"><strong>Status Atual:</strong><br>Open to Work para desafios em Engenharia de Redes, SRE e Automação de Infraestrutura.</div>
+            <h2>about.me</h2>
+            <p>Profissional focado em operações de redes (NOC) e Suporte Técnico, com forte base em troubleshooting estruturado pelo <strong>Modelo OSI</strong>. Tenho vivência prática no dia a dia de provedores (ISPs), atuando desde a análise física em redes GPON (OLT/ONU) até o diagnóstico de falhas lógicas complexas. Especialista em monitorar ativos e resolver incidentes de conectividade para garantir a melhor experiência ao cliente final.</p>
         </section>
+
         <section class="section">
-            <h2>Competências Técnicas</h2>
-            <ul>
-            <li><strong>Automação & Safety:</strong> Python (Automação Operacional), Whitelisting, Logs Forenses, Docker Containerization.</li>
-            <li><strong>Infraestrutura & Redes:</strong> BGP, MPLS, OSPF, Redes Ópticas (Huawei/Datacom), Conceitos Multi-vendor.</li>
-            <li><strong>Observabilidade:</strong> Zabbix (Especialista - Triggers & API), Grafana (Dashboards Executivos), Health Checks.</li>
-            <li><strong>Processos:</strong> ITSM, SLA, Governança de TI, Gestão de Incidentes Críticos.</li>
-            </ul>
+            <h2>hard.skills (Dia a dia do NOC)</h2>
+            <div class="highlight">
+                <strong>Monitoramento Ativo:</strong> Zabbix, Grafana, LibreNMS, PRTG, The Dude. Análise de latência, banda (Upload/Download) e alarmes de backbone.<br>
+                <strong>Infraestrutura de ISP:</strong> Redes passivas GPON, análise de sinal óptico em OLTs (alarmes LOS / Portas PON), CDNs.<br>
+                <strong>Resolução de Falhas:</strong> Diagnóstico de PPPoE (autenticação, logs no BRAS/MikroTik), portas bloqueadas e DNS (Autoritativo, Recursivo e Reverso).<br>
+                <strong>Redes e Roteamento:</strong> IPv4 vs IPv6, limitações e troubleshooting de CGNAT (NAT Estrito), BGP (ASN, redundância) e OSPF.
+            </div>
         </section>
+
         <section class="section">
-            <h2>Experiência Profissional</h2>
-            
-            <div class="job-title">Consultor de Implantação – Ellevo Software</div>
-            <div class="job-meta">Ago/2025 – Jan/2026</div>
+            <h2>work.experience</h2>
+            <div class="job-title" style="margin-top: 0;">Analista de Suporte e Implantação (ITSM) · Ellevo Software (Ago/2025 – Presente)</div>
             <ul>
-            <li>Responsável pela implantação de sistemas corporativos (ITSM) em grandes contas.</li>
-            <li>Atuação na interface técnica e de negócios, traduzindo requisitos operacionais em fluxos de sistema.</li>
-            <li>Gestão de SLA e estruturação de processos de atendimento para ambientes críticos.</li>
+                <li>Atendimento a chamados críticos e implantação de sistemas de gestão de incidentes.</li>
+                <li>Estruturação de fluxos de suporte focados no cumprimento de SLA, garantindo respostas rápidas para o cliente.</li>
             </ul>
 
-            <div class="job-title">Senior Network Technician – RR64 Network Intelligence</div>
-            <div class="job-meta">2023 – 2025</div>
+            <div class="job-title">Técnico de Redes / NOC · RR64 Network Intelligence (2023 – 2025)</div>
             <ul>
-            <li>Monitoramento e troubleshooting avançado em redes de Backbone e Acesso.</li>
-            <li>Atuação direta com protocolos de roteamento dinâmico (OSPF/BGP) e análise de incidentes em tempo real.</li>
-            <li>Operação de ferramentas de observabilidade (Zabbix/Grafana) para garantia de uptime.</li>
+                <li>Troubleshooting de conectividade em redes utilizando BGP e OSPF.</li>
+                <li>Monitoramento proativo em Zabbix e Grafana, investigando gargalos de tráfego, saturação de links e latência de clientes.</li>
             </ul>
 
-            <div class="job-title">Analista de NOC (N1/N2) – MetroNetwork</div>
-            <div class="job-meta">2022 – 2023</div>
+            <div class="job-title">Analista de NOC / Suporte N2 · MetroNetwork (2022 – 2023)</div>
             <ul>
-            <li>Monitoramento proativo 24x7 de infraestrutura ISP.</li>
-            <li>Tratativa de incidentes de rede óptica (GPON) e suporte a clientes corporativos.</li>
-            </ul>
-            
-            <div class="job-title">Analista de Redes – VivaTech</div>
-            <div class="job-meta">Experiência Anterior</div>
-            <ul>
-            <li>Gestão de infraestrutura de redes e conectividade.</li>
-            <li>Suporte a infraestrutura local e manutenção preventiva de ativos de rede.</li>
+                <li>Monitoramento 24x7 de infraestrutura de provedor (ISP) e redes ópticas GPON, identificando rompimentos de fibra (alarmes LOS na OLT).</li>
+                <li>Suporte técnico para isolar falhas usando o Modelo OSI, resolvendo problemas de autenticação PPPoE e falhas de navegação envolvendo CGNAT e DNS.</li>
             </ul>
         </section>
+
         <section class="section">
-            <h2>Engenharia & Projetos (P&D)</h2>
+            <h2>featured.projects</h2>
             <div class="kns-card-container">
                 <div class="kns-card">
-                    <div class="kns-badge">Versão 1.0 (Dockerized)</div>
-                    <h3 class="kns-title">⚡ Protocolo 09 Core Engine</h3>
-                    <p class="kns-desc">Engine de Orquestração de Decisão Operacional. Um sistema autônomo que mitiga ataques e falhas de rede em tempo real, rodando em containers isolados com camadas de segurança (Safety Layer) e auditoria forense.</p>
-                    <div class="kns-tech-stack"><span class="kns-tech">Python</span><span class="kns-tech">Docker</span><span class="kns-tech">Safety Layer (Whitelist)</span><span class="kns-tech">Zabbix Webhooks</span></div>
-                    <a href="https://github.com/Kaleb-Nunes/protocolo-09-core" target="_blank" class="kns-btn">VER ARQUITETURA &rarr;</a>
+                    <div class="kns-badge">Ferramentas de NOC</div>
+                    <h3 class="kns-title">Dashboard Integrado de NOC</h3>
+                    <p class="kns-desc">Estruturação de um ambiente completo de monitoramento focado no dia a dia do Suporte Técnico. Implementação de Zabbix e Grafana para gerar alertas em tempo real sobre status de portas, latência e consumo de banda, facilitando o troubleshooting rápido de redes.</p>
+                    <div class="kns-tech-stack">
+                        <span class="kns-tech">Zabbix</span>
+                        <span class="kns-tech">Grafana</span>
+                        <span class="kns-tech">Troubleshooting</span>
+                        <span class="kns-tech">Monitoramento</span>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 </div>
-
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 <script>document.getElementById("themeToggle").onclick=()=>{document.body.classList.toggle("light");};</script>
 </body>
 </html>
